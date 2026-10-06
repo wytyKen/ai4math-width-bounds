@@ -1,0 +1,7 @@
+{
+  "reviewed_checkpoint": "20260923T061356547450Z-d4394ecb",
+  "reviewed_source_sha256": "d0d9d520472440f30952121bd625f5d403d9f86563f1bdc2d35c1d720dc2866a",
+  "current_source_sha256": "319bca132144536e769c16dc4e33ed456cf5cc811d696144b76cf6f74a80f1d4",
+  "mathematical_text_unchanged": true,
+  "only_changes": "Task status line and newline normalization. The earlier printed text hash was normalized UTF-8, not the archived raw-byte hash."
+}

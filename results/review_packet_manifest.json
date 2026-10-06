@@ -1,0 +1,183 @@
+{
+  "version": "0.1",
+  "date": "2026-09-23",
+  "status": "Research draft for independent review; novelty not established.",
+  "formal_scope": "New standard-monomial combinatorics and finite certificate; algebraic transfer is conventional.",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 3637,
+      "sha256": "96005eccb32bac5b1ca4dcbd1ed53714efb165b733861de7c6ec9981fde7a32f"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 208,
+      "sha256": "85472c32f4f1ec6d9151ba253d0edc8a857e219843c638b9ce335844cd99b567"
+    },
+    {
+      "path": "uv.lock",
+      "bytes": 135,
+      "sha256": "79985c431714a950788c2aba7594fdc3f20d527280293dc51511e391b2db3c5a"
+    },
+    {
+      "path": "paper/README.md",
+      "bytes": 1887,
+      "sha256": "d7e085d62966d0bf6a94ab74de80742d98ffd7d154ef56d6780c427921ff7da0"
+    },
+    {
+      "path": "paper/width_bounds.tex",
+      "bytes": 16281,
+      "sha256": "3d67eae1fd88d1947bbb8fede3c06bf81b69b72a9a4bc8579e2a67322744dd2d"
+    },
+    {
+      "path": "paper/certificate_table.tex",
+      "bytes": 954,
+      "sha256": "2bfd90d9483112f0faf45f0801559c55c06bf3d3b3611f749778d99d902bd26f"
+    },
+    {
+      "path": "output/pdf/width_bounds.pdf",
+      "bytes": 348767,
+      "sha256": "35ef5ede0cfa95a99aac2afe54510e8ee84ad17ac4e26e70e5d6b7cca00ddfac"
+    },
+    {
+      "path": "scripts/audit_bounds.py",
+      "bytes": 6069,
+      "sha256": "7cad46fb111c374cdaac319540f45f64db4497bafc4d365c71b6c9b4b2a6dee7"
+    },
+    {
+      "path": "scripts/envelope_certificate.py",
+      "bytes": 2350,
+      "sha256": "92f9efe0a1a846db6745f7e0fae5bef0997a40ebca042b815866f6ddd7677631"
+    },
+    {
+      "path": "scripts/prepare_paper.py",
+      "bytes": 1358,
+      "sha256": "b0034f0b776f6b79a72292d7f8d34a365a351eef54bb6511241040272706b8d8"
+    },
+    {
+      "path": "scripts/build_paper.ps1",
+      "bytes": 1193,
+      "sha256": "936a7bd3bcf8f1da51775ff34d6af4a6d5cddc0aee49b6499b392abaa5f7163a"
+    },
+    {
+      "path": "scripts/package_review.py",
+      "bytes": 2579,
+      "sha256": "f1cd9fb60aba84cd7175e25b37f79788eb336d584c0b5905417291d372b3046d"
+    },
+    {
+      "path": "lean/lakefile.toml",
+      "bytes": 214,
+      "sha256": "a6fba0ef9ebdd1c7156b5410380f43afbafa37467f3b51d5721dcba13bd1a1b2"
+    },
+    {
+      "path": "lean/lake-manifest.json",
+      "bytes": 3114,
+      "sha256": "23d8e3b619fd208b722d04b7bf1417c0e2b05b2e0bf787a2c0cfe481138e28e2"
+    },
+    {
+      "path": "lean/lean-toolchain",
+      "bytes": 25,
+      "sha256": "8f6680f8389e8adee06cb2bd44372c6d60dce0e8301630b61a99a5642d1bd71b"
+    },
+    {
+      "path": "lean/WidthBounds.lean",
+      "bytes": 162,
+      "sha256": "c5b816fb026ebcb74d29ee0dd3e6fe7016acacddadda02e6a389a8691bb0c76e"
+    },
+    {
+      "path": "research/combinatorial_proof.md",
+      "bytes": 6532,
+      "sha256": "bebbf31afa4843d9664dc6a64f42bfcf6cddfbe0e6c5cdfaeaed6eee9d4c44f8"
+    },
+    {
+      "path": "research/algebra_bridge_audit.md",
+      "bytes": 8859,
+      "sha256": "c2d8bfd6829c6843da2e36d782733af4b3cb5e63dd6952b064e901397adc4e60"
+    },
+    {
+      "path": "research/literature_review.md",
+      "bytes": 3336,
+      "sha256": "d16ce0ac0b7749cd1da5d5deafa00017ea075981a35b9ee156eb278fc5df5ea2"
+    },
+    {
+      "path": "research/adversarial_review.md",
+      "bytes": 3712,
+      "sha256": "f5b13ebff40fd1eaf561e96efca58f7e60b9672be3579c2ead7cccb10b37f86d"
+    },
+    {
+      "path": "research/first_pass.md",
+      "bytes": 8145,
+      "sha256": "1dfe404219e2526e0800e9fbfe5ad9b2591a503d48247415bce79dc26d82f360"
+    },
+    {
+      "path": "research/review_plan.md",
+      "bytes": 3078,
+      "sha256": "d33a8ae3811ed9eac33cf7bbb96ed8def8986fc2d6fa47473fbe6050f7b8ccba"
+    },
+    {
+      "path": "results/envelope_certificate.json",
+      "bytes": 234485,
+      "sha256": "121ad581db4139639ae09cb26be462a523c766644881c51cf89560ed8bd730e0"
+    },
+    {
+      "path": "results/lean_combinatorial_build.txt",
+      "bytes": 1277,
+      "sha256": "7efd2f27b7eecd7b06ace81bfa44764ecdf7ae0533327b44380bace81089dbf0"
+    },
+    {
+      "path": "results/dp_audit.json",
+      "bytes": 254687,
+      "sha256": "088762ca6187bd75fd746f26a6f6cdf987534caa75ebaa41f973b318ae4b99d0"
+    },
+    {
+      "path": "results/lean_check.txt",
+      "bytes": 471,
+      "sha256": "747dc9d5761df37bcf1eee22e4108b27f8f63f845e24a9cf3af2c2d988f491af"
+    },
+    {
+      "path": "results/pdf_qa.md",
+      "bytes": 1035,
+      "sha256": "fdc3f4daaf15a0d971a60aae64d04b9a695abfea71dce9111b4221bbebfd1217"
+    },
+    {
+      "path": "lean/WidthBounds/Arithmetic.lean",
+      "bytes": 1585,
+      "sha256": "7d2355b4ba4ef8146d74643401e752cda0190a391dad594f9d6c574a36122353"
+    },
+    {
+      "path": "lean/WidthBounds/Certificate.lean",
+      "bytes": 2961,
+      "sha256": "d4f6521561c02399882feba9079a88811342e32851f06c61f0b01d5ca2166042"
+    },
+    {
+      "path": "lean/WidthBounds/Cutoff.lean",
+      "bytes": 3960,
+      "sha256": "42273dc49231edb8ee55b92df7098223601e97c7049ed65b3c9552c2dd5bb09a"
+    },
+    {
+      "path": "lean/WidthBounds/Envelope.lean",
+      "bytes": 3957,
+      "sha256": "ce581a2b6b8316c5ec5127d98deb1cf4857ed55b9d062152b4eb62786a6a5c00"
+    },
+    {
+      "path": "lean/WidthBounds/Length.lean",
+      "bytes": 3320,
+      "sha256": "5d73699a12d7f087d287a45739ab2f09e73297fc4cbf20d2ea1e5fd1474abd68"
+    },
+    {
+      "path": "lean/WidthBounds/LexCounting.lean",
+      "bytes": 7686,
+      "sha256": "92dbf9120ff93a1907fc894f73c80952ee897c967989f888e6558da4fccbff2b"
+    },
+    {
+      "path": "lean/WidthBounds/Prefix.lean",
+      "bytes": 4322,
+      "sha256": "1cccb0a10fa5602caacca9a4317eecdad1dc840a96df36077c51776e0e7aca2b"
+    },
+    {
+      "path": "lean/WidthBounds/SmallWidth.lean",
+      "bytes": 5209,
+      "sha256": "63c540dc67ecef843c0c97714a08032192d307219dc947f4cc3da344de9e8b41"
+    }
+  ]
+}

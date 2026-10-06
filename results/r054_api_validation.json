@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "checked_utc": "2026-09-30T04:09:39.815956+00:00",
+  "task": "R054",
+  "classification": "API audit with locally compiled conditional examples; not higher lex Tor formulas",
+  "toolchain": "Lean 4.22.0 / mathlib v4.22.0",
+  "mathlib_commit": "79e94a093aff4a60fb1b1f92d9681e407124c2ca",
+  "mathlib_tracked_diff_empty": true,
+  "probes": [
+    {
+      "source": "research/probes/R054_root_api.lean",
+      "source_sha256": "15172fd1298739776455e6e45ff4912bcda1c895923faf22df59b299491be584",
+      "log": "results/r054_root_api_probe.txt",
+      "log_sha256": "744f703d74643fcd54df2ffc56ea357c56b96fe497822abb153635009ee997da",
+      "command": "lake env lean ../research/probes/R054_root_api.lean",
+      "working_directory": "lean",
+      "exit_code": 0,
+      "named_axiom_outputs": 1
+    },
+    {
+      "source": "research/probes/R054_koszul_api.lean",
+      "source_sha256": "9b71738f66c6d6d99710156cbb8a067b66d83eb936b663a969dcbc7d3445ab22",
+      "log": "results/r054_koszul_api_probe.txt",
+      "log_sha256": "00b96921812c7807cd1bc526fa188093fa71ebb9913e8ca118f4d0121aa9924d",
+      "command": "lake env lean ../research/probes/R054_koszul_api.lean",
+      "working_directory": "lean",
+      "exit_code": 0,
+      "named_axiom_outputs": 4
+    },
+    {
+      "source": "research/probes/R054_tor_api.lean",
+      "source_sha256": "7d4a9154d457c08e706017ff8686799cd2efd7919fea86a0f6073f76fbb54ac2",
+      "log": "results/r054_tor_api_probe.txt",
+      "log_sha256": "305562747005f87ee173a984bea18d067b113a2ba57b02546aff3a15ccceb9c2",
+      "command": "lake env lean ../research/probes/R054_tor_api.lean",
+      "working_directory": "lean",
+      "exit_code": 0,
+      "named_axiom_outputs": 3
+    }
+  ],
+  "named_axiom_outputs": 8,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "lean_mainline_files_unchanged": 50,
+  "existing_claim_evidence_paths_matched": 139,
+  "frozen_delivery_sha256": "84f9508927c73b96c5313b8e60a32ac7a9b2d7d308447c1226128f81ae9c201d",
+  "mainline_lake_build_run": false,
+  "root_probe_wrapper_note": "Lean exited 0 and log was saved; subsequent GBK stdout printing in Python raised UnicodeEncodeError. Actual saved child result independently inspected.",
+  "route_selected": "Direct projective resolution of the second argument A/I; Koszul/balancing remains fallback.",
+  "next_task": "R055 finite monomial presentation only; awaiting user instruction",
+  "limitations": [
+    "No finite lex ProjectiveResolution constructed",
+    "No target Tor2/Tor3 dimension theorem proved",
+    "No Tor balance or full finite-chain Euler theorem claimed",
+    "Source-only library interfaces explicitly distinguished from locally compiled imports"
+  ]
+}

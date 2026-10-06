@@ -1,0 +1,20 @@
+ℹ [1/124] Replayed WidthBounds.Arithmetic
+info: WidthBounds/Arithmetic.lean:48:0: 'WidthBounds.finite_envelope_certificate' does not depend on any axioms
+ℹ [3054/3060] Replayed WidthBounds.LexCounting
+info: WidthBounds/LexCounting.lean:188:0: 'WidthBounds.LexCounting.hilbert2_succ_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LexCounting.lean:189:0: 'WidthBounds.LexCounting.sum_le_hilbert3' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3056/3060] Replayed WidthBounds.Cutoff
+info: WidthBounds/Cutoff.lean:91:0: 'WidthBounds.LexCounting.hilbert2_eq_zero_of_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/Cutoff.lean:92:0: 'WidthBounds.LexCounting.alpha_le_two_mul_add_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3057/3060] Replayed WidthBounds.SmallWidth
+info: WidthBounds/SmallWidth.lean:114:0: 'WidthBounds.small_width_combinatorial_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/SmallWidth.lean:115:0: 'WidthBounds.small_width_binomial_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3058/3060] Replayed WidthBounds.ColumnBounds
+info: WidthBounds/ColumnBounds.lean:211:0: 'WidthBounds.Columns.sum_columns_eq_sectionLength' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/ColumnBounds.lean:212:0: 'WidthBounds.Columns.terminal_triangle_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3059/3060] Replayed WidthBounds.AnalyticArithmetic
+info: WidthBounds/AnalyticArithmetic.lean:150:0: 'WidthBounds.analytic_column_binomial_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3060/3060] Built WidthBounds.AllWidths
+info: WidthBounds/AllWidths.lean:53:0: 'WidthBounds.all_widths_analytic_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/AllWidths.lean:54:0: 'WidthBounds.all_widths_strict_improvement' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully.

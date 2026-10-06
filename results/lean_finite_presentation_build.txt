@@ -1,0 +1,335 @@
+R055 unified build; Lean/mathlib 4.22.0
+COMMAND: lake build
+CWD: lean/
+
+ℹ [1/262] Replayed WidthBounds.Arithmetic
+info: WidthBounds/Arithmetic.lean:48:0: 'WidthBounds.finite_envelope_certificate' does not depend on any axioms
+ℹ [3053/3069] Replayed WidthBounds.LexCounting
+info: WidthBounds/LexCounting.lean:188:0: 'WidthBounds.LexCounting.hilbert2_succ_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LexCounting.lean:189:0: 'WidthBounds.LexCounting.sum_le_hilbert3' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3055/3069] Replayed WidthBounds.Cutoff
+info: WidthBounds/Cutoff.lean:91:0: 'WidthBounds.LexCounting.hilbert2_eq_zero_of_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/Cutoff.lean:92:0: 'WidthBounds.LexCounting.alpha_le_two_mul_add_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3056/3069] Replayed WidthBounds.SmallWidth
+info: WidthBounds/SmallWidth.lean:114:0: 'WidthBounds.small_width_combinatorial_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/SmallWidth.lean:115:0: 'WidthBounds.small_width_binomial_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3060/3069] Replayed WidthBounds.MonomialInterface
+info: WidthBounds/MonomialInterface.lean:208:0: 'WidthBounds.MonomialInterface.monomial_mem_monomialIdeal_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/MonomialInterface.lean:209:0: 'WidthBounds.MonomialInterface.monomialIdeal_standardLex' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/MonomialInterface.lean:210:0: 'WidthBounds.MonomialInterface.exists_initial_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/MonomialInterface.lean:211:0: 'WidthBounds.MonomialInterface.monomialIdeal_exists_initial_degree' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3061/3069] Replayed WidthBounds.AnalyticArithmetic
+info: WidthBounds/AnalyticArithmetic.lean:150:0: 'WidthBounds.analytic_column_binomial_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3065/3262] Replayed WidthBounds.ColumnBounds
+info: WidthBounds/ColumnBounds.lean:211:0: 'WidthBounds.Columns.sum_columns_eq_sectionLength' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/ColumnBounds.lean:212:0: 'WidthBounds.Columns.terminal_triangle_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3066/3262] Replayed WidthBounds.AllWidths
+info: WidthBounds/AllWidths.lean:53:0: 'WidthBounds.all_widths_analytic_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/AllWidths.lean:54:0: 'WidthBounds.all_widths_strict_improvement' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3074/3262] Replayed WidthBounds.MonomialBasis
+info: WidthBounds/MonomialBasis.lean:247:0: 'WidthBounds.MonomialInterface.quotientStandardEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/MonomialBasis.lean:248:0: 'WidthBounds.MonomialInterface.standardMonomialBasis_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/MonomialBasis.lean:249:0: 'WidthBounds.MonomialInterface.finrank_standardMonomialSpan' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/MonomialBasis.lean:250:0: 'WidthBounds.MonomialInterface.finrank_quotientHomogeneous' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3075/3262] Replayed WidthBounds.IdealBounds
+info: WidthBounds/IdealBounds.lean:160:0: 'WidthBounds.MonomialInterface.finrank_xySubspace' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/IdealBounds.lean:161:0: 'WidthBounds.MonomialInterface.monomialIdeal_all_widths_dimension_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3076/3262] Replayed WidthBounds.Growth
+info: WidthBounds/Growth.lean:145:0: 'WidthBounds.Growth.sectionLength_le_divisor_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/Growth.lean:146:0: 'WidthBounds.Growth.sectionLength_le_harmonic' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/Growth.lean:166:0: 'WidthBounds.Growth.quotient_xy_le_harmonic' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3077/3262] Replayed WidthBounds.MinimalGenerators
+info: WidthBounds/MinimalGenerators.lean:166:0: 'WidthBounds.MonomialInterface.monomialIdeal_exists_generators_of_columns' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/MinimalGenerators.lean:167:0: 'WidthBounds.MonomialInterface.monomialIdeal_exists_generators_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/MinimalGenerators.lean:168:0: 'WidthBounds.MonomialInterface.monomialIdeal_exists_generators_finrank_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3078/3262] Replayed WidthBounds.FiniteColength
+info: WidthBounds/FiniteColength.lean:96:0: 'WidthBounds.MonomialInterface.quotient_finite_iff_standard_finite' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/FiniteColength.lean:97:0: 'WidthBounds.MonomialInterface.exists_pure_z_mem_of_finite_quotient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/FiniteColength.lean:98:0: 'WidthBounds.MonomialInterface.quotient_finite_iff_exists_pure_z' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3079/3262] Replayed WidthBounds.GeneratorBounds
+info: WidthBounds/GeneratorBounds.lean:59:0: 'WidthBounds.MonomialInterface.monomialIdeal_exists_generators_card_lt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/GeneratorBounds.lean:60:0: 'WidthBounds.MonomialInterface.finiteColength_exists_generators_card_lt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3080/3262] Replayed WidthBounds.GeneratorMinimality
+info: WidthBounds/GeneratorMinimality.lean:141:0: 'WidthBounds.MonomialInterface.isMinimalExponent_pure_x' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/GeneratorMinimality.lean:142:0: 'WidthBounds.MonomialInterface.column_strictAnti_of_initial' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/GeneratorMinimality.lean:143:0: 'WidthBounds.MonomialInterface.isMinimalExponent_xy_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/GeneratorMinimality.lean:144:0: 'WidthBounds.MonomialInterface.zThreshold_pos_of_standard' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/GeneratorMinimality.lean:145:0: 'WidthBounds.MonomialInterface.isMinimalExponent_zThreshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3081/3262] Replayed WidthBounds.BoundaryGenerators
+info: WidthBounds/BoundaryGenerators.lean:182:0: 'WidthBounds.MonomialInterface.boundaryExponents_monomial_mem' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/BoundaryGenerators.lean:183:0: 'WidthBounds.MonomialInterface.exists_boundaryExponent_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/BoundaryGenerators.lean:184:0: 'WidthBounds.MonomialInterface.card_boundaryExponents' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/BoundaryGenerators.lean:185:0: 'WidthBounds.MonomialInterface.span_boundaryExponents' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3082/3262] Replayed WidthBounds.GeneratorExact
+info: WidthBounds/GeneratorExact.lean:228:0: 'WidthBounds.MonomialInterface.monomialIdeal_exists_exact_minimal_exponents' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/GeneratorExact.lean:229:0: 'WidthBounds.MonomialInterface.finiteColength_exists_exact_minimal_generators' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3083/3262] Replayed WidthBounds.PolynomialGeneratorNumber
+info: WidthBounds/PolynomialGeneratorNumber.lean:97:0: 'WidthBounds.MonomialInterface.coeff_mul_of_minimalExponent' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/PolynomialGeneratorNumber.lean:98:0: 'WidthBounds.MonomialInterface.minimalCoefficientMap_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/PolynomialGeneratorNumber.lean:99:0: 'WidthBounds.MonomialInterface.minimalCoefficientMap_exists_preimage_of_mem' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/PolynomialGeneratorNumber.lean:100:0: 'WidthBounds.MonomialInterface.minimalCoefficientMap_exists_preimage' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3084/3262] Replayed WidthBounds.GeneratingFamilyDimension
+info: WidthBounds/GeneratingFamilyDimension.lean:73:0: 'WidthBounds.MonomialInterface.span_image_eq_top_of_ideal_generators' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/GeneratingFamilyDimension.lean:74:0: 'WidthBounds.MonomialInterface.finrank_le_card_of_ideal_generators' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3085/3262] Replayed WidthBounds.GeneratorNumberBounds
+info: WidthBounds/GeneratorNumberBounds.lean:136:0: 'WidthBounds.MonomialInterface.minimal_exponents_card_le_generators' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/GeneratorNumberBounds.lean:137:0: 'WidthBounds.MonomialInterface.isLeast_generatorCardinalities_of_minimal_exponents' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/GeneratorNumberBounds.lean:138:0: 'WidthBounds.MonomialInterface.finiteColength_generator_number_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3086/3262] Replayed WidthBounds.GeneratorQuotient
+info: WidthBounds/GeneratorQuotient.lean:124:0: 'WidthBounds.MonomialInterface.constantCoeff_eq_zero_of_mem_variableIdeal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/GeneratorQuotient.lean:125:0: 'WidthBounds.MonomialInterface.minimalCoefficientMap_eq_zero_of_mem_variableIdeal_mul' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/GeneratorQuotient.lean:126:0: 'WidthBounds.MonomialInterface.mem_variableIdeal_mul_of_minimalCoefficientMap_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/GeneratorQuotient.lean:127:0: 'WidthBounds.MonomialInterface.mem_variableIdeal_mul_monomialIdeal_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3087/3262] Replayed WidthBounds.IdealSubquotient
+info: WidthBounds/IdealSubquotient.lean:99:0: 'WidthBounds.MonomialInterface.ker_restrictedIdealMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/IdealSubquotient.lean:100:0: 'WidthBounds.MonomialInterface.idealSubquotientEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/IdealSubquotient.lean:101:0: 'WidthBounds.MonomialInterface.idealSubquotientEquiv_mk' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/IdealSubquotient.lean:102:0: 'WidthBounds.MonomialInterface.finrank_idealSubquotient' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/IdealSubquotient.lean:103:0: 'WidthBounds.MonomialInterface.finite_idealSubquotient' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3088/3262] Replayed WidthBounds.GeneratorQuotientBounds
+info: WidthBounds/GeneratorQuotientBounds.lean:179:0: 'WidthBounds.MonomialInterface.ker_generatorCoefficientMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/GeneratorQuotientBounds.lean:180:0: 'WidthBounds.MonomialInterface.generatorQuotientEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/GeneratorQuotientBounds.lean:181:0: 'WidthBounds.MonomialInterface.generatorQuotientBasis_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/GeneratorQuotientBounds.lean:182:0: 'WidthBounds.MonomialInterface.finrank_generatorQuotient' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/GeneratorQuotientBounds.lean:183:0: 'WidthBounds.MonomialInterface.finiteColength_generatorQuotient_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3090/3262] Replayed WidthBounds.GeneratorTensorFiber
+info: WidthBounds/GeneratorTensorFiber.lean:72:0: 'WidthBounds.MonomialInterface.generator_smul_top_restrictScalars' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/GeneratorTensorFiber.lean:73:0: 'WidthBounds.MonomialInterface.generatorTensorEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/GeneratorTensorFiber.lean:74:0: 'WidthBounds.MonomialInterface.generatorTensorEquiv_mk_tmul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/GeneratorTensorFiber.lean:75:0: 'WidthBounds.MonomialInterface.generatorTensorEquiv_one_tmul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/GeneratorTensorFiber.lean:76:0: 'WidthBounds.MonomialInterface.generatorTensorEquiv_symm_mk' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3091/3262] Replayed WidthBounds.VariableResidue
+info: WidthBounds/VariableResidue.lean:70:0: 'WidthBounds.MonomialInterface.mem_variableIdeal_iff_constantCoeff_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/VariableResidue.lean:71:0: 'WidthBounds.MonomialInterface.variableIdeal_eq_ker_constantCoeff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/VariableResidue.lean:72:0: 'WidthBounds.MonomialInterface.variableResidueEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/VariableResidue.lean:73:0: 'WidthBounds.MonomialInterface.variableResidueEquiv_mk' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/VariableResidue.lean:74:0: 'WidthBounds.MonomialInterface.variableResidueEquiv_symm_apply' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3092/3262] Replayed WidthBounds.GeneratorTensorBounds
+info: WidthBounds/GeneratorTensorBounds.lean:170:0: 'WidthBounds.MonomialInterface.generatorTensorBasis_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/GeneratorTensorBounds.lean:171:0: 'WidthBounds.MonomialInterface.generatorTensorCoordinates_tmul' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/GeneratorTensorBounds.lean:172:0: 'WidthBounds.MonomialInterface.monomialIdeal_le_variableIdeal_of_x_standard' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/GeneratorTensorBounds.lean:173:0: 'WidthBounds.MonomialInterface.finrank_generatorTensor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/GeneratorTensorBounds.lean:174:0: 'WidthBounds.MonomialInterface.finiteColength_generatorTensor_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3173/3262] Replayed WidthBounds.IdealExactSequence
+info: WidthBounds/IdealExactSequence.lean:117:0: 'WidthBounds.idealQuotientShortExact' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/IdealExactSequence.lean:118:0: 'WidthBounds.idealQuotientKernelIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/IdealExactSequence.lean:119:0: 'WidthBounds.idealQuotientKernelIso_hom_inclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/IdealExactSequence.lean:120:0: 'WidthBounds.idealQuotientKernelIso_inv_kernel_ι' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/IdealExactSequence.lean:121:0: 'WidthBounds.ringModuleProjective' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3201/3262] Replayed WidthBounds.ChosenResolution
+info: WidthBounds/ChosenResolution.lean:98:0: 'WidthBounds.ChosenResolution.complex_exactAt_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/ChosenResolution.lean:99:0: 'WidthBounds.ChosenResolution.resolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/ChosenResolution.lean:100:0: 'WidthBounds.ChosenResolution.resolution_π_f_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/ChosenResolution.lean:101:0: 'WidthBounds.ChosenResolution.isoLeftDerivedObj' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3202/3262] Replayed WidthBounds.DerivedKernel
+info: WidthBounds/DerivedKernel.lean:91:0: 'WidthBounds.DerivedKernel.presentation_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/DerivedKernel.lean:92:0: 'WidthBounds.DerivedKernel.kernelIsCokernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/DerivedKernel.lean:93:0: 'WidthBounds.DerivedKernel.homologyOneIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/DerivedKernel.lean:94:0: 'WidthBounds.DerivedKernel.isoLeftDerivedOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3217/3262] Replayed WidthBounds.TorOneBridge
+info: WidthBounds/TorOneBridge.lean:123:0: 'WidthBounds.MonomialInterface.residueTensorInclusion_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/TorOneBridge.lean:124:0: 'WidthBounds.MonomialInterface.monomial_residueTensorInclusion_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/TorOneBridge.lean:125:0: 'WidthBounds.MonomialInterface.ker_residueTensorInclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/TorOneBridge.lean:126:0: 'WidthBounds.MonomialInterface.residueTensorFunctor_map_kernel_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/TorOneBridge.lean:127:0: 'WidthBounds.MonomialInterface.idealQuotientTorOneIsoTensor' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3219/3262] Replayed WidthBounds.TorOneBounds
+info: WidthBounds/TorOneBounds.lean:154:0: 'WidthBounds.MonomialInterface.idealQuotientTorOneEquivTensor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/TorOneBounds.lean:155:0: 'WidthBounds.MonomialInterface.torOneBasis_toTensor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/TorOneBounds.lean:156:0: 'WidthBounds.MonomialInterface.finrank_torOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/TorOneBounds.lean:157:0: 'WidthBounds.MonomialInterface.finiteColength_torOne_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3220/3262] Replayed WidthBounds.LowerConstruction
+info: WidthBounds/LowerConstruction.lean:141:0: 'WidthBounds.Lower.lowerExponentSet_isUpper' depends on axioms: [propext, Quot.sound]
+info: WidthBounds/LowerConstruction.lean:142:0: 'WidthBounds.Lower.lowerExponentSet_isLex' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LowerConstruction.lean:143:0: 'WidthBounds.Lower.standard_lowerIdeal_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LowerConstruction.lean:144:0: 'WidthBounds.Lower.lowerIdeal_quotient_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LowerConstruction.lean:145:0: 'WidthBounds.Lower.lowerIdeal_initial_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LowerConstruction.lean:146:0: 'WidthBounds.Lower.monomial3_mem_lowerIdeal_iff_piecewise' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3221/3262] Replayed WidthBounds.LowerProfile
+info: WidthBounds/LowerProfile.lean:122:0: 'WidthBounds.Lower.lowerStandard_standardLex' depends on axioms: [propext, Quot.sound]
+info: WidthBounds/LowerProfile.lean:123:0: 'WidthBounds.Lower.lower_hilbert3_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LowerProfile.lean:124:0: 'WidthBounds.Lower.lower_hilbert3_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LowerProfile.lean:125:0: 'WidthBounds.Lower.lower_hilbert2_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LowerProfile.lean:126:0: 'WidthBounds.Lower.lower_hilbert2_of_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LowerProfile.lean:127:0: 'WidthBounds.Lower.lower_hilbert2_of_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3222/3262] Replayed WidthBounds.LowerConstructionBounds
+info: WidthBounds/LowerConstructionBounds.lean:212:0: 'WidthBounds.Lower.lowerIdeal_finrank_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LowerConstructionBounds.lean:213:0: 'WidthBounds.Lower.lowerIdeal_admissible' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LowerConstructionBounds.lean:214:0: 'WidthBounds.Lower.lowerIdeal_xy_finrank' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LowerConstructionBounds.lean:215:0: 'WidthBounds.Lower.lowerIdeal_xy_harmonic_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LowerConstructionBounds.lean:216:0: 'WidthBounds.Lower.lowerIdeal_torOne_finrank' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LowerConstructionBounds.lean:217:0: 'WidthBounds.Lower.lowerIdeal_generator_number' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3255/3262] Replayed WidthBounds.LogGrowth
+info: WidthBounds/LogGrowth.lean:123:0: 'WidthBounds.LogGrowth.harmonicQ_eq_harmonic' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LogGrowth.lean:124:0: 'WidthBounds.LogGrowth.log_add_one_le_harmonicQ' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LogGrowth.lean:125:0: 'WidthBounds.LogGrowth.harmonicQ_le_one_add_log' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LogGrowth.lean:126:0: 'WidthBounds.LogGrowth.quotient_xy_le_log' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LogGrowth.lean:127:0: 'WidthBounds.LogGrowth.quotient_xy_le_ten_mul_width_log' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3256/3262] Replayed WidthBounds.LogLower
+info: WidthBounds/LogLower.lean:94:0: 'WidthBounds.LogLower.sqrt_admissible' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LogLower.lean:95:0: 'WidthBounds.LogLower.lowerSectionLength_log_add_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LogLower.lean:96:0: 'WidthBounds.LogLower.lowerSectionLength_log_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LogLower.lean:97:0: 'WidthBounds.LogLower.lowerIdeal_xy_log_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3257/3262] Replayed WidthBounds.LexGrowthTheta
+info: WidthBounds/LexGrowthTheta.lean:135:0: 'WidthBounds.LexExtremal.maxLexLength_isGreatest' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LexGrowthTheta.lean:136:0: 'WidthBounds.LexExtremal.maxLexLength_log_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LexGrowthTheta.lean:137:0: 'WidthBounds.LexExtremal.maxLexLength_isTheta' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3258/3262] Replayed WidthBounds.FiniteMonomialPresentation
+info: WidthBounds/FiniteMonomialPresentation.lean:239:0: 'WidthBounds.MonomialPresentation.differential_single' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/FiniteMonomialPresentation.lean:240:0: 'WidthBounds.MonomialPresentation.range_differential_eq_ideal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/FiniteMonomialPresentation.lean:241:0: 'WidthBounds.MonomialPresentation.presentation_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/FiniteMonomialPresentation.lean:242:0: 'WidthBounds.MonomialPresentation.differentialIntoIdeal_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/FiniteMonomialPresentation.lean:243:0: 'WidthBounds.MonomialPresentation.firstSyzygiesKernelIso_hom_inclusion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/FiniteMonomialPresentation.lean:244:0: 'WidthBounds.MonomialPresentation.mapToIdealKernelIso_hom_inclusion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/FiniteMonomialPresentation.lean:245:0: 'WidthBounds.MonomialPresentation.mapToQuotientKernel_comp_idealQuotientKernelIso' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3259/3262] Built WidthBounds.FinitePresentationBounds
+info: WidthBounds/FinitePresentationBounds.lean:136:0: 'WidthBounds.MonomialPresentation.generatorFree_finrank' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/FinitePresentationBounds.lean:137:0: 'WidthBounds.MonomialPresentation.finiteColength_generatorFree_rank' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/FinitePresentationBounds.lean:138:0: 'WidthBounds.MonomialPresentation.tensorDifferential_tmul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/FinitePresentationBounds.lean:139:0: 'WidthBounds.MonomialPresentation.tensorDifferential_tmul_freeBasis' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/FinitePresentationBounds.lean:140:0: 'WidthBounds.MonomialPresentation.residueTensorFunctor_map_differential_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/FinitePresentationBounds.lean:141:0: 'WidthBounds.MonomialPresentation.tensorDifferentialK_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/FinitePresentationBounds.lean:142:0: 'WidthBounds.MonomialPresentation.finiteColength_presentation_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3260/3262] Built WidthBounds.DependencyAudit
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.all_widths_analytic_bounds: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.all_widths_strict_improvement: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.Growth.sectionLength_le_harmonic: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.Growth.quotient_xy_le_harmonic: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialInterface.monomialIdeal_exists_generators_le: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialInterface.finiteColength_exists_generators_card_lt: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialInterface.quotient_finite_iff_exists_pure_z: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialInterface.monomialIdeal_exists_exact_minimal_exponents: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialInterface.finiteColength_exists_exact_minimal_generators: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialInterface.minimal_exponents_card_le_generators: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialInterface.finiteColength_generator_number_bounds: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialInterface.ker_generatorCoefficientMap: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialInterface.generatorQuotientBasis_apply: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialInterface.finiteColength_generatorQuotient_bounds: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialInterface.generatorTensorEquiv: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialInterface.variableResidueEquiv: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialInterface.generatorTensorCoordinates_tmul: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialInterface.generatorTensorBasis_apply: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialInterface.monomialIdeal_le_variableIdeal_of_x_standard: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialInterface.finiteColength_generatorTensor_bounds: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.DerivedKernel.isoLeftDerivedOne: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialInterface.idealQuotientTorOneIsoTensor: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialInterface.idealQuotientTorOneEquivTensor: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialInterface.torOneBasis_toTensor: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialInterface.finiteColength_torOne_bounds: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.Lower.lower_hilbert2_eq: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.Lower.lowerIdeal_admissible: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.Lower.lowerIdeal_xy_finrank: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.Lower.lowerIdeal_xy_harmonic_lower: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.Lower.lowerIdeal_torOne_finrank: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.Lower.lowerIdeal_generator_number: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.LogGrowth.quotient_xy_le_ten_mul_width_log: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.LogLower.lowerIdeal_xy_log_lower: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.LexExtremal.maxLexLength_isGreatest: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.LexExtremal.maxLexLength_log_bounds: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.LexExtremal.maxLexLength_isTheta: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialPresentation.range_differential_eq_ideal: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialPresentation.presentation_exact: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialPresentation.firstSyzygiesKernelIso_hom_inclusion: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialPresentation.mapToIdealKernelIso_hom_inclusion: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialPresentation.mapToQuotientKernel_comp_idealQuotientKernelIso: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialPresentation.residueTensorFunctor_map_differential_eq_zero: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialPresentation.tensorDifferential_tmul_freeBasis: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialPresentation.tensorDifferentialK_eq_zero: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:18:0: WidthBounds.MonomialPresentation.finiteColength_presentation_bounds: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+✔ [3261/3262] Built WidthBounds
+Build completed successfully.
+
+PROCESS_EXIT_CODE=0

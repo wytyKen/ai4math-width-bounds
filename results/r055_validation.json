@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "task": "R055",
+  "checked_utc": "2026-09-30T05:55:57.385154+00:00",
+  "status": "formal_verified_for_stated_finite_presentation_scope",
+  "command": "lake build",
+  "working_directory": "lean",
+  "process_exit_code": 0,
+  "toolchain": "Lean 4.22.0 / mathlib v4.22.0",
+  "source_and_log": [
+    {
+      "path": "lean/WidthBounds/FiniteMonomialPresentation.lean",
+      "sha256": "acfc0c6db316e9c8fcbee40e338b431c05106a79c1df269c9b76869f73294be6"
+    },
+    {
+      "path": "lean/WidthBounds/FinitePresentationBounds.lean",
+      "sha256": "a02675f535e26699b66df5b35aad9e324758d615bca7bde339279c3ef11b131f"
+    },
+    {
+      "path": "lean/WidthBounds.lean",
+      "sha256": "7c2b5bd95261ecb88ca2f1d1f59234d3be91b64c9dc4e26a449457e5ae86ac71"
+    },
+    {
+      "path": "lean/WidthBounds/DependencyAudit.lean",
+      "sha256": "1c9d550920d82d32a3d429f7cb944563379f3064bbbb0d00373aa23d0feeb48b"
+    },
+    {
+      "path": "results/lean_finite_presentation_build.txt",
+      "sha256": "ce1f53c64c45b6b92b3c74602c0ebc113ef7a344b54123a44f335d05bff927ab"
+    }
+  ],
+  "new_axiom_outputs": [
+    "WidthBounds.MonomialPresentation.differential_single",
+    "WidthBounds.MonomialPresentation.range_differential_eq_ideal",
+    "WidthBounds.MonomialPresentation.presentation_exact",
+    "WidthBounds.MonomialPresentation.differentialIntoIdeal_surjective",
+    "WidthBounds.MonomialPresentation.firstSyzygiesKernelIso_hom_inclusion",
+    "WidthBounds.MonomialPresentation.mapToIdealKernelIso_hom_inclusion",
+    "WidthBounds.MonomialPresentation.mapToQuotientKernel_comp_idealQuotientKernelIso",
+    "WidthBounds.MonomialPresentation.generatorFree_finrank",
+    "WidthBounds.MonomialPresentation.finiteColength_generatorFree_rank",
+    "WidthBounds.MonomialPresentation.tensorDifferential_tmul",
+    "WidthBounds.MonomialPresentation.tensorDifferential_tmul_freeBasis",
+    "WidthBounds.MonomialPresentation.residueTensorFunctor_map_differential_eq_zero",
+    "WidthBounds.MonomialPresentation.tensorDifferentialK_eq_zero",
+    "WidthBounds.MonomialPresentation.finiteColength_presentation_bounds"
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "new_dependency_roots": [
+    "range_differential_eq_ideal",
+    "presentation_exact",
+    "firstSyzygiesKernelIso_hom_inclusion",
+    "mapToIdealKernelIso_hom_inclusion",
+    "mapToQuotientKernel_comp_idealQuotientKernelIso",
+    "residueTensorFunctor_map_differential_eq_zero",
+    "tensorDifferential_tmul_freeBasis",
+    "tensorDifferentialK_eq_zero",
+    "finiteColength_presentation_bounds"
+  ],
+  "errors": 0,
+  "warnings": 0,
+  "previous_lean_files_unchanged": 48,
+  "modified_existing_lean_files": [
+    "lean/WidthBounds.lean",
+    "lean/WidthBounds/DependencyAudit.lean"
+  ],
+  "new_lean_files": [
+    "lean/WidthBounds/FiniteMonomialPresentation.lean",
+    "lean/WidthBounds/FinitePresentationBounds.lean"
+  ],
+  "review": "research/tasks/R070_finite_presentation_review.md",
+  "review_sha256": "76ad6cf3c003566c7d03b00165e3383c5424d19f1a08918a78283435f5026647",
+  "frozen_v0_3_unchanged": true,
+  "scope": "Actual finite free presentation, concrete syzygy/kernel compatibility, residue-tensored d1=0 with I<=m, actual polynomial-ring rank in the lex model.",
+  "not_proved": [
+    "Freeness or an explicit finite basis of the syzygy kernel",
+    "Higher differentials d2/d3 or a finite projective resolution",
+    "Target higher Tor dimensions or the complete numerical semigroup transfer"
+  ]
+}

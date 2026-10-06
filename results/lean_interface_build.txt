@@ -1,0 +1,22 @@
+ℹ [1/378] Replayed WidthBounds.Arithmetic
+info: WidthBounds/Arithmetic.lean:48:0: 'WidthBounds.finite_envelope_certificate' does not depend on any axioms
+ℹ [3054/3063] Replayed WidthBounds.LexCounting
+info: WidthBounds/LexCounting.lean:188:0: 'WidthBounds.LexCounting.hilbert2_succ_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LexCounting.lean:189:0: 'WidthBounds.LexCounting.sum_le_hilbert3' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3056/3063] Replayed WidthBounds.Cutoff
+info: WidthBounds/Cutoff.lean:91:0: 'WidthBounds.LexCounting.hilbert2_eq_zero_of_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/Cutoff.lean:92:0: 'WidthBounds.LexCounting.alpha_le_two_mul_add_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3057/3063] Replayed WidthBounds.SmallWidth
+info: WidthBounds/SmallWidth.lean:114:0: 'WidthBounds.small_width_combinatorial_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/SmallWidth.lean:115:0: 'WidthBounds.small_width_binomial_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3061/3063] Replayed WidthBounds.MonomialInterface
+info: WidthBounds/MonomialInterface.lean:208:0: 'WidthBounds.MonomialInterface.monomial_mem_monomialIdeal_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/MonomialInterface.lean:209:0: 'WidthBounds.MonomialInterface.monomialIdeal_standardLex' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/MonomialInterface.lean:210:0: 'WidthBounds.MonomialInterface.exists_initial_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/MonomialInterface.lean:211:0: 'WidthBounds.MonomialInterface.monomialIdeal_exists_initial_degree' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+✔ [3062/3063] Built WidthBounds
+Build completed successfully.

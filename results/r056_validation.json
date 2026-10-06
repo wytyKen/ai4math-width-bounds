@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "task": "R056",
+  "checked_utc": "2026-09-30T06:44:02.038754+00:00",
+  "status": "formal_verified_for_actual_second_differential_scope",
+  "command": "lake build",
+  "working_directory": "lean",
+  "process_exit_code": 0,
+  "toolchain": "Lean 4.22.0 / mathlib v4.22.0",
+  "mathlib_commit": "79e94a093aff4a60fb1b1f92d9681e407124c2ca",
+  "mathlib_tracked_diff_empty": true,
+  "source_and_log": [
+    {
+      "path": "lean/WidthBounds/MonomialRelationSpan.lean",
+      "sha256": "2d563dfd4cc444b0edef89578417b9cf0041f34b2c37a10188cb0b9f981c8df3"
+    },
+    {
+      "path": "lean/WidthBounds/BoundarySyzygies.lean",
+      "sha256": "1d3b5eeeb57aefcec18c414baf89f81fc856e5e870ebd736f0587299c6b728ce"
+    },
+    {
+      "path": "lean/WidthBounds/MonomialFirstSyzygies.lean",
+      "sha256": "758a867f5d1ae1bd0ca829030cf0ad67f932328b0f6b1089f6a9706edb445997"
+    },
+    {
+      "path": "lean/WidthBounds.lean",
+      "sha256": "c89a465ac9b5b79ce1463ce69dc5ee317ca55938532821df982abfacf8ed1b8a"
+    },
+    {
+      "path": "lean/WidthBounds/DependencyAudit.lean",
+      "sha256": "7cf76547257cc3e018459fdcefbebab9ef703475a9150d0ba6dc827e565c135f"
+    },
+    {
+      "path": "results/lean_first_syzygies_build.txt",
+      "sha256": "de1b067c17870bd24995a03540aa30e6640ece7d0b88129cf4038ec399b93eb5"
+    }
+  ],
+  "new_axiom_outputs": [
+    "WidthBounds.MonomialPresentation.commonRelation_mem_ker",
+    "WidthBounds.MonomialPresentation.commonRelation_smul",
+    "WidthBounds.MonomialPresentation.ker_differential_le_of_commonRelation",
+    "WidthBounds.MonomialPresentation.ker_differential_eq_span_lcmRelation",
+    "WidthBounds.MonomialPresentation.card_boundaryRelationIndex",
+    "WidthBounds.MonomialPresentation.canonicalBoundaryExponent_le",
+    "WidthBounds.MonomialPresentation.boundaryRelationTarget_le_degree",
+    "WidthBounds.MonomialPresentation.boundaryRelationTarget_forward",
+    "WidthBounds.MonomialPresentation.boundaryRelationTarget_height_lt",
+    "WidthBounds.MonomialPresentation.exists_boundary_step",
+    "WidthBounds.MonomialPresentation.differential_comp_relationDifferential",
+    "WidthBounds.MonomialPresentation.commonRelation_canonical_mem",
+    "WidthBounds.MonomialPresentation.boundaryRelationSpan_eq_ker",
+    "WidthBounds.MonomialPresentation.range_secondDifferential",
+    "WidthBounds.MonomialPresentation.secondPresentation_exact",
+    "WidthBounds.MonomialPresentation.secondToFirstSyzygies_surjective",
+    "WidthBounds.MonomialPresentation.boundary_firstSyzygies_finite",
+    "WidthBounds.MonomialPresentation.boundary_secondFree_finrank",
+    "WidthBounds.MonomialPresentation.finiteColength_second_presentation_bounds"
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "new_dependency_roots": [
+    "WidthBounds.MonomialPresentation.boundaryRelationSpan_eq_ker",
+    "WidthBounds.MonomialPresentation.boundaryRelationTarget_height_lt",
+    "WidthBounds.MonomialPresentation.boundary_firstSyzygies_finite",
+    "WidthBounds.MonomialPresentation.boundary_secondFree_finrank",
+    "WidthBounds.MonomialPresentation.canonicalBoundaryExponent_le",
+    "WidthBounds.MonomialPresentation.card_boundaryRelationIndex",
+    "WidthBounds.MonomialPresentation.commonRelation_canonical_mem",
+    "WidthBounds.MonomialPresentation.exists_boundary_step",
+    "WidthBounds.MonomialPresentation.finiteColength_second_presentation_bounds",
+    "WidthBounds.MonomialPresentation.ker_differential_eq_span_lcmRelation",
+    "WidthBounds.MonomialPresentation.ker_differential_le_of_commonRelation",
+    "WidthBounds.MonomialPresentation.range_secondDifferential",
+    "WidthBounds.MonomialPresentation.secondPresentation_exact",
+    "WidthBounds.MonomialPresentation.secondToFirstSyzygies_surjective"
+  ],
+  "errors": 0,
+  "warnings": 0,
+  "baseline_checkpoint": "research/checkpoints/20260930T055724328038Z-1a71d267",
+  "previous_lean_files_unchanged": 50,
+  "modified_existing_lean_files": [
+    "lean/WidthBounds.lean",
+    "lean/WidthBounds/DependencyAudit.lean"
+  ],
+  "new_lean_files": [
+    "lean/WidthBounds/MonomialRelationSpan.lean",
+    "lean/WidthBounds/BoundarySyzygies.lean",
+    "lean/WidthBounds/MonomialFirstSyzygies.lean"
+  ],
+  "review": "research/tasks/R073_first_syzygies_review.md",
+  "review_sha256": "5b5cc13a312f674c294aff52eeb2b8e9da953a76e638635a69711c7e2c93e548",
+  "frozen_v0_3_unchanged": true,
+  "scope": "Complete arbitrary-polynomial relation generation, boundary adjacent columns, actual d2 with range=ker(d1), surjection onto the concrete relation module, and F2 polynomial-ring rank a+2ell with its width bound.",
+  "not_proved": [
+    "Freeness of the relation kernel or injectivity/minimality of d2",
+    "Residue tensor vanishing of d2",
+    "Third differential d3 or a complete finite projective resolution",
+    "Target Tor2/Tor3 dimensions or full numerical semigroup transfer"
+  ]
+}

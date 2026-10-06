@@ -1,0 +1,114 @@
+
+FullName                                            Length
+--------                                            ------
+D:\project\ai4math\output\pdf\width_bounds_v0_4.pdf 435122
+
+
+BUILD_SCRIPT_EXIT_CODE=0
+
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(width_bounds_v0_4.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo))
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty)
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty))
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty)
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty))
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty)
+
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinek
+eys.sty)
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.st
+y (C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty)
+
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.
+sty
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.st
+y))) (C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+) (C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty)
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitl
+estring.sty
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty)
+)) (C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+)
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.st
+y) (C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def)
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty)
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.
+sty)))
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfile
+check.sty
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniqueco
+unter.sty))) (C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
+)
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdft
+ex.def) (D:\project\ai4math\tmp\pdfs\width_bounds_v0_4\width_bounds_v0_4.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(D:\project\ai4math\tmp\pdfs\width_bounds_v0_4\width_bounds_v0_4.out)
+(D:\project\ai4math\tmp\pdfs\width_bounds_v0_4\width_bounds_v0_4.out)
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd)
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd)
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd)
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd)
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd)
+(C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd)
+[1{C:/Users/wyty/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/wyt
+y/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/wyty/App
+Data/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/wyty/AppD
+ata/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/wyty/AppDa
+ta/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/wyty/AppData/Lo
+cal/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}] [2] [3] [4] [5] [6]
+[7] (C:\Users\wyty\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd)
+[8] [9] [10]
+(D:\project\ai4math\tmp\pdfs\width_bounds_v0_4\width_bounds_v0_4.aux) )<C:/User
+s/wyty/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.p
+fb><C:/Users/wyty/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pf
+b><C:/Users/wyty/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb
+><C:/Users/wyty/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb>
+<C:/Users/wyty/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><
+C:/Users/wyty/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:
+/Users/wyty/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/U
+sers/wyty/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Use
+rs/wyty/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users
+/wyty/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/w
+yty/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/wyt
+y/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/wyty/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/wyty/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/wyty/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/wyty/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/wyty/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/wyty/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/wyty/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb><C:/Users/wyty/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/lm/lmtti10.pfb><C:/Users/wyty/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/wyty/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on D:\project\ai4math\tmp\pdfs\width_bounds_v0_4\width_bounds_v0
+_4.pdf (10 pages, 435122 bytes).
+Transcript written on D:\project\ai4math\tmp\pdfs\width_bounds_v0_4\width_bound
+s_v0_4.log.
+pdflatex: major issue: So far, you have not checked for MiKTeX updates.

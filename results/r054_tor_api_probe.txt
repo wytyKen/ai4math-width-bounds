@@ -1,0 +1,58 @@
+Command: lake env lean ../research/probes/R054_tor_api.lean
+CategoryTheory.ProjectiveResolution.{v, u} {C : Type u} [Category.{v, u} C] [HasZeroObject C] [HasZeroMorphisms C]
+  (Z : C) : Type (max u v)
+CategoryTheory.ProjectiveResolution.lift.{v, u} {C : Type u} [Category.{v, u} C] [Abelian C] {Y Z : C} (f : Y ⟶ Z)
+  (P : ProjectiveResolution Y) (Q : ProjectiveResolution Z) : P.complex ⟶ Q.complex
+CategoryTheory.ProjectiveResolution.lift_commutes.{v, u} {C : Type u} [Category.{v, u} C] [Abelian C] {Y Z : C}
+  (f : Y ⟶ Z) (P : ProjectiveResolution Y) (Q : ProjectiveResolution Z) :
+  ProjectiveResolution.lift f P Q ≫ Q.π = P.π ≫ (ChainComplex.single₀ C).map f
+CategoryTheory.ProjectiveResolution.liftHomotopy.{v, u} {C : Type u} [Category.{v, u} C] [Abelian C] {Y Z : C}
+  (f : Y ⟶ Z) {P : ProjectiveResolution Y} {Q : ProjectiveResolution Z} (g h : P.complex ⟶ Q.complex)
+  (g_comm : g ≫ Q.π = P.π ≫ (ChainComplex.single₀ C).map f) (h_comm : h ≫ Q.π = P.π ≫ (ChainComplex.single₀ C).map f) :
+  Homotopy g h
+CategoryTheory.ProjectiveResolution.homotopyEquiv.{v, u} {C : Type u} [Category.{v, u} C] [Abelian C] {X : C}
+  (P Q : ProjectiveResolution X) : HomotopyEquiv P.complex Q.complex
+CategoryTheory.ProjectiveResolution.isoLeftDerivedObj.{v, u, u_1, u_2} {C : Type u} [Category.{v, u} C] {D : Type u_1}
+  [Category.{u_2, u_1} D] [Abelian C] [HasProjectiveResolutions C] [Abelian D] {X : C} (P : ProjectiveResolution X)
+  (F : C ⥤ D) [F.Additive] (n : ℕ) :
+  (F.leftDerived n).obj X ≅
+    (HomologicalComplex.homologyFunctor D (ComplexShape.down ℕ) n).obj
+      ((F.mapHomologicalComplex (ComplexShape.down ℕ)).obj P.complex)
+CategoryTheory.ProjectiveResolution.isoLeftDerivedObj_hom_naturality.{v, u, u_1, u_2} {C : Type u} [Category.{v, u} C]
+  {D : Type u_1} [Category.{u_2, u_1} D] [Abelian C] [HasProjectiveResolutions C] [Abelian D] {X Y : C} (f : X ⟶ Y)
+  (P : ProjectiveResolution X) (Q : ProjectiveResolution Y) (φ : P.complex ⟶ Q.complex)
+  (comm : φ.f 0 ≫ Q.π.f 0 = P.π.f 0 ≫ f) (F : C ⥤ D) [F.Additive] (n : ℕ) :
+  (F.leftDerived n).map f ≫ (Q.isoLeftDerivedObj F n).hom =
+    (P.isoLeftDerivedObj F n).hom ≫
+      (F.mapHomologicalComplex (ComplexShape.down ℕ) ⋙ HomologicalComplex.homologyFunctor D (ComplexShape.down ℕ) n).map
+        φ
+CategoryTheory.Functor.mapProjectiveResolution.{u, v', u', u_1} {C : Type u} [Category.{u_1, u} C] [HasZeroObject C]
+  [Preadditive C] {D : Type u'} [Category.{v', u'} D] [HasZeroObject D] [Preadditive D] [CategoryWithHomology D]
+  (F : C ⥤ D) [F.Additive] [F.PreservesProjectiveObjects] [F.PreservesHomology] {Z : C} (P : ProjectiveResolution Z) :
+  ProjectiveResolution (F.obj Z)
+CategoryTheory.NatTrans.leftDerived.{v, u, u_1, u_2} {C : Type u} [Category.{v, u} C] {D : Type u_1}
+  [Category.{u_2, u_1} D] [Abelian C] [HasProjectiveResolutions C] [Abelian D] {F G : C ⥤ D} [F.Additive] [G.Additive]
+  (α : F ⟶ G) (n : ℕ) : F.leftDerived n ⟶ G.leftDerived n
+CategoryTheory.Functor.leftDerivedZeroIsoSelf.{v, u, u_1, u_2} {C : Type u} [Category.{v, u} C] {D : Type u_1}
+  [Category.{u_2, u_1} D] [Abelian C] [HasProjectiveResolutions C] [Abelian D] (F : C ⥤ D) [F.Additive]
+  [PreservesFiniteColimits F] : F.leftDerived 0 ≅ F
+CategoryTheory.Functor.isZero_leftDerived_obj_projective_succ.{v, u, u_1, u_2} {C : Type u} [Category.{v, u} C]
+  {D : Type u_1} [Category.{u_2, u_1} D] [Abelian C] [HasProjectiveResolutions C] [Abelian D] (F : C ⥤ D) [F.Additive]
+  (n : ℕ) (X : C) [Projective X] : IsZero ((F.leftDerived (n + 1)).obj X)
+CategoryTheory.isZero_Tor_succ_of_projective.{u_1, u_2} (C : Type u_1) [Category.{u_2, u_1} C] [MonoidalCategory C]
+  [Abelian C] [MonoidalPreadditive C] [HasProjectiveResolutions C] (X Y : C) [Projective Y] (n : ℕ) :
+  IsZero (((Tor C (n + 1)).obj X).obj Y)
+CategoryTheory.isZero_Tor'_succ_of_projective.{u_1, u_2} (C : Type u_1) [Category.{u_2, u_1} C] [MonoidalCategory C]
+  [Abelian C] [MonoidalPreadditive C] [HasProjectiveResolutions C] (X Y : C) [Projective X] (n : ℕ) :
+  IsZero (((Tor' C (n + 1)).obj X).obj Y)
+WidthBounds.ChosenResolution.resolution.{v, u} {C : Type u} [Category.{v, u} C] [Abelian C] [EnoughProjectives C]
+  {P X : C} (f : P ⟶ X) [Projective P] [Epi f] : ProjectiveResolution X
+WidthBounds.DerivedKernel.isoLeftDerivedOne.{v, u, v', u'} {C : Type u} [Category.{v, u} C] [Abelian C]
+  [EnoughProjectives C] {P X : C} (f : P ⟶ X) {D : Type u'} [Category.{v', u'} D] [Abelian D] (F : C ⥤ D) [F.Additive]
+  [PreservesFiniteColimits F] [Projective P] [Epi f] (h : F.map (kernel.ι f) = 0) :
+  (F.leftDerived 1).obj X ≅ F.obj (kernel f)
+'R054TorAuditProbe.torWithRingIsZero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'R054TorAuditProbe.residueDerivedZeroIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+'R054TorAuditProbe.sameQuotientResolutionComparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+Exit code: 0

@@ -1,0 +1,50 @@
+{
+  "previous_evidence_references_verified": 724,
+  "lean_project_files_unchanged": 64,
+  "frozen_output_files_unchanged": 12,
+  "original_narrative_map_project_report_unchanged": true,
+  "local_document_links_checked": 163,
+  "converted_map_links": 142,
+  "public_candidates_before_final_state": 267,
+  "public_candidate_bytes_before_final_state": 5147981,
+  "ignored_existing_noncache_files": [
+    "output/ai4math_research_delivery_v0_3.receipt.json",
+    "output/ai4math_research_delivery_v0_3.verify.json",
+    "output/ai4math_research_delivery_v0_3.zip",
+    "output/ai4math_research_delivery_v0_4.receipt.json",
+    "output/ai4math_research_delivery_v0_4.verify.json",
+    "output/ai4math_research_delivery_v0_4.zip",
+    "output/width_bounds_review_v0_1.zip",
+    "output/width_bounds_review_v0_2.zip",
+    "references/cms2024.html"
+  ],
+  "common_credential_pattern_file_hits": [],
+  "credential_check_scope": "Limited common token/private-key patterns on selected UTF-8 files and prior credential filename scan; not exhaustive audit and does not inspect PDF internals.",
+  "git_checks": "Read-only check-ignore and check-attr using existing unborn lean/.git with an explicit root work-tree; no git init/add/commit/move/remote/push executed.",
+  "text_attributes": [
+    "README.md: text: unset",
+    "lean/WidthBounds.lean: text: unset"
+  ],
+  "lean_rebuilt": false,
+  "root_git_present": false,
+  "lean_git_still_present": true,
+  "r093_r095_started": false,
+  "review": "research/tasks/R104_github_readiness_review.md",
+  "checked_utc": "2026-10-06T18:35:04.980008+00:00",
+  "checked_local_date": "2026-10-07",
+  "status": "accepted_local_preparation",
+  "powershell_blocks_parsed_without_execution": 6,
+  "queue_valid": true,
+  "root_integration_registration_corrected": true,
+  "review_result": "accepted_no_blocking_findings",
+  "new_math_or_novelty_search": false,
+  "github_upload_executed": false,
+  "prepared_file_sha256": {
+    "README.md": "1bca49d931837785c224fef090a072e073f82a0ae594bb154be85d718bf01740",
+    ".gitignore": "1b8b21d64c992323a69b1c77e2e7563497ee5c8f3d2246b6c20d3d5a69f1aa33",
+    ".gitattributes": "247131a69ccb0b95d33a4946ed5be52e1683e4636784ad94ddc67eda8f0c9b61",
+    "research/publication/GITHUB_UPLOAD_GUIDE.md": "9b51ffa8932f2a3f71dfc396638f30d0806a676b0e9a4edf47565073fbf787f9",
+    "research/publication/STATEMENT_MAP_GITHUB.md": "21c922344ac21382ff878a3a255703faf706a07c3e383c9d7ad55424c73033d6",
+    "research/frozen/v0_4/README.md": "0251ee5d716346e39385b0e8f624e460241d5e69d8000376ee7296d627b8ea92"
+  }
+}

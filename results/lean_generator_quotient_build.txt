@@ -1,0 +1,159 @@
+ℹ [1/396] Replayed WidthBounds.Arithmetic
+info: WidthBounds/Arithmetic.lean:48:0: 'WidthBounds.finite_envelope_certificate' does not depend on any axioms
+ℹ [3054/3091] Replayed WidthBounds.LexCounting
+info: WidthBounds/LexCounting.lean:188:0: 'WidthBounds.LexCounting.hilbert2_succ_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LexCounting.lean:189:0: 'WidthBounds.LexCounting.sum_le_hilbert3' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3056/3091] Replayed WidthBounds.Cutoff
+info: WidthBounds/Cutoff.lean:91:0: 'WidthBounds.LexCounting.hilbert2_eq_zero_of_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/Cutoff.lean:92:0: 'WidthBounds.LexCounting.alpha_le_two_mul_add_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3057/3091] Replayed WidthBounds.SmallWidth
+info: WidthBounds/SmallWidth.lean:114:0: 'WidthBounds.small_width_combinatorial_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/SmallWidth.lean:115:0: 'WidthBounds.small_width_binomial_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3061/3091] Replayed WidthBounds.MonomialInterface
+info: WidthBounds/MonomialInterface.lean:208:0: 'WidthBounds.MonomialInterface.monomial_mem_monomialIdeal_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/MonomialInterface.lean:209:0: 'WidthBounds.MonomialInterface.monomialIdeal_standardLex' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/MonomialInterface.lean:210:0: 'WidthBounds.MonomialInterface.exists_initial_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/MonomialInterface.lean:211:0: 'WidthBounds.MonomialInterface.monomialIdeal_exists_initial_degree' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3062/3091] Replayed WidthBounds.ColumnBounds
+info: WidthBounds/ColumnBounds.lean:211:0: 'WidthBounds.Columns.sum_columns_eq_sectionLength' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/ColumnBounds.lean:212:0: 'WidthBounds.Columns.terminal_triangle_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3063/3091] Replayed WidthBounds.AnalyticArithmetic
+info: WidthBounds/AnalyticArithmetic.lean:150:0: 'WidthBounds.analytic_column_binomial_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3064/3091] Replayed WidthBounds.AllWidths
+info: WidthBounds/AllWidths.lean:53:0: 'WidthBounds.all_widths_analytic_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/AllWidths.lean:54:0: 'WidthBounds.all_widths_strict_improvement' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3073/3091] Replayed WidthBounds.GeneratingFamilyDimension
+info: WidthBounds/GeneratingFamilyDimension.lean:73:0: 'WidthBounds.MonomialInterface.span_image_eq_top_of_ideal_generators' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/GeneratingFamilyDimension.lean:74:0: 'WidthBounds.MonomialInterface.finrank_le_card_of_ideal_generators' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3074/3091] Replayed WidthBounds.IdealSubquotient
+info: WidthBounds/IdealSubquotient.lean:99:0: 'WidthBounds.MonomialInterface.ker_restrictedIdealMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/IdealSubquotient.lean:100:0: 'WidthBounds.MonomialInterface.idealSubquotientEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/IdealSubquotient.lean:101:0: 'WidthBounds.MonomialInterface.idealSubquotientEquiv_mk' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/IdealSubquotient.lean:102:0: 'WidthBounds.MonomialInterface.finrank_idealSubquotient' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/IdealSubquotient.lean:103:0: 'WidthBounds.MonomialInterface.finite_idealSubquotient' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3076/3091] Replayed WidthBounds.MonomialBasis
+info: WidthBounds/MonomialBasis.lean:247:0: 'WidthBounds.MonomialInterface.quotientStandardEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/MonomialBasis.lean:248:0: 'WidthBounds.MonomialInterface.standardMonomialBasis_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/MonomialBasis.lean:249:0: 'WidthBounds.MonomialInterface.finrank_standardMonomialSpan' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/MonomialBasis.lean:250:0: 'WidthBounds.MonomialInterface.finrank_quotientHomogeneous' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3077/3091] Replayed WidthBounds.IdealBounds
+info: WidthBounds/IdealBounds.lean:160:0: 'WidthBounds.MonomialInterface.finrank_xySubspace' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/IdealBounds.lean:161:0: 'WidthBounds.MonomialInterface.monomialIdeal_all_widths_dimension_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3078/3091] Replayed WidthBounds.Growth
+info: WidthBounds/Growth.lean:145:0: 'WidthBounds.Growth.sectionLength_le_divisor_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/Growth.lean:146:0: 'WidthBounds.Growth.sectionLength_le_harmonic' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/Growth.lean:166:0: 'WidthBounds.Growth.quotient_xy_le_harmonic' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3079/3091] Replayed WidthBounds.MinimalGenerators
+info: WidthBounds/MinimalGenerators.lean:166:0: 'WidthBounds.MonomialInterface.monomialIdeal_exists_generators_of_columns' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/MinimalGenerators.lean:167:0: 'WidthBounds.MonomialInterface.monomialIdeal_exists_generators_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/MinimalGenerators.lean:168:0: 'WidthBounds.MonomialInterface.monomialIdeal_exists_generators_finrank_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3080/3091] Replayed WidthBounds.FiniteColength
+info: WidthBounds/FiniteColength.lean:96:0: 'WidthBounds.MonomialInterface.quotient_finite_iff_standard_finite' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/FiniteColength.lean:97:0: 'WidthBounds.MonomialInterface.exists_pure_z_mem_of_finite_quotient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/FiniteColength.lean:98:0: 'WidthBounds.MonomialInterface.quotient_finite_iff_exists_pure_z' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3081/3091] Replayed WidthBounds.GeneratorBounds
+info: WidthBounds/GeneratorBounds.lean:59:0: 'WidthBounds.MonomialInterface.monomialIdeal_exists_generators_card_lt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/GeneratorBounds.lean:60:0: 'WidthBounds.MonomialInterface.finiteColength_exists_generators_card_lt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3082/3091] Replayed WidthBounds.GeneratorMinimality
+info: WidthBounds/GeneratorMinimality.lean:141:0: 'WidthBounds.MonomialInterface.isMinimalExponent_pure_x' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/GeneratorMinimality.lean:142:0: 'WidthBounds.MonomialInterface.column_strictAnti_of_initial' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/GeneratorMinimality.lean:143:0: 'WidthBounds.MonomialInterface.isMinimalExponent_xy_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/GeneratorMinimality.lean:144:0: 'WidthBounds.MonomialInterface.zThreshold_pos_of_standard' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/GeneratorMinimality.lean:145:0: 'WidthBounds.MonomialInterface.isMinimalExponent_zThreshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3083/3091] Replayed WidthBounds.BoundaryGenerators
+info: WidthBounds/BoundaryGenerators.lean:182:0: 'WidthBounds.MonomialInterface.boundaryExponents_monomial_mem' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/BoundaryGenerators.lean:183:0: 'WidthBounds.MonomialInterface.exists_boundaryExponent_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/BoundaryGenerators.lean:184:0: 'WidthBounds.MonomialInterface.card_boundaryExponents' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/BoundaryGenerators.lean:185:0: 'WidthBounds.MonomialInterface.span_boundaryExponents' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3084/3091] Replayed WidthBounds.GeneratorExact
+info: WidthBounds/GeneratorExact.lean:228:0: 'WidthBounds.MonomialInterface.monomialIdeal_exists_exact_minimal_exponents' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/GeneratorExact.lean:229:0: 'WidthBounds.MonomialInterface.finiteColength_exists_exact_minimal_generators' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3085/3091] Replayed WidthBounds.PolynomialGeneratorNumber
+info: WidthBounds/PolynomialGeneratorNumber.lean:97:0: 'WidthBounds.MonomialInterface.coeff_mul_of_minimalExponent' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/PolynomialGeneratorNumber.lean:98:0: 'WidthBounds.MonomialInterface.minimalCoefficientMap_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/PolynomialGeneratorNumber.lean:99:0: 'WidthBounds.MonomialInterface.minimalCoefficientMap_exists_preimage_of_mem' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/PolynomialGeneratorNumber.lean:100:0: 'WidthBounds.MonomialInterface.minimalCoefficientMap_exists_preimage' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3086/3091] Replayed WidthBounds.GeneratorNumberBounds
+info: WidthBounds/GeneratorNumberBounds.lean:136:0: 'WidthBounds.MonomialInterface.minimal_exponents_card_le_generators' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/GeneratorNumberBounds.lean:137:0: 'WidthBounds.MonomialInterface.isLeast_generatorCardinalities_of_minimal_exponents' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/GeneratorNumberBounds.lean:138:0: 'WidthBounds.MonomialInterface.finiteColength_generator_number_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3087/3091] Replayed WidthBounds.GeneratorQuotient
+info: WidthBounds/GeneratorQuotient.lean:124:0: 'WidthBounds.MonomialInterface.constantCoeff_eq_zero_of_mem_variableIdeal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/GeneratorQuotient.lean:125:0: 'WidthBounds.MonomialInterface.minimalCoefficientMap_eq_zero_of_mem_variableIdeal_mul' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/GeneratorQuotient.lean:126:0: 'WidthBounds.MonomialInterface.mem_variableIdeal_mul_of_minimalCoefficientMap_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/GeneratorQuotient.lean:127:0: 'WidthBounds.MonomialInterface.mem_variableIdeal_mul_monomialIdeal_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3088/3091] Built WidthBounds.GeneratorQuotientBounds
+info: WidthBounds/GeneratorQuotientBounds.lean:179:0: 'WidthBounds.MonomialInterface.ker_generatorCoefficientMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/GeneratorQuotientBounds.lean:180:0: 'WidthBounds.MonomialInterface.generatorQuotientEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/GeneratorQuotientBounds.lean:181:0: 'WidthBounds.MonomialInterface.generatorQuotientBasis_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/GeneratorQuotientBounds.lean:182:0: 'WidthBounds.MonomialInterface.finrank_generatorQuotient' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/GeneratorQuotientBounds.lean:183:0: 'WidthBounds.MonomialInterface.finiteColength_generatorQuotient_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3089/3091] Built WidthBounds.DependencyAudit
+info: WidthBounds/DependencyAudit.lean:13:0: WidthBounds.all_widths_analytic_bounds: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:13:0: WidthBounds.all_widths_strict_improvement: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:13:0: WidthBounds.Growth.sectionLength_le_harmonic: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:13:0: WidthBounds.Growth.quotient_xy_le_harmonic: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:13:0: WidthBounds.MonomialInterface.monomialIdeal_exists_generators_le: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:13:0: WidthBounds.MonomialInterface.finiteColength_exists_generators_card_lt: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:13:0: WidthBounds.MonomialInterface.quotient_finite_iff_exists_pure_z: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:13:0: WidthBounds.MonomialInterface.monomialIdeal_exists_exact_minimal_exponents: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:13:0: WidthBounds.MonomialInterface.finiteColength_exists_exact_minimal_generators: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:13:0: WidthBounds.MonomialInterface.minimal_exponents_card_le_generators: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:13:0: WidthBounds.MonomialInterface.finiteColength_generator_number_bounds: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:13:0: WidthBounds.MonomialInterface.ker_generatorCoefficientMap: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:13:0: WidthBounds.MonomialInterface.generatorQuotientBasis_apply: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:13:0: WidthBounds.MonomialInterface.finiteColength_generatorQuotient_bounds: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+✔ [3090/3091] Built WidthBounds
+Build completed successfully.

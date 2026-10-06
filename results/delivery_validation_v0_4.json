@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "version": "0.4",
+  "task": "R059",
+  "checked_utc": "2026-10-01T09:51:22.632981+00:00",
+  "stage": "source_manuscript_and_payload_preparation_before_final_archive",
+  "scope": "Mathematical source/log correspondence and independent full lex chain review; document/PDF QA and package-tool tests. Final ZIP creation and verification are recorded only in the external receipt.",
+  "lean_rebuilt": false,
+  "lean_source_files_unchanged": 64,
+  "scientific_baseline_checkpoint": "research/checkpoints/20261001T090243180713Z-07071c19",
+  "scientific_build_log": "results/lean_higher_tor_build.txt",
+  "scientific_build_sha256": "29b05fbcfa9054df43f5b171a511eb51e28e5745188c4a3a4ce9320fcee787e4",
+  "previous_claim_evidence_references_verified": 687,
+  "math_chain_review": "research/tasks/R083_lex_chain_release_audit.md",
+  "delivery_preparation_review": "research/tasks/R085_v04_delivery_audit.md",
+  "pdf": {
+    "pages": 10,
+    "local_build_exit_code": 0,
+    "native_editor_open_request": "queued",
+    "native_compiler": "unavailable in this environment: Unable to find standard directories for platform",
+    "all_pages_visually_inspected": true,
+    "final_changed_pages_reinspected": [
+      1,
+      6
+    ],
+    "other_final_rendered_pages_byte_identical": true,
+    "overfull_underfull_undefined_missing_glyphs": false
+  },
+  "packager_tests": {
+    "count": 38,
+    "result": "OK",
+    "log": "results/package_delivery_v0_4_tests.txt"
+  },
+  "artifacts": [
+    {
+      "path": "paper/width_bounds_v0_4.tex",
+      "sha256": "26c1ebdcf796969ca3f829b93393d291e04c5c9f23b3bbf652f76641f37a54d5"
+    },
+    {
+      "path": "output/pdf/width_bounds_v0_4.pdf",
+      "sha256": "ead6e0ede749632d5ebd704a0a2b9ab2e5312361fe94a322c916df23877ef64f"
+    },
+    {
+      "path": "scripts/build_paper_v0_4.ps1",
+      "sha256": "8ac234e22c50eb06e7bc9416ec9407d13dec97226ab943c4375658ddaac963a2"
+    },
+    {
+      "path": "scripts/package_delivery_v0_4.py",
+      "sha256": "30646d67a4d5dbf67256ce43cae9a329eb1d56b7cd12e5030b367c2b74385ad4"
+    },
+    {
+      "path": "scripts/test_package_delivery_v0_4.py",
+      "sha256": "ce143c10f6c4b4ce8593dde3c735f46918fa479ae70dc8f4623ba859f62395e6"
+    },
+    {
+      "path": "results/paper_compile_v0_4.txt",
+      "sha256": "1939d12652d0185fe9782f01fcab4af57b927b9ef5c1d3384f6e073c3eb1f98d"
+    },
+    {
+      "path": "results/package_delivery_v0_4_tests.txt",
+      "sha256": "1edfefbcdc68ab2d3ed7f6e05713538b4be892ab1491731fe8b33cef26e3d9ca"
+    },
+    {
+      "path": "results/pdf_qa_v0_4.md",
+      "sha256": "23b5e1bc04d081b386f895d842b0b0b19b565232d246112b2d48e58f9bd01989"
+    },
+    {
+      "path": "research/DELIVERY_v0_4.md",
+      "sha256": "4011d392665113517f7df5616b1a83b42663a4bcbc6d4c4bb26292a40ac9ebe8"
+    },
+    {
+      "path": "README.md",
+      "sha256": "0251ee5d716346e39385b0e8f624e460241d5e69d8000376ee7296d627b8ea92"
+    },
+    {
+      "path": "research/PROJECT_REPORT.md",
+      "sha256": "e0ee66c04bd99da690c632f666d1952c5b9fab3b772a2de60bcc87df6700e0cb"
+    },
+    {
+      "path": "research/tasks/R083_lex_chain_release_audit.md",
+      "sha256": "68aa3715ac088c3394fc17f4c84d814dff0f0009320480503c9e7dca56ba267f"
+    },
+    {
+      "path": "research/tasks/R084_v04_packager.md",
+      "sha256": "96d6d6503088255b93bb81477e224b1732d378d29dbd452a034ab28458121287"
+    }
+  ],
+  "preserved_previous_artifacts": [
+    {
+      "path": "paper/width_bounds.tex",
+      "sha256": "3d67eae1fd88d1947bbb8fede3c06bf81b69b72a9a4bc8579e2a67322744dd2d"
+    },
+    {
+      "path": "paper/width_bounds_v0_2.tex",
+      "sha256": "e0a5c4bbcb10c5671e1fa87664471f2ed088848b0e1aced91a01d0f05b2abba8"
+    },
+    {
+      "path": "paper/width_bounds_v0_3.tex",
+      "sha256": "5f6fe88d19fcbc0f086e5fb8242bef1a84613177bc0f522c0271aed89609bb27"
+    },
+    {
+      "path": "output/pdf/width_bounds.pdf",
+      "sha256": "35ef5ede0cfa95a99aac2afe54510e8ee84ad17ac4e26e70e5d6b7cca00ddfac"
+    },
+    {
+      "path": "output/pdf/width_bounds_v0_2.pdf",
+      "sha256": "40f4c90a0d8fe9f67d761a14483c57b068ebcf13bae8b9d51f376e9bc4c18445"
+    },
+    {
+      "path": "output/pdf/width_bounds_v0_3.pdf",
+      "sha256": "5d1e9f8a925a7fc9d7c6368056a060ff4ef634306801da4fe6e810b010208887"
+    },
+    {
+      "path": "output/width_bounds_review_v0_1.zip",
+      "sha256": "daf6849293d37ee1ae9bc44d8891ae01fa28a36827a9114ac1840ec7dc169001"
+    },
+    {
+      "path": "output/width_bounds_review_v0_2.zip",
+      "sha256": "9ad24bcc1a3eaa0829383b3fd70507f6d4ea99936682cbb6efc9fd35ddca89fc"
+    },
+    {
+      "path": "output/ai4math_research_delivery_v0_3.zip",
+      "sha256": "84f9508927c73b96c5313b8e60a32ac7a9b2d7d308447c1226128f81ae9c201d"
+    },
+    {
+      "path": "output/ai4math_research_delivery_v0_3.receipt.json",
+      "sha256": "d459058f5675612f279ee269bbf755e99241fd82eb51d661e4e8d2f51aaf1df1"
+    },
+    {
+      "path": "scripts/build_paper.ps1",
+      "sha256": "2d119d281a91abd414d670c272bcf7fc88d2a6ab06562384fe372b036cfd2ab1"
+    },
+    {
+      "path": "scripts/package_delivery.py",
+      "sha256": "bae26d0df594b4266e41eff21b91c1265b67cd5516a22e79254af9cee2213329"
+    },
+    {
+      "path": "scripts/test_package_delivery.py",
+      "sha256": "4115d3b686cffac3e4d0cd492eeed7fbe1101a0350b21c760a3129c859e1db2c"
+    },
+    {
+      "path": "research/DELIVERY.md",
+      "sha256": "84908ed66c665fa3351fd1189023b92256bcd4babc2313b944019a7a4f775837"
+    },
+    {
+      "path": "results/delivery_validation_v0_3.json",
+      "sha256": "79ea705f6ab43d93ce2f508bd05ed3421682d779bbdfbdd4350af94be3c82b6a"
+    },
+    {
+      "path": "results/pdf_qa_v0_3.md",
+      "sha256": "965120aa1eeaea6a5586958eeb8df629ab87669dc3021242ef8f56ea9e42bc91"
+    },
+    {
+      "path": "research/tasks/R049_delivery_closeout.md",
+      "sha256": "7f37106d960e239637289ab1f2822b8e3d91995b86fdfae0595cf1bc7f6552e8"
+    },
+    {
+      "path": "research/tasks/R051_delivery_audit.md",
+      "sha256": "f889972cd484c9c38546b489ba3f8cfd0ea685354bb28f0b6eca6d13063caea6"
+    }
+  ],
+  "final_archive": "output/ai4math_research_delivery_v0_4.zip",
+  "external_receipt": "output/ai4math_research_delivery_v0_4.receipt.json",
+  "archive_not_yet_created_at_this_source_record": true,
+  "next_research_task": "R060 parked; user instruction required"
+}

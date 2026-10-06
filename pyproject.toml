@@ -1,0 +1,9 @@
+[project]
+name = "ai4math-width"
+version = "0.1.0"
+description = "Reproducible experiments for numerical semigroup width bounds"
+requires-python = ">=3.13,<3.14"
+dependencies = []
+
+[tool.uv]
+package = false

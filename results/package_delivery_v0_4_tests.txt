@@ -1,0 +1,51 @@
+R084 v0.4 delivery integrity tests
+UTC: 2026-10-01T09:44:33.682888+00:00
+Interpreter: D:\project\ai4math\.venv\Scripts\python.exe
+Command: .venv\Scripts\python.exe -B scripts/test_package_delivery_v0_4.py
+Scope: temporary fixture directories only; no real release created; no Lean invoked.
+package_delivery_v0_4.py SHA-256: 30646d67a4d5dbf67256ce43cae9a329eb1d56b7cd12e5030b367c2b74385ad4
+test_package_delivery_v0_4.py SHA-256: ce143c10f6c4b4ce8593dde3c735f46918fa479ae70dc8f4623ba859f62395e6
+Exit code: 0
+test_active_queue_rejected_for_all_active_statuses (__main__.DeliveryV04Tests.test_active_queue_rejected_for_all_active_statuses) ... ok
+test_capture_rechecks_binary_artifacts (__main__.DeliveryV04Tests.test_capture_rechecks_binary_artifacts) ... ok
+test_checkpoint_archive_digest_and_size_rejected (__main__.DeliveryV04Tests.test_checkpoint_archive_digest_and_size_rejected) ... ok
+test_checkpoint_id_mismatch_rejected (__main__.DeliveryV04Tests.test_checkpoint_id_mismatch_rejected) ... ok
+test_checkpoint_manifest_digest_rejected (__main__.DeliveryV04Tests.test_checkpoint_manifest_digest_rejected) ... ok
+test_checkpoint_queue_must_match (__main__.DeliveryV04Tests.test_checkpoint_queue_must_match) ... ok
+test_constructive_create_and_verify_matches_receipt (__main__.DeliveryV04Tests.test_constructive_create_and_verify_matches_receipt) ... ok
+test_creation_rejects_changed_optional_binary_evidence (__main__.DeliveryV04Tests.test_creation_rejects_changed_optional_binary_evidence) ... ok
+test_creation_rejects_changed_workspace (__main__.DeliveryV04Tests.test_creation_rejects_changed_workspace) ... ok
+test_creation_rejects_ready_queue_despite_nonwip_checkpoint (__main__.DeliveryV04Tests.test_creation_rejects_ready_queue_despite_nonwip_checkpoint) ... ok
+test_current_delivery_self_references_rejected (__main__.DeliveryV04Tests.test_current_delivery_self_references_rejected) ... ok
+test_current_source_must_equal_nested_checkpoint (__main__.DeliveryV04Tests.test_current_source_must_equal_nested_checkpoint) ... ok
+test_current_source_selection_must_equal_checkpoint (__main__.DeliveryV04Tests.test_current_source_selection_must_equal_checkpoint) ... ok
+test_duplicate_and_case_collision_members_rejected (__main__.DeliveryV04Tests.test_duplicate_and_case_collision_members_rejected) ... ok
+test_existing_target_and_receipt_are_not_overwritten (__main__.DeliveryV04Tests.test_existing_target_and_receipt_are_not_overwritten) ... ok
+test_false_checkpoint_claim_assessment_rejected (__main__.DeliveryV04Tests.test_false_checkpoint_claim_assessment_rejected) ... ok
+test_false_stability_label_rejected (__main__.DeliveryV04Tests.test_false_stability_label_rejected) ... ok
+test_file_directory_collision_rejected (__main__.DeliveryV04Tests.test_file_directory_collision_rejected) ... ok
+test_invalid_manifest_sizes_hashes_and_duplicate_paths (__main__.DeliveryV04Tests.test_invalid_manifest_sizes_hashes_and_duplicate_paths) ... ok
+test_invalid_queue_rejected (__main__.DeliveryV04Tests.test_invalid_queue_rejected) ... ok
+test_missing_claim_evidence_rejected (__main__.DeliveryV04Tests.test_missing_claim_evidence_rejected) ... ok
+test_missing_member_rejected (__main__.DeliveryV04Tests.test_missing_member_rejected) ... ok
+test_nested_checkpoint_tamper_rejected_after_outer_rehash (__main__.DeliveryV04Tests.test_nested_checkpoint_tamper_rejected_after_outer_rehash) ... ok
+test_nested_duplicate_and_unsafe_members_rejected (__main__.DeliveryV04Tests.test_nested_duplicate_and_unsafe_members_rejected) ... ok
+test_nested_member_missing_rejected (__main__.DeliveryV04Tests.test_nested_member_missing_rejected) ... ok
+test_nonaccepted_claim_evidence_also_checked (__main__.DeliveryV04Tests.test_nonaccepted_claim_evidence_also_checked) ... ok
+test_required_accepted_evidence_must_be_in_checkpoint (__main__.DeliveryV04Tests.test_required_accepted_evidence_must_be_in_checkpoint) ... ok
+test_required_artifact_missing_even_with_updated_manifest (__main__.DeliveryV04Tests.test_required_artifact_missing_even_with_updated_manifest) ... ok
+test_stale_claim_rejected_despite_updated_manifest (__main__.DeliveryV04Tests.test_stale_claim_rejected_despite_updated_manifest) ... ok
+test_symlink_member_rejected (__main__.DeliveryV04Tests.test_symlink_member_rejected) ... ok
+test_tampered_payload_rejected (__main__.DeliveryV04Tests.test_tampered_payload_rejected) ... ok
+test_target_or_receipt_appearing_during_capture_is_preserved (__main__.DeliveryV04Tests.test_target_or_receipt_appearing_during_capture_is_preserved) ... ok
+test_unexpected_listed_artifact_rejected (__main__.DeliveryV04Tests.test_unexpected_listed_artifact_rejected) ... ok
+test_unlisted_member_rejected (__main__.DeliveryV04Tests.test_unlisted_member_rejected) ... ok
+test_unsafe_member_paths_rejected (__main__.DeliveryV04Tests.test_unsafe_member_paths_rejected) ... ok
+test_verify_is_read_only_and_needs_no_workspace (__main__.DeliveryV04Tests.test_verify_is_read_only_and_needs_no_workspace) ... ok
+test_wip_checkpoint_rejected (__main__.DeliveryV04Tests.test_wip_checkpoint_rejected) ... ok
+test_wrong_version_rejected (__main__.DeliveryV04Tests.test_wrong_version_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 38 tests in 2.737s
+
+OK

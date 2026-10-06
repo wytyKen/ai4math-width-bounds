@@ -1,0 +1,38 @@
+Finsupp.linearCombination.{u_1, u_2, u_5} {α : Type u_1} {M : Type u_2} (R : Type u_5) [Semiring R] [AddCommMonoid M]
+  [Module R M] (v : α → M) : (α →₀ R) →ₗ[R] M
+Finsupp.range_linearCombination.{u_1, u_2, u_5} {α : Type u_1} {M : Type u_2} (R : Type u_5) [Semiring R]
+  [AddCommMonoid M] [Module R M] {v : α → M} :
+  LinearMap.range (Finsupp.linearCombination R v) = Submodule.span R (Set.range v)
+Fintype.linearCombination.{u_1, u_2, u_3} {α : Type u_1} {M : Type u_2} (R : Type u_3) [Fintype α] [Semiring R]
+  [AddCommMonoid M] [Module R M] (v : α → M) : (α → R) →ₗ[R] M
+CategoryTheory.ProjectiveResolution.isoLeftDerivedObj.{v, u, u_1, u_2} {C : Type u} [Category.{v, u} C] {D : Type u_1}
+  [Category.{u_2, u_1} D] [Abelian C] [HasProjectiveResolutions C] [Abelian D] {X : C} (P : ProjectiveResolution X)
+  (F : C ⥤ D) [F.Additive] (n : ℕ) :
+  (F.leftDerived n).obj X ≅
+    (HomologicalComplex.homologyFunctor D (ComplexShape.down ℕ) n).obj
+      ((F.mapHomologicalComplex (ComplexShape.down ℕ)).obj P.complex)
+CategoryTheory.ProjectiveResolution.exact₀.{v, u} {C : Type u} [Category.{v, u} C] [Abelian C] {Z : C}
+  (P : ProjectiveResolution Z) :
+  { X₁ := P.complex.X 1, X₂ := P.complex.X 0, X₃ := ((ChainComplex.single₀ C).obj Z).X 0, f := P.complex.d 1 0,
+      g := P.π.f 0, zero := ⋯ }.Exact
+WidthBounds.MonomialInterface.monomialIdeal_exists_exact_minimal_exponents.{u_1} {R : Type u_1} [CommSemiring R]
+  [Nontrivial R] (S : Set (Fin 3 →₀ ℕ)) (hUp : IsUpperSet S) (hLex : IsLexExponentSet S) {w a : ℕ} (hw : 4 ≤ w)
+  (hHS :
+    ∀ (d : ℕ), ∑ t ∈ Finset.range (d + 1), WidthBounds.LexCounting.hilbert3 (standard (monomialIdeal S)) t ≤ 1 + d * w)
+  (hx : monomial3 a 0 0 ∈ monomialIdeal S) (hInitial : ∀ d < a, standard (monomialIdeal S) d 0 0)
+  (hZ : ∃ b, monomial3 0 0 b ∈ monomialIdeal S) :
+  ∃ E,
+    (∀ (e : Fin 3 →₀ ℕ), e ∈ E ↔ IsMinimalExponent (monomialIdeal S) e) ∧
+      Ideal.span ↑(exponentMonomials E) = monomialIdeal S ∧
+        E.card = a + 1 + WidthBounds.sectionLength (standard (monomialIdeal S)) w ∧
+          ∀ e ∈ E, (MvPolynomial.monomial e) 1 ∉ Ideal.span ↑(exponentMonomials (E.erase e))
+WidthBounds.MonomialInterface.span_boundary_exponentMonomials.{u_1} {R : Type u_1} [CommSemiring R]
+  (S : Set (Fin 3 →₀ ℕ)) (hZ : ∃ b, monomial3 0 0 b ∈ monomialIdeal S) (a : ℕ) (n : ℕ → ℕ)
+  (hx : monomial3 a 0 0 ∈ monomialIdeal S) (hn : ∀ (i j : ℕ), standard (monomialIdeal S) i j 0 ↔ j < n i) :
+  Ideal.span ↑(exponentMonomials (boundaryExponents (monomialIdeal S) hZ a n)) = monomialIdeal S
+WidthBounds.MonomialInterface.monomial_mem_span_exponentMonomials_iff.{u_1} {R : Type u_1} [CommSemiring R]
+  [Nontrivial R] (E : Finset (Fin 3 →₀ ℕ)) (e : Fin 3 →₀ ℕ) :
+  (MvPolynomial.monomial e) 1 ∈ Ideal.span ↑(exponentMonomials E) ↔ ∃ f ∈ E, f ≤ e
+'R054Probe.suppliedResolutionComputesTor' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PROCESS_EXIT_CODE=0

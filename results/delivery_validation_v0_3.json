@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "phase": "Pre-freeze payload validation; final ZIP values live only in the external receipt.",
+  "checked_utc": "2026-09-29T09:17:21.058781+00:00",
+  "baseline_checkpoint": "research/checkpoints/20260929T083830833245Z-461c545d/manifest.json",
+  "mathematical_source_changed": false,
+  "lean_rebuilt": false,
+  "lean_project_files_unchanged": 50,
+  "existing_claims": 23,
+  "existing_unique_evidence_paths": 112,
+  "existing_evidence_all_match": true,
+  "latest_mathematical_log": {
+    "path": "results/lean_lex_theta_build.txt",
+    "sha256": "0b43de4c75bf3eeedc6af52ca63417c53aae798e6593aefda2255eea40d230b8"
+  },
+  "frozen_history": [
+    {
+      "path": "paper/width_bounds.tex",
+      "sha256": "3d67eae1fd88d1947bbb8fede3c06bf81b69b72a9a4bc8579e2a67322744dd2d"
+    },
+    {
+      "path": "paper/width_bounds_v0_2.tex",
+      "sha256": "e0a5c4bbcb10c5671e1fa87664471f2ed088848b0e1aced91a01d0f05b2abba8"
+    },
+    {
+      "path": "output/pdf/width_bounds.pdf",
+      "sha256": "35ef5ede0cfa95a99aac2afe54510e8ee84ad17ac4e26e70e5d6b7cca00ddfac"
+    },
+    {
+      "path": "output/pdf/width_bounds_v0_2.pdf",
+      "sha256": "40f4c90a0d8fe9f67d761a14483c57b068ebcf13bae8b9d51f376e9bc4c18445"
+    },
+    {
+      "path": "output/width_bounds_review_v0_1.zip",
+      "sha256": "daf6849293d37ee1ae9bc44d8891ae01fa28a36827a9114ac1840ec7dc169001"
+    },
+    {
+      "path": "output/width_bounds_review_v0_2.zip",
+      "sha256": "9ad24bcc1a3eaa0829383b3fd70507f6d4ea99936682cbb6efc9fd35ddca89fc"
+    }
+  ],
+  "delivery_tests": {
+    "command": ".venv/Scripts/python.exe -B scripts/test_package_delivery.py",
+    "exit_code": 0,
+    "tests": 9,
+    "log": "results/delivery_tests_v0_3.txt",
+    "log_sha256": "438706c9aa0abce38839bb9e70df3b8f71747be54540a8632fb98f5c0d3d9ba8"
+  },
+  "pdf": {
+    "pages": 8,
+    "tex_sha256": "5f6fe88d19fcbc0f086e5fb8242bef1a84613177bc0f522c0271aed89609bb27",
+    "pdf_sha256": "5d1e9f8a925a7fc9d7c6368056a060ff4ef634306801da4fe6e810b010208887",
+    "qa": "results/pdf_qa_v0_3.md"
+  },
+  "validation_scope": "Byte correspondence, document/packaging checks and recorded review; not a new Lean build or end-to-end semigroup proof."
+}

@@ -1,0 +1,260 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=27mm]{geometry}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={A finite Hilbert-function envelope for four-generated numerical semigroups},pdfauthor={}}
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{1em}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newenvironment{proof}[1][Proof]{\par\noindent\textit{#1.}\ \ignorespaces}{\unskip\nobreak\hfill\ensuremath{\square}\par}
+\newcommand{\NN}{\mathbb N}
+\newcommand{\kk}{\Bbbk}
+\newcommand{\HF}{\operatorname{HF}}
+\newcommand{\HS}{\operatorname{HS}}
+\newcommand{\Lex}{\operatorname{Lex}}
+\newcommand{\len}{\operatorname{length}}
+\newcommand{\llbracket}{[\![}
+\newcommand{\rrbracket}{]\!]}
+\title{A finite Hilbert-function envelope for four-generated numerical semigroups}
+\author{}
+\date{Research draft v0.1 --- 23 September 2026}
+\begin{document}
+\maketitle
+\vspace{-1.4em}
+\begin{center}\small
+Working draft for independent mathematical review.
+Novelty has not been established; the scope of formal verification is stated in Section~\ref{sec:formal}.
+\end{center}
+\begin{abstract}
+We bound the colength of a two-variable section of an artinian lex ideal in three variables subject to a linear Hilbert--Samuel bound. Monotonicity of its two-variable Hilbert function yields a degreewise envelope computable by a small finite integer calculation. A Lean-checked certificate covers the widths $4\le w\le39$ left by the estimates in Caviglia--Moscariello--Sammartano. Combining this bound with their published reductions gives the proposed completion of the width bounds for the Betti numbers of four-generated numerical semigroup rings. The new standard-monomial argument and its arithmetic certificate are formalized; the commutative-algebra transfer is supplied as a conventional proof with explicit references.
+\end{abstract}
+
+\section{Statement and relation to existing results}
+We write $\NN=\{0,1,2,\ldots\}$. A numerical semigroup $\Gamma\subseteq\NN$ is an additive submonoid with finite complement. Suppose its minimal generators are $g_0<g_1<g_2<g_3$, and put $m=g_0$ and $w=g_3-g_0$. For any field $\kk$, let
+\[
+ R_\Gamma=\kk\llbracket t^{g_0},t^{g_1},t^{g_2},t^{g_3}\rrbracket.
+\]
+Its Betti numbers $\beta_i(R_\Gamma)$ are taken over its minimal regular presentation $\kk\llbracket X_0,X_1,X_2,X_3\rrbracket$.
+
+\begin{theorem}\label{thm:main}
+For every four-generated numerical semigroup $\Gamma$ and every field $\kk$,
+\begin{equation}\label{eq:main}
+ \beta_i(R_\Gamma)\le i\binom{w+1}{i+1}\qquad(i\ge1).
+\end{equation}
+\end{theorem}
+
+The new part of the proposed proof is a three-variable lex bound for $4\le w\le39$. Caviglia--Moscariello--Sammartano (CMS) prove \eqref{eq:main} for $w\ge40$ in \cite[Theorem~1.5]{CMS}; their Remark~5.2 identifies the remaining small-width lex problem. The case $w=3$ consists of consecutive generators and follows from \cite[Proposition~2.7]{HS}. We retain these known cases and focus on the finite gap.
+
+The width bound here concerns the semigroup ring itself. We do not assert the corresponding stronger bound for every tangent cone. Likewise, the result is restricted to four minimal generators.
+
+\section{The small-width lex bound}\label{sec:lex}
+Let $S=\kk[x,y,z]$, with lexicographic order $x>y>z$. A lex ideal contains, in each degree, an initial segment in this order. A monomial is \emph{standard} if it does not belong to the ideal. Write $\beta_i^S(M)$ for Betti numbers of an $S$-module; in particular, $\beta_0^S(L)$ is the number of minimal generators of an ideal $L$.
+
+\begin{theorem}\label{thm:lex}
+Let $4\le w\le39$. Suppose $L\subseteq(x,y,z)^2$ is a lex ideal of finite colength and
+\begin{equation}\label{eq:budget}
+ \HS(S/L,d)=\sum_{t=0}^{d}\HF(S/L,t)\le1+dw\qquad(d\in\NN).
+\end{equation}
+Then
+\[
+ \beta_0^S(L)\le\binom{w+1}{2},\qquad
+ \beta_1^S(L)\le2\binom{w+1}{3},\qquad
+ \beta_2^S(L)\le3\binom{w+1}{4}.
+\]
+\end{theorem}
+
+Set $T=\kk[x,y]$ and $K=L\cap T$, equivalently the image of $L$ modulo $z$. Define
+\[
+ \alpha=\min\{a:x^a\in L\},\qquad
+ h_d=\dim_\kk(T/K)_d,\qquad H_d=\dim_\kk(S/L)_d,
+ \qquad \ell=\len(T/K).
+\]
+Finite colength ensures that $\alpha$ exists, and the absence of linear forms gives $\alpha\ge2$. Lex order implies that $\alpha$ is the initial degree of $L$.
+
+\begin{lemma}\label{lem:count}
+For $d<\alpha$, $h_d=d+1$ and $H_d=\binom{d+2}{2}$. Moreover, $h_{d+1}\le h_d$ for $d\ge\alpha-1$, and
+\begin{equation}\label{eq:q}
+ H_d\ge q_d(h_d),\qquad
+ q_d(h)=\sum_{i=0}^{h-1}(d-i+1)=\frac{h(2d+3-h)}2.
+\end{equation}
+\end{lemma}
+\begin{proof}
+If $d<\alpha$, then $x^d$ is standard. It is the largest degree-$d$ monomial, so all monomials of that degree are standard. This gives the two initial counts.
+
+For $d+1\ge\alpha$, a standard monomial of degree $d+1$ in $T$ cannot be $x^{d+1}$. It is therefore divisible by $y$, and division by $y$ injects the standard monomials of that degree into the preceding degree. This proves monotonicity.
+
+The degree-$d$ standard monomials of $T$ form the lex suffix
+\[
+ x^i y^{d-i},\qquad 0\le i<h_d.
+\]
+For each such $i$, the monomials $x^iy^jz^{d-i-j}$, $0\le j\le d-i$, are no larger in lex order and hence remain standard. These columns are disjoint for distinct $i$. Counting them gives \eqref{eq:q}. The bound is not asserted to be an equality.
+\end{proof}
+
+\begin{lemma}\label{lem:cutoff}
+Under \eqref{eq:budget}, $h_d=0$ for $d\ge2w-2$. In particular, $\alpha\le2w+1$ and $\ell=\sum_{d=0}^{2w}h_d$.
+\end{lemma}
+\begin{proof}
+If $h_d>0$, then $y^d$ is standard. For every $0\le t\le d$, divisibility and lex closure make all $t+1$ degree-$t$ monomials in $y,z$ standard. Thus
+\[
+ \frac{(d+1)(d+2)}2\le\sum_{t=0}^dH_t\le1+dw.
+\]
+For $d>0$, this simplifies to $d+3\le2w$. Hence no such $d\ge2w-2$ exists. If $\alpha>2w+1$, then $x^{2w+1}$ would be standard and $h_{2w+1}>0$, contradicting this cutoff. The stated finite sum follows. The slightly loose upper limit $2w$ is convenient for matching the certificate.
+\end{proof}
+
+\begin{lemma}\label{lem:envelope}
+Put $P_\alpha=\binom{\alpha+2}{3}$. For $d\ge\alpha$, define
+\begin{equation}\label{eq:r}
+ r_d(\alpha,w)=\max\left\{h\in\{0,\ldots,\alpha\}:
+ 2P_\alpha+(d-\alpha+1)h(\alpha+d+3-h)\le2+2dw\right\}.
+\end{equation}
+Then $P_\alpha\le1+(\alpha-1)w$, the set in \eqref{eq:r} is nonempty, and
+\begin{equation}\label{eq:B}
+ \ell\le B(\alpha,w):=\binom{\alpha+1}{2}
+                  +\sum_{d=\alpha}^{2w}r_d(\alpha,w).
+\end{equation}
+\end{lemma}
+\begin{proof}
+The exact initial counts give
+\[
+ \sum_{t=0}^{\alpha-1}H_t=P_\alpha\le1+(\alpha-1)w,
+ \qquad \sum_{t=0}^{\alpha-1}h_t=\binom{\alpha+1}{2}.
+\]
+Fix $d\ge\alpha$ and write $h=h_d$. Lemma~\ref{lem:count} gives $0\le h\le\alpha$ and $h_t\ge h$ for $\alpha\le t\le d$. In this range $q_t(h+1)-q_t(h)=t+1-h>0$. Consequently,
+\begin{align*}
+ 1+dw&\ge P_\alpha+\sum_{t=\alpha}^{d}H_t\\
+ &\ge P_\alpha+\sum_{t=\alpha}^{d}q_t(h)
+ =P_\alpha+\frac{(d-\alpha+1)h(\alpha+d+3-h)}2.
+\end{align*}
+Thus $h_d$ is admitted by \eqref{eq:r}. Zero is also admitted because of the bound on $P_\alpha$. Summing $h_d\le r_d$ and using Lemma~\ref{lem:cutoff} proves \eqref{eq:B}. No simultaneous attainability of the individual maxima is needed.
+\end{proof}
+
+\begin{proposition}[Finite certificate]\label{prop:certificate}
+For every pair of integers $(w,\alpha)$ satisfying
+\begin{equation}\label{eq:parameters}
+ 4\le w\le39,\quad 2\le\alpha\le2w+1,\quad
+ \binom{\alpha+2}{3}\le1+(\alpha-1)w,
+\end{equation}
+the envelope \eqref{eq:B} satisfies
+\begin{equation}\label{eq:certificate}
+ \alpha+1+B\le\binom{w+1}{2},\quad
+ \alpha+2B\le2\binom{w+1}{3},\quad
+ B\le3\binom{w+1}{4}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+There are exactly 267 pairs in \eqref{eq:parameters}. The finite computation in Appendix~\ref{app:certificate} checks every admissible pair and every height in \eqref{eq:r} using only integer arithmetic. The same computation is certified by Lean's kernel using \texttt{decide}; its quantified consequence is the theorem \texttt{WidthBounds.envelope\_bounds}. Table~\ref{tab:certificate} records the resulting upper bounds. The machine-checkable source and its precise scope are described in Section~\ref{sec:formal}.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:lex}]
+For $0\le i\le\alpha$, let $c_i=\min\{j:x^iy^j\in K\}$. Lex closure gives $c_{i+1}<c_i$ for $i<\alpha$, and $c_\alpha=0$. Hence the $\alpha+1$ monomials $x^iy^{c_i}$ form the minimal generating set of $K$. Since $K$ has rank one and projective dimension one over $T$, its Betti numbers are $(\alpha+1,\alpha)$.
+
+The finite-colength lex formula \cite[equation~(7)]{CMS} now reads
+\begin{equation}\label{eq:betti-lex}
+ \beta_0^S(L)=\alpha+1+\ell,\qquad
+ \beta_1^S(L)=\alpha+2\ell,\qquad
+ \beta_2^S(L)=\ell.
+\end{equation}
+Combining Lemma~\ref{lem:envelope} with Proposition~\ref{prop:certificate} proves the three bounds.
+\end{proof}
+
+\begin{remark}\label{rem:finite}
+Finite colength is essential for the use of \eqref{eq:betti-lex}, although it is not needed for the standard-monomial envelope once a first forbidden pure $x$ power is specified. For example, $(x^2,xy,xz,y^2,yz)$ has infinitely many standard powers of $z$. It satisfies a linear cumulative bound, but has five generators rather than the six predicted by an invalid use of \eqref{eq:betti-lex}.
+\end{remark}
+
+\section{Transfer to numerical semigroups}\label{sec:transfer}
+We make the published algebraic inputs explicit. The local semigroup ring $R_\Gamma$ is a one-dimensional Cohen--Macaulay domain. It has embedding dimension four, so its projective dimension over the minimal regular local presentation is three. Thus its Betti numbers vanish for $i\ge4$.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+If $w\ge m-1$, the assertion follows from \cite[Corollary~2.4]{CMS}. If $w\ge40$, it follows from \cite[Theorem~1.5]{CMS}. If $w=3$, the four generators are necessarily consecutive. Proposition~2.7 of \cite{HS}, with $r=4$, gives the desired bound for the graded semigroup ring. Localizing at its homogeneous maximal ideal and completing preserve these Betti numbers: the graded minimal resolution remains minimal and exact under these flat base changes.
+
+It remains to assume $4\le w\le39$ and $w\le m-2$. Let $P=\kk\llbracket X_0,X_1,X_2,X_3\rrbracket$ and write $R_\Gamma=P/I_\Gamma$. Since $t^m$ is a nonzerodivisor, passing to $R_\Gamma/(t^m)$ preserves the Betti numbers over the corresponding three-variable regular local presentation. The construction in \cite[Sections~2--3]{CMS} then gives an artinian monomial ideal $J_\Gamma\subseteq Q=\kk[x,y,z]$ such that
+\begin{equation}\label{eq:comparison}
+ \beta_i(R_\Gamma)\le\beta_i^Q(Q/J_\Gamma),\qquad
+ \HS(Q/J_\Gamma,d)\le1+dw.
+\end{equation}
+The first comparison is the ideal-module inequality of CMS equation~(1), with the index shifted by one; the second is their Theorem~3.3. Minimality of the regular presentation implies that the associated graded defining ideal has no linear forms. Taking its homogeneous initial ideal preserves this fact, so $J_\Gamma\subseteq(x,y,z)^2$.
+
+Let $L=\Lex(J_\Gamma)$. It has the same Hilbert function and finite colength, and likewise contains no linear form. The characteristic-independent Bigatti--Hulett--Pardue theorem, in the form \cite[Theorem~2.1]{CMS}, yields
+\[
+ \beta_i^Q(Q/J_\Gamma)\le\beta_i^Q(Q/L).
+\]
+For $i\ge1$, $\beta_i^Q(Q/L)=\beta_{i-1}^Q(L)$. Theorem~\ref{thm:lex} therefore proves \eqref{eq:main} for $i=1,2,3$, completing all cases.
+\end{proof}
+
+\section{Formal verification and reproducibility}\label{sec:formal}
+The project uses Lean 4.22.0 and mathlib v4.22.0, with the dependency manifest fixed to a specific commit. The entry point is
+\begin{center}
+\texttt{WidthBounds.small\_width\_binomial\_bounds}.
+\end{center}
+Its input is a predicate on exponent triples expressing standard monomials, closure under divisors and downward lex moves, the initial pure-$x$ degree, and the cumulative three-variable count bound. It does \emph{not} assume monotonicity, the counting lower bound, the prefix formulas, the cutoff, or the envelope estimate: these are all proved. The theorem also identifies the truncated two-variable sum with every sufficiently long partial sum.
+
+The finite arithmetic theorem \texttt{finite\_envelope\_certificate} uses kernel reduction and has no axiom dependencies. The complete combinatorial theorem uses the usual foundations \texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}. The project contains no \texttt{sorry}, additional axioms, or use of \texttt{native\_decide}.
+
+The polynomial-ideal interpretation of the exponent predicate, the identification of cardinalities with Hilbert functions and colength, formula \eqref{eq:betti-lex}, and the algebraic transfer in Section~\ref{sec:transfer} are not formalized in this development. These are the conventional algebraic layer to be checked alongside the formally verified new combinatorics. In particular, the full semigroup theorem is not claimed to be an end-to-end Lean theorem.
+
+From the project root, the independent integer check is run with
+\begin{verbatim}
+uv --cache-dir .uv-cache run --frozen python 
+    scripts/envelope_certificate.py
+\end{verbatim}
+The command is a single line; the line break above is typographical. Running \texttt{lake build} in the \texttt{lean/} directory checks the formal development. The source bundle includes the exact toolchain and manifest, the integer output for every parameter pair, and the build log. The Python calculation is a reproduction aid; the finite certificate itself is checked by Lean's kernel.
+
+\paragraph{Research status.}
+This draft was developed through user-directed AI-assisted exploration, code generation, literature checking, and proof review. Automated proof checking covers the stated combinatorial scope only. Independent domain-expert review of the algebraic application and a fuller novelty assessment remain outstanding. No claim of acceptance or priority is made by the draft label.
+
+\appendix
+\section{The finite certificate}\label{app:certificate}
+The following complete check is equivalent to the finite arithmetic component. Each maximum is taken over a nonempty set because the parameter test admits height zero.
+\begin{small}
+\begin{verbatim}
+from math import comb
+checked = 0
+for w in range(4, 40):
+    for a in range(2, 2*w + 2):
+        P = comb(a + 2, 3)
+        if P > 1 + (a - 1)*w:
+            continue
+        B = comb(a + 1, 2)
+        for d in range(a, 2*w + 1):
+            B += max(h for h in range(a + 1)
+                     if 2*P + (d-a+1)*h*(a+d+3-h)
+                        <= 2 + 2*d*w)
+        assert a + 1 + B <= comb(w + 1, 2)
+        assert a + 2*B <= 2*comb(w + 1, 3)
+        assert B <= 3*comb(w + 1, 4)
+        checked += 1
+assert checked == 267
+\end{verbatim}
+\end{small}
+
+\clearpage
+For each width, write $U_0=\max_\alpha(\alpha+1+B)$, $U_1=\max_\alpha(\alpha+2B)$, and $U_2=\max_\alpha B$, where the maxima use exactly \eqref{eq:parameters}. These maxima need not occur at the same $\alpha$.
+\begin{table}[!ht]
+\centering\small
+\input{certificate_table.tex}
+\caption{Envelope bounds for all small widths. Each triple is bounded respectively by $\binom{w+1}{2}$, $2\binom{w+1}{3}$, and $3\binom{w+1}{4}$.}\label{tab:certificate}
+\end{table}
+
+\begin{thebibliography}{9}
+\bibitem{CMS}
+G.~Caviglia, A.~Moscariello and A.~Sammartano,
+\emph{Bounds for syzygies of monomial curves},
+Proc. Amer. Math. Soc. \textbf{152} (2024), 3665--3678.
+\href{https://doi.org/10.1090/proc/16862}{doi:10.1090/proc/16862}.
+Version used: \href{https://arxiv.org/abs/2307.05770v2}{arXiv:2307.05770v2}, 20 July 2024.
+\bibitem{HS}
+J.~Herzog and D.~I.~Stamate,
+\emph{On the defining equations of the tangent cone of a numerical semigroup ring},
+J. Algebra \textbf{418} (2014), 8--28.
+\href{https://doi.org/10.1016/j.jalgebra.2014.07.008}{doi:10.1016/j.jalgebra.2014.07.008}.
+Version used: \href{https://arxiv.org/abs/1308.4644v3}{arXiv:1308.4644v3}, 29 July 2014.
+\end{thebibliography}
+\end{document}

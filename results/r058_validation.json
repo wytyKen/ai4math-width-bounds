@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "task": "R058",
+  "checked_utc": "2026-10-01T08:56:12.929217+00:00",
+  "status": "formal_verified_standard_higher_tor_dimensions_vanishing_and_width_bounds",
+  "command": "lake build",
+  "working_directory": "lean",
+  "process_exit_code": 0,
+  "toolchain": "Lean 4.22.0 / mathlib v4.22.0",
+  "mathlib_commit": "79e94a093aff4a60fb1b1f92d9681e407124c2ca",
+  "mathlib_tracked_diff_empty": true,
+  "source_and_log": [
+    {
+      "path": "lean/WidthBounds/ResidueFreeDimension.lean",
+      "sha256": "64415e375a16e7253e77a343d96aa0a973ebfd5ca86b494697a4c4f69453d1e9"
+    },
+    {
+      "path": "lean/WidthBounds/MinimalResolutionTor.lean",
+      "sha256": "5f3f883bcb2a188698aecdaee61164759855c375485e9fc9a82f9cec0b1ce3aa"
+    },
+    {
+      "path": "lean/WidthBounds/HigherTorBounds.lean",
+      "sha256": "81bd72c661a22e187882c2b00c1beedb269a8cb4f6e828419f185da2dd263d42"
+    },
+    {
+      "path": "lean/WidthBounds.lean",
+      "sha256": "323d15d871492427fb92504c7e63dadfa65bd1b2fb0abc6ec4f0f160ce458e2e"
+    },
+    {
+      "path": "lean/WidthBounds/DependencyAudit.lean",
+      "sha256": "41ef3e895279c2a4ff12eb395bec6d62b647b89c1115795920395a05836719e0"
+    },
+    {
+      "path": "results/lean_higher_tor_build.txt",
+      "sha256": "29b05fbcfa9054df43f5b171a511eb51e28e5745188c4a3a4ce9320fcee787e4"
+    }
+  ],
+  "new_axiom_outputs": {
+    "WidthBounds.MonomialInterface.residueTensorKNaturalEquiv": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "WidthBounds.MonomialInterface.residueTensorFreeCoordinates": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "WidthBounds.MonomialInterface.residueTensor_free_finite": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "WidthBounds.MonomialInterface.finrank_residueTensor_free": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "WidthBounds.homologyIsoTermOfZeroDifferentials": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "WidthBounds.MonomialInterface.idealQuotientTorIsoHomology": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "WidthBounds.MonomialInterface.idealQuotientTorIsoResidueTensor": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "WidthBounds.MonomialInterface.idealQuotientTorEquivResidueTensor": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "WidthBounds.MonomialInterface.idealQuotientTor_isZero_of_resolution_isZero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "WidthBounds.MonomialPresentation.minimalResolution_tor_finite": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "WidthBounds.MonomialPresentation.higherTor_one_dimension_compatibility": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "WidthBounds.MonomialPresentation.minimalResolution_tor_finrank": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "WidthBounds.MonomialPresentation.lexQuotient_tor_dimensions": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "WidthBounds.MonomialPresentation.finiteColength_higherTor_dimensions": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "WidthBounds.MonomialPresentation.finiteColength_higherTor_width_bounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "WidthBounds.MonomialPresentation.finiteColength_tor_all_positive_bounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "new_actual_dependency_roots": [
+    "WidthBounds.MonomialInterface.finrank_residueTensor_free",
+    "WidthBounds.MonomialInterface.idealQuotientTorEquivResidueTensor",
+    "WidthBounds.MonomialInterface.idealQuotientTorIsoHomology",
+    "WidthBounds.MonomialInterface.idealQuotientTorIsoResidueTensor",
+    "WidthBounds.MonomialInterface.idealQuotientTor_isZero_of_resolution_isZero",
+    "WidthBounds.MonomialInterface.residueTensorFreeCoordinates",
+    "WidthBounds.MonomialInterface.residueTensorKNaturalEquiv",
+    "WidthBounds.MonomialInterface.residueTensor_free_finite",
+    "WidthBounds.MonomialPresentation.finiteColength_higherTor_dimensions",
+    "WidthBounds.MonomialPresentation.finiteColength_higherTor_width_bounds",
+    "WidthBounds.MonomialPresentation.finiteColength_tor_all_positive_bounds",
+    "WidthBounds.MonomialPresentation.finrank_tor_eq_zero_of_isZero",
+    "WidthBounds.MonomialPresentation.higherTor_one_dimension_compatibility",
+    "WidthBounds.MonomialPresentation.lexQuotient_tor_dimensions",
+    "WidthBounds.MonomialPresentation.minimalResolution_tor_finite",
+    "WidthBounds.MonomialPresentation.minimalResolution_tor_finrank",
+    "WidthBounds.homologyIsoTermOfZeroDifferentials"
+  ],
+  "forbidden_source_tokens_absent": true,
+  "errors_or_warnings": false,
+  "baseline_checkpoint": "research/checkpoints/20260930T122919414321Z-6ca2e298",
+  "baseline_lean_project_files": 61,
+  "changed_existing_lean_files": [
+    "lean/WidthBounds.lean",
+    "lean/WidthBounds/DependencyAudit.lean"
+  ],
+  "previous_mathematical_source_bodies_unchanged": true,
+  "build_scope": "Unified incremental lake build with replay of cached successful dependencies; not a clean rebuild.",
+  "scope": "Actual standard Tor^A_n(A/m,A/I), deriving second factor; K action restricted along algebraMap K A; genuine K finiteness, dimensions 1,a+1+ell,a+2ell,ell and IsZero for n>=4; all positive degree width bounds in original actual finite-colength lex budget model. No general Tor factor exchange or semigroup transfer."
+}

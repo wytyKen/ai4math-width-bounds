@@ -1,0 +1,224 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage[margin=27mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={A column-square estimate for four-generated numerical semigroups},pdfauthor={}}
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{1em}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newenvironment{proof}[1][Proof]{\par\noindent\textit{#1.}\ \ignorespaces}{\unskip\nobreak\hfill\ensuremath{\square}\par}
+\newcommand{\NN}{\mathbb N}
+\newcommand{\kk}{\Bbbk}
+\newcommand{\HF}{\operatorname{HF}}
+\newcommand{\HS}{\operatorname{HS}}
+\newcommand{\Lex}{\operatorname{Lex}}
+\newcommand{\len}{\operatorname{length}}
+\newcommand{\llbracket}{[\![}
+\newcommand{\rrbracket}{]\!]}
+\title{A column-square estimate for four-generated numerical semigroups}
+\author{}
+\date{Research draft v0.2 --- 23 September 2026}
+\begin{document}
+\maketitle
+\vspace{-1.4em}
+\begin{center}\small
+For independent mathematical review. Novelty has not been established.
+Formal verification covers the new combinatorial argument; see Section~\ref{sec:formal}.
+\end{center}
+\begin{abstract}
+We use a single terminal Hilbert--Samuel budget to control the sum of the squares of the column lengths of a two-variable lex section. Completing a square before applying Cauchy--Schwarz preserves the position of the last nonzero column degree and yields a strict quadratic bound for every integer width $w\ge4$. This replaces the finite enumeration in draft v0.1 and removes the use of a separate large-width estimate. Combined with published algebraic reductions, the argument gives the width bounds for four-generated numerical semigroup rings, with a strict first bound when $w\ge4$. The new combinatorial proof, including the uniform signed-vector inequality, is verified in Lean. The algebraic transfer and the novelty assessment remain subject to independent review.
+\end{abstract}
+
+\section{The semigroup statement}
+A numerical semigroup is an additive submonoid $\Gamma\subseteq\NN$ with finite complement, where $\NN=\{0,1,\ldots\}$. Suppose $\Gamma$ has exactly four minimal generators $g_0<g_1<g_2<g_3$, and put $m=g_0$ and $w=g_3-g_0$. For a field $\kk$, write
+\[
+ R_\Gamma=\kk\llbracket t^{g_0},t^{g_1},t^{g_2},t^{g_3}\rrbracket.
+\]
+All Betti numbers of $R_\Gamma$ are over its minimal regular presentation $\kk\llbracket X_0,X_1,X_2,X_3\rrbracket$.
+
+\begin{theorem}\label{thm:main}
+For every such $\Gamma$ and every field $\kk$,
+\[
+ \beta_i(R_\Gamma)\le i\binom{w+1}{i+1}\qquad(i\ge1).
+\]
+If $w\ge4$, then in addition
+\[
+ \beta_1(R_\Gamma)\le\binom{w+1}{2}-1.
+\]
+\end{theorem}
+
+Caviglia--Moscariello--Sammartano (CMS) prove the non-strict bounds for $w\ge40$ in \cite[Theorem~1.5]{CMS}; their Remark~5.2 discusses the remaining small-width lex problem. Draft v0.1 treated that interval using a finite envelope certificate. The present proof works uniformly for all $w\ge4$ and makes the first bound strict. The case $w=3$ remains the known consecutive-generator case. We do not claim these stronger conclusions for arbitrary tangent cones or for arbitrary embedding dimension.
+
+\section{A terminal budget for lex columns}
+Let $S=\kk[x,y,z]$, ordered lexicographically with $x>y>z$, and let $L\subseteq(x,y,z)^2$ be an artinian lex ideal. Its standard monomials are those outside $L$. Assume that, for an integer $w\ge4$,
+\begin{equation}\label{eq:budget}
+ \sum_{t=0}^{d}\HF(S/L,t)\le1+dw\qquad(d\in\NN).
+\end{equation}
+Put $K=L\cap\kk[x,y]$, and let $\alpha$ be the least exponent such that $x^\alpha\in L$. Then $\alpha\ge2$. For $0\le i<\alpha$, define the positive column length
+\[
+ n_i=\#\{j\ge0:x^iy^j\notin K\},\qquad
+ \ell=\len(\kk[x,y]/K)=\sum_{i=0}^{\alpha-1}n_i.
+\]
+Each column is an initial interval in its $y$ exponent. Since $x^iy^{n_i-1}$ is standard, lex order makes $y^{i+n_i-1}$ standard. Hence
+\begin{equation}\label{eq:column-end}
+ i+n_i\le n_0\qquad(0\le i<\alpha).
+\end{equation}
+
+\begin{lemma}\label{lem:terminal}
+The column lengths satisfy
+\begin{equation}\label{eq:terminal}
+ \sum_{i=0}^{\alpha-1}\frac{n_i(n_i+1)}2\le1+(n_0-1)w.
+\end{equation}
+\end{lemma}
+\begin{proof}
+For fixed $i$, all monomials $x^iy^jz^k$ with $j+k<n_i$ are standard: first $x^iy^{j+k}$ is standard, and replacing some $y$ factors by $z$ lowers lex order. They have total degree at most $i+n_i-1\le n_0-1$, by \eqref{eq:column-end}. Their number is $n_i(n_i+1)/2$, and the sets for distinct $i$ are disjoint. Apply \eqref{eq:budget} once, at $d=n_0-1$.
+\end{proof}
+
+\begin{lemma}\label{lem:alpha}
+One has $\alpha\le w-2$.
+\end{lemma}
+\begin{proof}
+All monomials of degree below $\alpha$ are standard, since the largest such monomials $x^d$ are standard. Thus
+\[
+ \binom{\alpha+2}{3}\le1+(\alpha-1)w.
+\]
+Using
+\[
+ \alpha(\alpha+1)(\alpha+2)-6
+   =(\alpha-1)(\alpha^2+4\alpha+6)
+\]
+and $\alpha\ge2$ gives $\alpha^2+4\alpha+6\le6w$. If $\alpha\ge w-1$, this implies $w^2+2w+3\le6w$, or $(w-1)(w-3)\le0$, impossible for $w\ge4$. The integer parameters therefore satisfy $\alpha\le w-2$.
+\end{proof}
+
+\section{A uniform strict estimate}
+\begin{lemma}\label{lem:cauchy}
+Under \eqref{eq:terminal},
+\begin{equation}\label{eq:cauchy}
+ (2\ell+\alpha-2w)^2\le
+ \alpha\bigl[4(w-1)(w-2)+\alpha\bigr].
+\end{equation}
+\end{lemma}
+\begin{proof}
+Use the signed integer vector
+\[
+ v_0=2n_0+1-2w,\qquad v_i=2n_i+1\quad(1\le i<\alpha).
+\]
+There is no nonnegativity assumption on $v_0$. Direct expansion and \eqref{eq:terminal} yield
+\begin{align*}
+ \sum_i v_i&=2\ell+\alpha-2w,\\
+ \sum_i v_i^2
+ &=4\sum_i n_i(n_i+1)+\alpha-8wn_0-4w+4w^2\\
+ &\le4(w-1)(w-2)+\alpha.
+\end{align*}
+Now apply $(\sum_i v_i)^2\le\alpha\sum_i v_i^2$. Equivalently, this step follows from the integer identity
+\[
+ \alpha\sum_i v_i^2-(\sum_i v_i)^2=\sum_{i<j}(v_i-v_j)^2\ge0.
+\]
+\end{proof}
+
+\begin{theorem}\label{thm:strict}
+For every integer $w\ge4$ under the hypotheses of Section~2,
+\begin{equation}\label{eq:strict}
+ \alpha+1+\ell\le\binom{w+1}{2}-1.
+\end{equation}
+Moreover,
+\begin{equation}\label{eq:other}
+ \alpha+2\ell\le2\binom{w+1}{3},\qquad
+ \ell\le3\binom{w+1}{4}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Set $T=w^2-w-\alpha-2$. Lemma~\ref{lem:alpha} gives $T\ge w(w-2)>0$. A polynomial identity and the same lemma show
+\begin{align*}
+ T^2-\alpha\bigl[4(w-1)(w-2)+\alpha\bigr]
+ &=(w-2)\bigl[(w-2)(w+1)^2-2\alpha(3w-1)\bigr]\\
+ &\ge(w-2)^2(w-1)(w-3)>0.
+\end{align*}
+Combining this with \eqref{eq:cauchy} gives $2\ell+\alpha-2w<T$, since $T>0$. Rearranging yields
+\[
+ \alpha+1+\ell<\frac{w(w+1)}2,
+\]
+which is \eqref{eq:strict} by integrality.
+
+Write $C=\binom{w+1}{2}$. Then $\ell\le C-\alpha-2$, so $\alpha+2\ell\le2C-\alpha-4\le2C$ and $\ell\le C$. Finally,
+\[
+ C\le\binom{w+1}{3},\qquad C\le3\binom{w+1}{4}\qquad(w\ge4),
+\]
+as is immediate from the ratios $(w-1)/3$ and $(w-1)(w-2)/4$. This proves \eqref{eq:other} without a bounded parameter search.
+\end{proof}
+
+\begin{remark}
+The retained estimate \eqref{eq:cauchy} also gives
+\[
+ \ell\le w-\frac\alpha2+
+   \sqrt{\alpha(w-1)(w-2)+\frac{\alpha^2}{4}}.
+\]
+Since $\alpha^2+4\alpha+6\le6w$, this is $O(w^{5/4})$ as $w$ grows. The square-root formulation and asymptotic notation are ordinary consequences recorded here; the Lean conclusion used below is the exact integer bound \eqref{eq:strict}--\eqref{eq:other}.
+\end{remark}
+
+\section{The algebraic transfer}
+For the finite-colength lex ideal $L$, the two-variable lex ideal $K$ has $\alpha+1$ minimal generators and rank one, so its Betti numbers as an ideal are $(\alpha+1,\alpha)$. The finite-colength formula \cite[equation~(7)]{CMS} gives
+\begin{equation}\label{eq:betti}
+ \beta_0^S(L)=\alpha+1+\ell,\quad
+ \beta_1^S(L)=\alpha+2\ell,\quad
+ \beta_2^S(L)=\ell.
+\end{equation}
+Thus Theorem~\ref{thm:strict} bounds the three positive Betti numbers of $S/L$, with the usual ideal-to-quotient shift by one.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The four-generator hypothesis gives $w\ge3$. If $w=3$, the generators are consecutive. Proposition~2.7 of \cite{HS}, with $r=4$, gives the desired bound for the graded semigroup ring. Localizing its minimal weighted-graded free resolution at the homogeneous maximal ideal and then completing preserve exactness and minimality, hence preserve the Betti numbers.
+
+Suppose now $w\ge4$. CMS's construction starts with the Artinian reduction $R_\Gamma/(t^m)$ and passes to its associated graded ring and then to a homogeneous monomial initial ideal $J\subseteq Q=\kk[x,y,z]$. It has colength $m$ and no linear forms. The regular parameter $t^m$, the initial-ideal comparison and \cite[equation~(1)]{CMS} give
+\[
+ \beta_i(R_\Gamma)\le\beta_i^Q(Q/J)\quad(i\ge1).
+\]
+If $w\le m-2$, Theorem~3.3 of \cite{CMS} gives $\HS(Q/J,d)\le1+dw$. If $w\ge m-1$, the same inequality follows directly: the degree-zero contribution is one, and for $d\ge1$,
+\[
+ \HS(Q/J,d)\le m\le w+1\le1+dw.
+\]
+Thus the budget holds for every $w\ge4$, without invoking a separate large-width theorem.
+
+Let $L=\Lex(J)$. It remains artinian, has no linear forms and has the same Hilbert function. The characteristic-independent Bigatti--Hulett--Pardue comparison \cite[Theorem~2.1]{CMS} implies
+\[
+ \beta_i(R_\Gamma)\le\beta_i^Q(Q/J)\le\beta_i^Q(Q/L).
+\]
+Apply \eqref{eq:betti} and Theorem~\ref{thm:strict} for $i=1,2,3$. For $i\ge4$, the Betti numbers vanish: $R_\Gamma$ is one-dimensional Cohen--Macaulay with a four-dimensional minimal regular presentation, and therefore has projective dimension three. This proves both conclusions.
+\end{proof}
+
+The Artinian assumption in \eqref{eq:betti} is not inferred from the combinatorial theorem. It comes from the semigroup reduction. For example, $(x^2,xy,xz,y^2,yz)$ retains infinitely many standard powers of $z$ and does not satisfy the finite-colength Betti formula. The general lex statement at $w=3$ is also false; that boundary is handled separately for semigroups.
+
+\section{Formal verification, evidence and limits}\label{sec:formal}
+The new Lean entry points are
+\begin{center}\ttfamily
+WidthBounds.all\_widths\_analytic\_bounds\par
+WidthBounds.all\_widths\_strict\_improvement.
+\end{center}
+They work with a predicate on exponent triples, divisor closure, downward same-degree lex closure, the initial pure-$x$ degree, and the cumulative three-variable counting budget. They have no assumption $w\le39$ and no assumed column-square or Cauchy conclusion. Column support, exact total length, the terminal triangle injection, prefix counting, signed-vector arithmetic and strict comparison are all proved.
+
+The proof uses Lean 4.22.0 and mathlib v4.22.0. Its axiom dependencies are the standard \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}; there are no proof placeholders or new axioms. A separate diagnostic traverses actual declaration dependencies and rejects a dependency on the old finite envelope certificate or small-width theorems. Those older declarations remain available in the project but are not used by the new proof.
+
+The polynomial-ideal interpretation has a separately verified membership interface. The identifications of monomial counts with quotient Hilbert functions and colength, the Betti formula \eqref{eq:betti}, and the full semigroup transfer are conventional algebraic arguments, not an end-to-end Lean formalization. The direct colength argument for $w\ge m-1$ in Section~4 is part of that conventional layer.
+
+Run \texttt{lake build} inside the project's \texttt{lean/} directory. The modules \texttt{ColumnBounds}, \texttt{AnalyticArithmetic}, \texttt{AllWidths} and \texttt{DependencyAudit} contain the new development. The dependency manifest, exact source hashes and build log accompany the project. Small numerical experiments served to look for mistakes; no such experiment is used in the proof.
+
+\paragraph{Research status.}
+This is a user-directed AI-assisted research draft. The analytic argument received an internal proof review, and its combinatorial formalization has passed Lean's kernel checks. A bounded primary-source search did not locate the same full-range strict conclusion, but that is not a novelty certification. Human domain-expert review and a fuller novelty assessment remain outstanding. Draft v0.1 and its finite certificate are preserved as an independent earlier route.
+
+\begin{thebibliography}{9}
+\bibitem{CMS} G.~Caviglia, A.~Moscariello and A.~Sammartano,
+\emph{Bounds for syzygies of monomial curves},
+Proc. Amer. Math. Soc. \textbf{152} (2024), 3665--3678.
+\href{https://doi.org/10.1090/proc/16862}{doi:10.1090/proc/16862}.
+Version used: \href{https://arxiv.org/abs/2307.05770v2}{arXiv:2307.05770v2}, 20 July 2024.
+\bibitem{HS} J.~Herzog and D.~I.~Stamate,
+\emph{On the defining equations of the tangent cone of a numerical semigroup ring},
+J. Algebra \textbf{418} (2014), 8--28.
+\href{https://doi.org/10.1016/j.jalgebra.2014.07.008}{doi:10.1016/j.jalgebra.2014.07.008}.
+Version used: \href{https://arxiv.org/abs/1308.4644v3}{arXiv:1308.4644v3}, 29 July 2014.
+\end{thebibliography}
+\end{document}

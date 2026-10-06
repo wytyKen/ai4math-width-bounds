@@ -1,0 +1,42 @@
+ℹ [1/393] Replayed WidthBounds.Arithmetic
+info: WidthBounds/Arithmetic.lean:48:0: 'WidthBounds.finite_envelope_certificate' does not depend on any axioms
+ℹ [3054/3078] Replayed WidthBounds.LexCounting
+info: WidthBounds/LexCounting.lean:188:0: 'WidthBounds.LexCounting.hilbert2_succ_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/LexCounting.lean:189:0: 'WidthBounds.LexCounting.sum_le_hilbert3' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3056/3078] Replayed WidthBounds.Cutoff
+info: WidthBounds/Cutoff.lean:91:0: 'WidthBounds.LexCounting.hilbert2_eq_zero_of_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/Cutoff.lean:92:0: 'WidthBounds.LexCounting.alpha_le_two_mul_add_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3057/3078] Replayed WidthBounds.SmallWidth
+info: WidthBounds/SmallWidth.lean:114:0: 'WidthBounds.small_width_combinatorial_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/SmallWidth.lean:115:0: 'WidthBounds.small_width_binomial_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3061/3078] Replayed WidthBounds.MonomialInterface
+info: WidthBounds/MonomialInterface.lean:208:0: 'WidthBounds.MonomialInterface.monomial_mem_monomialIdeal_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: WidthBounds/MonomialInterface.lean:209:0: 'WidthBounds.MonomialInterface.monomialIdeal_standardLex' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/MonomialInterface.lean:210:0: 'WidthBounds.MonomialInterface.exists_initial_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/MonomialInterface.lean:211:0: 'WidthBounds.MonomialInterface.monomialIdeal_exists_initial_degree' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3062/3078] Replayed WidthBounds.ColumnBounds
+info: WidthBounds/ColumnBounds.lean:211:0: 'WidthBounds.Columns.sum_columns_eq_sectionLength' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/ColumnBounds.lean:212:0: 'WidthBounds.Columns.terminal_triangle_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3063/3078] Replayed WidthBounds.AnalyticArithmetic
+info: WidthBounds/AnalyticArithmetic.lean:150:0: 'WidthBounds.analytic_column_binomial_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3064/3078] Replayed WidthBounds.AllWidths
+info: WidthBounds/AllWidths.lean:53:0: 'WidthBounds.all_widths_analytic_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/AllWidths.lean:54:0: 'WidthBounds.all_widths_strict_improvement' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3074/3078] Replayed WidthBounds.MonomialBasis
+info: WidthBounds/MonomialBasis.lean:247:0: 'WidthBounds.MonomialInterface.quotientStandardEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/MonomialBasis.lean:248:0: 'WidthBounds.MonomialInterface.standardMonomialBasis_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/MonomialBasis.lean:249:0: 'WidthBounds.MonomialInterface.finrank_standardMonomialSpan' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/MonomialBasis.lean:250:0: 'WidthBounds.MonomialInterface.finrank_quotientHomogeneous' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3075/3078] Built WidthBounds.Growth
+info: WidthBounds/Growth.lean:144:0: 'WidthBounds.Growth.sectionLength_le_divisor_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WidthBounds/Growth.lean:145:0: 'WidthBounds.Growth.sectionLength_le_harmonic' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3076/3078] Built WidthBounds.DependencyAudit
+info: WidthBounds/DependencyAudit.lean:9:0: WidthBounds.all_widths_analytic_bounds: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:9:0: WidthBounds.all_widths_strict_improvement: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+info: WidthBounds/DependencyAudit.lean:9:0: WidthBounds.Growth.sectionLength_le_harmonic: finite enumeration and small-width certificate absent from transitive declaration dependencies.
+✔ [3077/3078] Built WidthBounds
+Build completed successfully.

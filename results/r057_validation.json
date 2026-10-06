@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "task": "R057",
+  "checked_utc": "2026-09-30T11:57:54.953331+00:00",
+  "status": "formal_verified_actual_finite_free_resolution_and_residue_zero_differentials",
+  "command": "lake build",
+  "working_directory": "lean",
+  "process_exit_code": 0,
+  "toolchain": "Lean 4.22.0 / mathlib v4.22.0",
+  "mathlib_commit": "79e94a093aff4a60fb1b1f92d9681e407124c2ca",
+  "mathlib_tracked_diff_empty": true,
+  "source_and_log": [
+    {
+      "path": "lean/WidthBounds/PolynomialPairRelation.lean",
+      "sha256": "246621dc7652262db3d3a3dd70db471f2037c517af8ace877c86a61b49a8041f"
+    },
+    {
+      "path": "lean/WidthBounds/BoundaryResolutionDegree.lean",
+      "sha256": "7ea223bec28ede3b2dd87a9346f3ff34e47a3cd7bacc2ceb1a8b89a87f7d475d"
+    },
+    {
+      "path": "lean/WidthBounds/TriangularSecondSyzygies.lean",
+      "sha256": "b1d6cdf45272938004df6936b09390ff2aa7c4f0f90998f472ced8f38ebb42f1"
+    },
+    {
+      "path": "lean/WidthBounds/BoundaryThirdDifferential.lean",
+      "sha256": "c54459d2cc3b0646d5584f90d11061b9f800f11b1f0941b71e08942c0b06d025"
+    },
+    {
+      "path": "lean/WidthBounds/FiniteThreeResolution.lean",
+      "sha256": "f75552a79464e92a94f06c967813790fc218fa1c20a3f66a0b8289457ba47a30"
+    },
+    {
+      "path": "lean/WidthBounds/LexQuotientResolution.lean",
+      "sha256": "dcb068dc03511467532fe570047bfac9f02f32a241d5f1d9f90bdefb0541e951"
+    },
+    {
+      "path": "lean/WidthBounds.lean",
+      "sha256": "3d16cb197e8b2c0e9fba9e14284397882aa41d283e5489748f65c127f8fd3725"
+    },
+    {
+      "path": "lean/WidthBounds/DependencyAudit.lean",
+      "sha256": "cbfe35634a059e9f30da5da4420c414f32d0180f0d70c2419b8fa657bf311178"
+    },
+    {
+      "path": "results/lean_lex_resolution_build.txt",
+      "sha256": "6a5565d48176395e01ae0b91fec0653ee8e724213e6cb40056286d6347a58d34"
+    }
+  ],
+  "new_axiom_outputs": [
+    "WidthBounds.FiniteThreeResolution.complex_exactAt_succ",
+    "WidthBounds.FiniteThreeResolution.resolution",
+    "WidthBounds.FiniteThreeResolution.resolution_π_f_zero",
+    "WidthBounds.FiniteThreeResolution.map_resolution_d_eq_zero",
+    "WidthBounds.FiniteThreeResolution.resolution_free",
+    "WidthBounds.FiniteThreeResolution.resolution_finite",
+    "WidthBounds.MonomialPresentation.boundaryRelationDegree_total",
+    "WidthBounds.MonomialPresentation.boundaryRelationTarget_total_le",
+    "WidthBounds.MonomialPresentation.boundaryRelation_apply_mem_variableIdeal",
+    "WidthBounds.MonomialPresentation.residue_tmul_eq_zero_of_coordinates_mem_variableIdeal",
+    "WidthBounds.MonomialPresentation.lTensor_eq_zero_of_coordinates_mem_variableIdeal",
+    "WidthBounds.MonomialPresentation.residueTensorFunctor_map_secondDifferential_eq_zero",
+    "WidthBounds.MonomialPresentation.polynomial_pair_relation",
+    "WidthBounds.MonomialPresentation.polynomial_xy_relation",
+    "WidthBounds.MonomialPresentation.secondDifferential_top_coordinate",
+    "WidthBounds.MonomialPresentation.secondDifferential_top_inl",
+    "WidthBounds.MonomialPresentation.secondDifferential_top_face",
+    "WidthBounds.MonomialPresentation.secondDifferential_thirdDifferential",
+    "WidthBounds.MonomialPresentation.thirdDifferential_injective",
+    "WidthBounds.MonomialPresentation.range_thirdDifferential",
+    "WidthBounds.MonomialPresentation.exists_normalizingCoefficients",
+    "WidthBounds.MonomialPresentation.exists_lexThirdColumn",
+    "WidthBounds.MonomialPresentation.lexThirdColumn_triangular",
+    "WidthBounds.MonomialPresentation.range_lexThirdDifferential",
+    "WidthBounds.MonomialPresentation.lexThirdDifferential_injective",
+    "WidthBounds.MonomialPresentation.lexThird_exact",
+    "WidthBounds.MonomialPresentation.residueTensorFunctor_map_lexThirdDifferential_eq_zero",
+    "WidthBounds.MonomialPresentation.boundary_thirdFree_finrank",
+    "WidthBounds.MonomialPresentation.lexQuotientResolution",
+    "WidthBounds.MonomialPresentation.lexQuotientResolution_augmentation",
+    "WidthBounds.MonomialPresentation.lexQuotientResolution_free",
+    "WidthBounds.MonomialPresentation.lexQuotientResolution_finite",
+    "WidthBounds.MonomialPresentation.lexQuotientResolution_zero_tail",
+    "WidthBounds.MonomialPresentation.lexQuotientResolution_residue_d_zero",
+    "WidthBounds.MonomialPresentation.finiteColength_exists_residue_minimal_resolution"
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "new_dependency_roots": [
+    "WidthBounds.FiniteThreeResolution.map_resolution_d_eq_zero",
+    "WidthBounds.FiniteThreeResolution.resolution",
+    "WidthBounds.MonomialPresentation.boundaryRelationTarget_total_le",
+    "WidthBounds.MonomialPresentation.boundary_thirdFree_finrank",
+    "WidthBounds.MonomialPresentation.exists_lexThirdColumn",
+    "WidthBounds.MonomialPresentation.exists_normalizingCoefficients",
+    "WidthBounds.MonomialPresentation.finiteColength_exists_residue_minimal_resolution",
+    "WidthBounds.MonomialPresentation.lexQuotientResolution",
+    "WidthBounds.MonomialPresentation.lexQuotientResolution_augmentation",
+    "WidthBounds.MonomialPresentation.lexQuotientResolution_finite",
+    "WidthBounds.MonomialPresentation.lexQuotientResolution_free",
+    "WidthBounds.MonomialPresentation.lexQuotientResolution_residue_d_zero",
+    "WidthBounds.MonomialPresentation.lexQuotientResolution_zero_tail",
+    "WidthBounds.MonomialPresentation.lexThirdColumn_triangular",
+    "WidthBounds.MonomialPresentation.lexThirdDifferential_injective",
+    "WidthBounds.MonomialPresentation.lexThird_exact",
+    "WidthBounds.MonomialPresentation.polynomial_xy_relation",
+    "WidthBounds.MonomialPresentation.range_lexThirdDifferential",
+    "WidthBounds.MonomialPresentation.range_thirdDifferential",
+    "WidthBounds.MonomialPresentation.residueTensorFunctor_map_lexThirdDifferential_eq_zero",
+    "WidthBounds.MonomialPresentation.residueTensorFunctor_map_secondDifferential_eq_zero",
+    "WidthBounds.MonomialPresentation.thirdDifferential_injective"
+  ],
+  "errors": 0,
+  "warnings": 0,
+  "baseline_checkpoint": "research/checkpoints/20260930T064756496849Z-befb8c1c",
+  "previous_lean_files_unchanged": 53,
+  "modified_existing_lean_files": [
+    "lean/WidthBounds.lean",
+    "lean/WidthBounds/DependencyAudit.lean"
+  ],
+  "new_lean_files": [
+    "lean/WidthBounds/PolynomialPairRelation.lean",
+    "lean/WidthBounds/BoundaryResolutionDegree.lean",
+    "lean/WidthBounds/TriangularSecondSyzygies.lean",
+    "lean/WidthBounds/BoundaryThirdDifferential.lean",
+    "lean/WidthBounds/FiniteThreeResolution.lean",
+    "lean/WidthBounds/LexQuotientResolution.lean"
+  ],
+  "review": "research/tasks/R076_lex_resolution_review.md",
+  "review_sha256": "ac3ec467a744ee0f372c3b50d26b85beb54bf3fda2ac51275fa1ed7e34c9c84c",
+  "frozen_v0_3_unchanged": true,
+  "scope": "Actual third columns with kernel/triangular/variable-ideal conditions proved, concrete d3 image=ker(d2) and injective, genuine standard ProjectiveResolution(A/I) with finite free terms and ranks 1,a+1+ell,a+2ell,ell, zero tail from degree4, and all actual residue tensor differentials zero.",
+  "not_proved": [
+    "Identification of standard higher Tor with K-vector-space dimensions (R058)",
+    "A complete graded-shift resolution API",
+    "Full numerical semigroup transfer or novelty certification"
+  ]
+}

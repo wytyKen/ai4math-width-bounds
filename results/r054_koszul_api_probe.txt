@@ -1,0 +1,31 @@
+MvPolynomial.isRegular_X.{u, u_1} {R : Type u} {σ : Type u_1} {n : σ} [CommSemiring R] : IsRegular (MvPolynomial.X n)
+ChainComplex.of.{v, u, u_2} {V : Type u} [Category.{v, u} V] [HasZeroMorphisms V] {α : Type u_2}
+  [AddRightCancelSemigroup α] [One α] [DecidableEq α] (X : α → V) (d : (n : α) → X (n + 1) ⟶ X n)
+  (sq : ∀ (n : α), d (n + 1) ≫ d n = 0) : ChainComplex V α
+CategoryTheory.ShortComplex.moduleCatMk.{v, u} {R : Type u} [Ring R] {X₁ X₂ X₃ : Type v} [AddCommGroup X₁]
+  [AddCommGroup X₂] [AddCommGroup X₃] [Module R X₁] [Module R X₂] [Module R X₃] (f : X₁ →ₗ[R] X₂) (g : X₂ →ₗ[R] X₃)
+  (hfg : g ∘ₗ f = 0) : ShortComplex (ModuleCat R)
+CategoryTheory.ShortComplex.moduleCat_exact_iff_range_eq_ker.{v, u} {R : Type u} [Ring R]
+  (S : ShortComplex (ModuleCat R)) :
+  S.Exact ↔ LinearMap.range (ModuleCat.Hom.hom S.f) = LinearMap.ker (ModuleCat.Hom.hom S.g)
+CategoryTheory.ShortComplex.moduleCatHomologyIso.{v, u} {R : Type u} [Ring R] (S : ShortComplex (ModuleCat R)) :
+  S.homology ≅ S.moduleCatLeftHomologyData.H
+CategoryTheory.ShortComplex.isZero_homology_of_isZero_X₂.{v, u} {C : Type u} [Category.{v, u} C] [HasZeroMorphisms C]
+  (S : ShortComplex C) (hS : IsZero S.X₂) [S.HasHomology] : IsZero S.homology
+HomologicalComplex.ExactAt.isZero_homology.{u_1, u_2, u_3} {C : Type u_1} [Category.{u_3, u_1} C] [HasZeroMorphisms C]
+  {ι : Type u_2} {c : ComplexShape ι} {K : HomologicalComplex C c} {i : ι} [K.HasHomology i] (h : K.ExactAt i) :
+  IsZero (K.homology i)
+Submodule.finrank_quotient_add_finrank.{u, u_1} {R : Type u_1} {M : Type u} [Ring R] [AddCommGroup M] [Module R M]
+  [HasRankNullity.{u, u_1} R] [StrongRankCondition R] [Module.Finite R M] (N : Submodule R M) :
+  Module.finrank R (M ⧸ N) + Module.finrank R ↥N = Module.finrank R M
+LinearMap.finrank_range_add_finrank_ker.{u, v, v'} {K : Type u} {V : Type v} [DivisionRing K] [AddCommGroup V]
+  [Module K V] {V₂ : Type v'} [AddCommGroup V₂] [Module K V₂] [FiniteDimensional K V] (f : V →ₗ[K] V₂) :
+  Module.finrank K ↥(LinearMap.range f) + Module.finrank K ↥(LinearMap.ker f) = Module.finrank K V
+Module.Finite.equiv.{u_1, u_4, u_5} {R : Type u_1} {M : Type u_4} {N : Type u_5} [Semiring R] [AddCommMonoid M]
+  [Module R M] [AddCommMonoid N] [Module R N] [Module.Finite R M] (e : M ≃ₗ[R] N) : Module.Finite R N
+'R054KoszulAPI.finite_homology' depends on axioms: [propext, Classical.choice, Quot.sound]
+'R054KoszulAPI.local_finrank_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'R054KoszulAPI.local_finrank_decomposition_ambient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'R054KoszulAPI.homology_zero_of_term_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PROCESS_EXIT_CODE=0

@@ -1,0 +1,4 @@
+# Evidence records use SHA-256 of exact file bytes, including line endings.
+# Preserve existing bytes on add/checkout across Windows and Unix.
+# This does not change Git's normal text diff detection.
+* -text

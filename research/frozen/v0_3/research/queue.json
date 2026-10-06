@@ -1,0 +1,1322 @@
+{
+  "schema_version": 1,
+  "updated_utc": "2026-09-29T09:20:47.317273+00:00",
+  "focus": "研究交付v0.3阶段关闭；没有自动下一数学任务，未来扩展须用户另选范围",
+  "root_owned_paths": [
+    "AGENTS.md",
+    "README.md",
+    "research/STATE.md",
+    "research/HANDOFF.md",
+    "research/PROTOCOL.md",
+    "research/queue.json",
+    "research/claims.json",
+    "lean/WidthBounds.lean",
+    "lean/lakefile.toml",
+    "lean/lake-manifest.json",
+    "lean/WidthBounds/GeneratorBounds.lean",
+    "lean/WidthBounds/GeneratorExact.lean",
+    "lean/WidthBounds/GeneratorNumberBounds.lean",
+    "lean/WidthBounds/GeneratorQuotientBounds.lean",
+    "lean/WidthBounds/GeneratorTensorBounds.lean",
+    "lean/WidthBounds/TorOneBounds.lean",
+    "lean/WidthBounds/LowerConstructionBounds.lean",
+    "lean/WidthBounds/LexGrowthTheta.lean",
+    "research/FINISH_PLAN.md",
+    "scripts/build_paper.ps1"
+  ],
+  "tasks": [
+    {
+      "id": "R001",
+      "title": "本地Python与Lean环境",
+      "status": "done",
+      "priority": 1,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [],
+      "owned_paths": [],
+      "deliverables": [
+        "pyproject.toml",
+        "lean/lean-toolchain"
+      ],
+      "acceptance": [
+        "uv虚拟环境与固定Lean/mathlib4.22.0可用"
+      ]
+    },
+    {
+      "id": "R002",
+      "title": "有限整数包络证书",
+      "status": "done",
+      "priority": 1,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R001"
+      ],
+      "owned_paths": [],
+      "deliverables": [
+        "results/envelope_certificate.json",
+        "lean/WidthBounds/Arithmetic.lean"
+      ],
+      "acceptance": [
+        "267组参数通过Python与Lean有限检查"
+      ]
+    },
+    {
+      "id": "R003",
+      "title": "新增组合证明形式化",
+      "status": "done",
+      "priority": 1,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R002"
+      ],
+      "owned_paths": [],
+      "deliverables": [
+        "lean/WidthBounds/SmallWidth.lean",
+        "results/lean_combinatorial_build.txt"
+      ],
+      "acceptance": [
+        "统一lake build成功；无sorry/自定义公理；明确语义范围"
+      ]
+    },
+    {
+      "id": "R004",
+      "title": "传统代数归约审查与v0.1稿件",
+      "status": "done",
+      "priority": 2,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R003"
+      ],
+      "owned_paths": [],
+      "deliverables": [
+        "research/algebra_bridge_audit.md",
+        "paper/width_bounds.tex",
+        "output/pdf/width_bounds.pdf"
+      ],
+      "acceptance": [
+        "文献假设与下标逐项核对；PDF已视觉检查；不声称专家认可或原创性"
+      ]
+    },
+    {
+      "id": "R005",
+      "title": "可恢复检查点工具",
+      "status": "done",
+      "priority": 1,
+      "owner": "checkpoint_engine",
+      "agent": "/root/checkpoint_engine",
+      "depends_on": [
+        "R004"
+      ],
+      "owned_paths": [
+        "scripts/checkpoint.py",
+        "scripts/test_checkpoint.py",
+        "research/tasks/R005_checkpoint_engine.md"
+      ],
+      "deliverables": [
+        "scripts/checkpoint.py",
+        "scripts/test_checkpoint.py",
+        "research/tasks/R005_checkpoint_engine.md"
+      ],
+      "acceptance": [
+        "临时目录测试通过",
+        "归档哈希校验和工作区变化分开报告",
+        "原子最新指针且不覆盖旧快照",
+        "真实项目检查点可创建和复核"
+      ]
+    },
+    {
+      "id": "R006",
+      "title": "解析包络与大宽度扩展",
+      "status": "done",
+      "priority": 2,
+      "owner": "analytic_extension",
+      "agent": "/root/analytic_extension",
+      "depends_on": [
+        "R003"
+      ],
+      "owned_paths": [
+        "research/tasks/R006_analytic.md",
+        "scripts/research_analytic.py",
+        "results/research_analytic.json"
+      ],
+      "deliverables": [
+        "research/tasks/R006_analytic.md"
+      ],
+      "acceptance": [
+        "给出准确可证明的新界或明确失败障碍",
+        "最多有界实验，不以经验曲线作证明",
+        "主智能体复核推导后才接纳"
+      ]
+    },
+    {
+      "id": "R007",
+      "title": "实际单项式理想到组合模型的接口",
+      "status": "done",
+      "priority": 2,
+      "owner": "formal_interface",
+      "agent": "/root/formal_interface",
+      "depends_on": [
+        "R003"
+      ],
+      "owned_paths": [
+        "lean/WidthBounds/MonomialInterface.lean",
+        "research/tasks/R007_interface.md"
+      ],
+      "deliverables": [
+        "lean/WidthBounds/MonomialInterface.lean",
+        "research/tasks/R007_interface.md"
+      ],
+      "acceptance": [
+        "真实数学接口有增量而非改名",
+        "目标Lean模块编译通过",
+        "明确仍缺的Hilbert维数或同调归约"
+      ]
+    },
+    {
+      "id": "R008",
+      "title": "验收新研究结果并选下一引理",
+      "status": "done",
+      "priority": 3,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R006",
+        "R007"
+      ],
+      "owned_paths": [],
+      "deliverables": [
+        "research/STATE.md",
+        "research/claims.json"
+      ],
+      "acceptance": [
+        "验收具体命题与语义",
+        "更新主线构建证据或失败记录",
+        "写下下一项有限任务"
+      ]
+    },
+    {
+      "id": "R009",
+      "title": "人类领域专家审稿及对外联系",
+      "status": "parked",
+      "priority": 9,
+      "owner": "user",
+      "agent": null,
+      "depends_on": [
+        "R004"
+      ],
+      "owned_paths": [],
+      "deliverables": [],
+      "acceptance": [
+        "用户明确恢复该方向并授权具体对外动作"
+      ],
+      "reason": "用户于本轮明确暂时不管外部审阅，先继续研究"
+    },
+    {
+      "id": "R010",
+      "title": "独立审查无枚举解析界",
+      "status": "done",
+      "priority": 2,
+      "owner": "analytic_review",
+      "agent": "/root/analytic_review",
+      "depends_on": [
+        "R003"
+      ],
+      "reviews_task": "R006",
+      "owned_paths": [
+        "research/tasks/R010_analytic_review.md"
+      ],
+      "deliverables": [
+        "research/tasks/R010_analytic_review.md"
+      ],
+      "acceptance": [
+        "从列几何重推终端预算",
+        "逐项核对Cauchy和严格不等式",
+        "不把有界实验当无限范围证明"
+      ]
+    },
+    {
+      "id": "R011",
+      "title": "无枚举解析证明的向量算术形式化",
+      "status": "done",
+      "priority": 1,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R001",
+        "R010"
+      ],
+      "owned_paths": [
+        "lean/WidthBounds/AnalyticArithmetic.lean",
+        "research/tasks/R011_analytic_arithmetic.md"
+      ],
+      "deliverables": [
+        "lean/WidthBounds/AnalyticArithmetic.lean",
+        "research/tasks/R011_analytic_arithmetic.md"
+      ],
+      "acceptance": [
+        "形式化平方/Cauchy与严格二项式比较，允许v0为负",
+        "证明任意整数w>=4而非有限区间",
+        "无sorry或新增公理，准确区分算术与列计数假设"
+      ],
+      "handoff_note": "Worker hit usage limit after reporting single-file compile success and saving olean. Root took over final build and evidence."
+    },
+    {
+      "id": "R012",
+      "title": "集成全部宽度解析定理",
+      "status": "done",
+      "priority": 2,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R011",
+        "R016"
+      ],
+      "owned_paths": [
+        "lean/WidthBounds/AllWidths.lean",
+        "research/tasks/R012_all_widths.md"
+      ],
+      "deliverables": [
+        "lean/WidthBounds/AllWidths.lean",
+        "research/tasks/R012_all_widths.md",
+        "lean/WidthBounds/DependencyAudit.lean",
+        "results/lean_all_widths_build.txt"
+      ],
+      "acceptance": [
+        "从StandardLex构造有限列长度，不把终端平方和预算当假设",
+        "证明总长度等于列长之和并接R011",
+        "得到全部w>=4的强化组合界，保留传统代数依赖边界"
+      ]
+    },
+    {
+      "id": "R013",
+      "title": "无聊天历史的文件恢复演练",
+      "status": "done",
+      "priority": 1,
+      "owner": "handoff_rehearsal",
+      "agent": "/root/handoff_rehearsal",
+      "depends_on": [
+        "R005"
+      ],
+      "owned_paths": [],
+      "deliverables": [
+        "research/tasks/R013_handoff_rehearsal.md"
+      ],
+      "acceptance": [
+        "空历史执行者只读项目文件即可复述已验证范围与唯一下一任务",
+        "没有把纸面解析界误作已编译定理",
+        "不启动外部联系或重复旧枚举"
+      ]
+    },
+    {
+      "id": "R014",
+      "title": "验收全宽度解析形式化后整合v0.2",
+      "status": "done",
+      "priority": 4,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R012"
+      ],
+      "owned_paths": [],
+      "deliverables": [
+        "research/STATE.md",
+        "paper/width_bounds_v0_2.tex",
+        "output/pdf/width_bounds_v0_2.pdf",
+        "research/tasks/R014_v0_2.md"
+      ],
+      "acceptance": [
+        "先验收新命题与主线构建，再决定稿件版本",
+        "保留v0.1冻结证据与准确新颖性状态"
+      ]
+    },
+    {
+      "id": "R015",
+      "title": "全宽度严格界与方法的定向查新",
+      "status": "done",
+      "priority": 2,
+      "owner": "analytic_novelty",
+      "agent": "/root/analytic_novelty",
+      "depends_on": [
+        "R010"
+      ],
+      "owned_paths": [
+        "research/tasks/R015_novelty.md"
+      ],
+      "deliverables": [
+        "research/tasks/R015_novelty.md"
+      ],
+      "acceptance": [
+        "针对全四生成元、严格界、列长平方和查一手文献",
+        "明确检索范围及不能认证新颖性",
+        "最多6轮检索后收束"
+      ]
+    },
+    {
+      "id": "R016",
+      "title": "列长度及终端三角形预算",
+      "status": "done",
+      "priority": 2,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R003",
+        "R010"
+      ],
+      "owned_paths": [
+        "lean/WidthBounds/ColumnBounds.lean",
+        "research/tasks/R016_columns.md"
+      ],
+      "deliverables": [
+        "lean/WidthBounds/ColumnBounds.lean",
+        "research/tasks/R016_columns.md"
+      ],
+      "acceptance": [
+        "从StandardLex构造有限列",
+        "列长和等于sectionLength",
+        "由显式注入证明终端平方和预算，适用于所有w>=4"
+      ]
+    },
+    {
+      "id": "R017",
+      "title": "单项式商环基与Hilbert维数接口",
+      "status": "done",
+      "priority": 1,
+      "owner": "monomial_basis",
+      "agent": "/root/monomial_basis",
+      "depends_on": [
+        "R007",
+        "R012"
+      ],
+      "owned_paths": [
+        "lean/WidthBounds/MonomialBasis.lean",
+        "research/tasks/R017_monomial_basis.md"
+      ],
+      "deliverables": [
+        "lean/WidthBounds/MonomialBasis.lean",
+        "research/tasks/R017_monomial_basis.md"
+      ],
+      "acceptance": [
+        "真实单项式理想商环的标准单项式线性基或明确可组合接口",
+        "不直接假设待证的Hilbert维数等同",
+        "目标模块编译、准确范围与阻碍记录"
+      ]
+    },
+    {
+      "id": "R018",
+      "title": "探索比O(w^(5/4))更强的截面增长界",
+      "status": "done",
+      "priority": 2,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R012",
+        "R015"
+      ],
+      "owned_paths": [
+        "research/tasks/R018_growth.md",
+        "scripts/research_growth.py",
+        "results/research_growth.json"
+      ],
+      "deliverables": [
+        "research/tasks/R018_growth.md"
+      ],
+      "acceptance": [
+        "优先从全部次数预算推解析界，例如O(w log w)，不预设成功",
+        "严格写明常数、阈值、适用模型；最多一个有界实验",
+        "若失败记录精确障碍，不能以曲线拟合宣称定理"
+      ]
+    },
+    {
+      "id": "R019",
+      "title": "针对用户质疑的实际半群语义反查",
+      "status": "done",
+      "priority": 0,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R012"
+      ],
+      "owned_paths": [
+        "scripts/semigroup_semantic_check.py",
+        "results/semigroup_semantic_check.json",
+        "research/tasks/R019_confidence_audit.md"
+      ],
+      "deliverables": [
+        "research/tasks/R019_confidence_audit.md"
+      ],
+      "acceptance": [
+        "从实际四生成元半群独立计算Apery与Hilbert函数再构造lex标准集",
+        "核对预算、单项式下闭、最少生成元数和严格界",
+        "明确有限检查不能替代一般归约或证明原创性"
+      ]
+    },
+    {
+      "id": "R020",
+      "title": "独立审查增长阶上下界",
+      "status": "done",
+      "priority": 2,
+      "owner": "growth_review",
+      "agent": "/root/growth_review",
+      "depends_on": [
+        "R012"
+      ],
+      "reviews_task": "R018",
+      "owned_paths": [
+        "research/tasks/R020_growth_review.md"
+      ],
+      "deliverables": [
+        "research/tasks/R020_growth_review.md"
+      ],
+      "acceptance": [
+        "从零检查谐和上界和真实lex下界族",
+        "严格区分抽象lex与半群实现",
+        "小实验只查错，不冒充增长证明"
+      ]
+    },
+    {
+      "id": "R021",
+      "title": "整数谐和上界的形式化",
+      "status": "done",
+      "priority": 2,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R012"
+      ],
+      "owned_paths": [
+        "lean/WidthBounds/Growth.lean",
+        "research/tasks/R021_growth_formal.md"
+      ],
+      "deliverables": [
+        "lean/WidthBounds/Growth.lean",
+        "research/tasks/R021_growth_formal.md"
+      ],
+      "acceptance": [
+        "从已有闭包/预算推点态乘积界",
+        "证明有限整除和上界，不能把新结论当假设",
+        "精确区分整数界与尚未形式化的渐近/下界族"
+      ]
+    },
+    {
+      "id": "R022",
+      "title": "真实商环次数预算与xy截面界的集成",
+      "status": "done",
+      "priority": 1,
+      "owner": "monomial_basis",
+      "agent": "/root/monomial_basis",
+      "depends_on": [
+        "R007",
+        "R012"
+      ],
+      "reviews_task": "R017",
+      "owned_paths": [
+        "lean/WidthBounds/IdealBounds.lean",
+        "research/tasks/R022_ideal_bounds.md"
+      ],
+      "deliverables": [
+        "lean/WidthBounds/IdealBounds.lean",
+        "research/tasks/R022_ideal_bounds.md"
+      ],
+      "acceptance": [
+        "真实齐次像的finrank预算进入已有全宽度结论",
+        "显式xy单项式商像子空间的维数等于sectionLength，若未完成须明示",
+        "不能把计数与实际维数等同作为假设"
+      ]
+    },
+    {
+      "id": "R023",
+      "title": "谐和增长界与极值lex类的定向查新",
+      "status": "done",
+      "priority": 2,
+      "owner": "growth_literature",
+      "agent": "/root/growth_literature",
+      "depends_on": [
+        "R020"
+      ],
+      "owned_paths": [
+        "research/tasks/R023_growth_literature.md"
+      ],
+      "deliverables": [
+        "research/tasks/R023_growth_literature.md"
+      ],
+      "acceptance": [
+        "最多3轮定向检索，核对一手来源",
+        "区分先例/相同结果/未定位",
+        "不以未搜到认证原创"
+      ]
+    },
+    {
+      "id": "R024",
+      "title": "显式下界lex理想族形式化",
+      "status": "done",
+      "priority": 2,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R017",
+        "R020"
+      ],
+      "owned_paths": [
+        "lean/WidthBounds/LowerConstruction.lean",
+        "research/tasks/R024_lower_construction.md"
+      ],
+      "deliverables": [
+        "lean/WidthBounds/LowerConstruction.lean",
+        "research/tasks/R024_lower_construction.md",
+        "lean/WidthBounds/LowerConstructionBounds.lean"
+      ],
+      "acceptance": [
+        "真实指数上集/lex/有限余长及全部次数预算，不假设构造性质",
+        "证明列长或有限计数公式；渐近可单独后续",
+        "明确不构成半群下界"
+      ],
+      "execution_scope": "真实指数上集/lex/有限余长由lower_ideal执行；等价乘积标准性轮廓与全部次数预算由R044并行；根集成精确列长、实际维数与最少数。",
+      "executor": "lower_ideal",
+      "integration_note": "真实理想模块已冻结并单编译；根继续整体预算/列计数集成。",
+      "completion_note": "显式真实lex下界族、全部次数实际预算、精确xy列和、有理谐和下界及标准Tor1/真正最少数统一lake build成功；R045最终接受；日志results/lean_lower_construction_build.txt。"
+    },
+    {
+      "id": "R025",
+      "title": "真实lex理想的有限单项式生成集合计数",
+      "status": "done",
+      "priority": 1,
+      "owner": "generators",
+      "agent": "/root/generators",
+      "depends_on": [
+        "R022"
+      ],
+      "owned_paths": [
+        "lean/WidthBounds/MinimalGenerators.lean",
+        "research/tasks/R025_generators.md"
+      ],
+      "deliverables": [
+        "lean/WidthBounds/MinimalGenerators.lean",
+        "research/tasks/R025_generators.md",
+        "lean/WidthBounds/GeneratorBounds.lean"
+      ],
+      "acceptance": [
+        "在明确有限余长或纯z幂假设下构造真实理想生成集合",
+        "优先证明生成数量上界a+1+ell，不假定CMS公式",
+        "准确区分显式生成上界、极小性与Betti数；无完整同调宣称"
+      ],
+      "completion_note": "统一lake build成功；R026独立语义审查接受；证据见results/lean_generators_build.txt及claims.json。"
+    },
+    {
+      "id": "R026",
+      "title": "独立审查R025生成集合的语义与假设",
+      "status": "done",
+      "priority": 1,
+      "owner": "generator_review",
+      "agent": "/root/generator_review",
+      "depends_on": [
+        "R022"
+      ],
+      "reviews_task": "R025",
+      "owned_paths": [
+        "research/tasks/R026_generator_review.md"
+      ],
+      "deliverables": [
+        "research/tasks/R026_generator_review.md"
+      ],
+      "acceptance": [
+        "独立检查纯z幂假设、实际理想生成性和计数上界",
+        "核对最终Lean定理假设及结论，严格区分极小性与Betti数"
+      ],
+      "completion_note": "统一lake build成功；R026独立语义审查接受；证据见results/lean_generators_build.txt及claims.json。"
+    },
+    {
+      "id": "R027",
+      "title": "有限维真实商环到纯z幂成员的接口",
+      "status": "done",
+      "priority": 1,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R017"
+      ],
+      "owned_paths": [
+        "lean/WidthBounds/FiniteColength.lean",
+        "research/tasks/R027_finite_colength.md"
+      ],
+      "deliverables": [
+        "lean/WidthBounds/FiniteColength.lean",
+        "research/tasks/R027_finite_colength.md"
+      ],
+      "acceptance": [
+        "由标准单项式基与Module.Finite证明纯z幂在真实理想内",
+        "不以finrank非零或计数有限替代真实有限维假设"
+      ],
+      "completion_note": "统一lake build成功；R026独立语义审查接受；证据见results/lean_generators_build.txt及claims.json。"
+    },
+    {
+      "id": "R028",
+      "title": "整除极小单项式生成元及精确计数",
+      "status": "done",
+      "priority": 1,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R025",
+        "R027"
+      ],
+      "owned_paths": [
+        "lean/WidthBounds/GeneratorMinimality.lean",
+        "research/tasks/R028_generator_minimality.md"
+      ],
+      "deliverables": [
+        "lean/WidthBounds/GeneratorMinimality.lean",
+        "research/tasks/R028_generator_minimality.md",
+        "lean/WidthBounds/GeneratorExact.lean"
+      ],
+      "acceptance": [
+        "在初始a与有限余长假设下证明实际整除极小单项式集合及精确a+1+ell计数",
+        "不把整除极小性或精确计数自动当成任意多项式最少生成数或Betti识别",
+        "复用已验收生成上界；统一构建与公理/依赖核验通过"
+      ],
+      "execution_scope": "执行者负责实际IsMinimalExponent定义与三类候选极小性；根集成完整分类、精确计数及真实维数版本。",
+      "executor": "generator_minimality",
+      "completion_note": "三类极小性、显式集合、完整分类和精确计数已统一lake build通过；R030独立审查接受。最新日志results/lean_minimal_generators_build.txt。"
+    },
+    {
+      "id": "R029",
+      "title": "显式边界生成指数集合、覆盖与精确基数",
+      "status": "done",
+      "priority": 1,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R025"
+      ],
+      "owned_paths": [
+        "lean/WidthBounds/BoundaryGenerators.lean",
+        "research/tasks/R029_boundary_generators.md"
+      ],
+      "deliverables": [
+        "lean/WidthBounds/BoundaryGenerators.lean",
+        "research/tasks/R029_boundary_generators.md"
+      ],
+      "acceptance": [
+        "定义可复用有限指数集合，证明其元素真实理想成员和整除覆盖",
+        "证明同一集合精确card=a+1+sum列长，区分其与极小性",
+        "实际monomialIdeal的span等式或可直接组合的覆盖接口；模块编译无禁止项"
+      ],
+      "executor": "boundary_generators",
+      "completion_note": "三类极小性、显式集合、完整分类和精确计数已统一lake build通过；R030独立审查接受。最新日志results/lean_minimal_generators_build.txt。"
+    },
+    {
+      "id": "R030",
+      "title": "独立审查R028极小性、分类与精确计数",
+      "status": "done",
+      "priority": 1,
+      "owner": "minimality_review",
+      "agent": "/root/minimality_review",
+      "depends_on": [
+        "R025",
+        "R026"
+      ],
+      "reviews_task": "R028",
+      "owned_paths": [
+        "research/tasks/R030_minimality_review.md"
+      ],
+      "deliverables": [
+        "research/tasks/R030_minimality_review.md"
+      ],
+      "acceptance": [
+        "独立核对三类候选真因子标准、反向分类和精确基数",
+        "审查最终源码、假设与结论，区分指数极小性、任意多项式生成数和Betti"
+      ],
+      "completion_note": "三类极小性、显式集合、完整分类和精确计数已统一lake build通过；R030独立审查接受。最新日志results/lean_minimal_generators_build.txt。"
+    },
+    {
+      "id": "R031",
+      "title": "任意多项式生成系的基数下界",
+      "status": "done",
+      "priority": 1,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R028",
+        "R029"
+      ],
+      "owned_paths": [
+        "lean/WidthBounds/PolynomialGeneratorNumber.lean",
+        "research/tasks/R031_polynomial_generator_number.md"
+      ],
+      "deliverables": [
+        "lean/WidthBounds/PolynomialGeneratorNumber.lean",
+        "research/tasks/R031_polynomial_generator_number.md",
+        "lean/WidthBounds/GeneratorNumberBounds.lean"
+      ],
+      "acceptance": [
+        "对实际Ideal.span P=I的任意有限多项式集合P证明全部极小指数数目<=P.card",
+        "结合现有精确生成系给最少生成元个数，不预先限制P为单项式或齐次",
+        "准确区分最少生成数与未完成的Tor/Betti识别；统一构建及证据核验"
+      ],
+      "execution_scope": "执行者证明极小系数映射、乘法降为常数系数作用及理想上的满射；R032并行证明通用任意多项式生成系维数界；根集成最少生成数。",
+      "executor": "minimal_coefficients",
+      "completion_note": "任意有限多项式生成集合下界、真正IsLeast及严格/有理谐和界已统一lake build通过；R033接受；日志results/lean_polynomial_generator_number_build.txt。"
+    },
+    {
+      "id": "R032",
+      "title": "理想生成系经常数作用线性映射的维数下界",
+      "status": "done",
+      "priority": 1,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R028"
+      ],
+      "owned_paths": [
+        "lean/WidthBounds/GeneratingFamilyDimension.lean",
+        "research/tasks/R032_generator_dimension.md"
+      ],
+      "deliverables": [
+        "lean/WidthBounds/GeneratingFamilyDimension.lean",
+        "research/tasks/R032_generator_dimension.md"
+      ],
+      "acceptance": [
+        "从真实Ideal.span P=I、系数作用性质和I上满射推finrank V<=P.card",
+        "P任意有限多项式集合，不假设单项式或齐次",
+        "通用模块编译通过，禁止项无引入"
+      ],
+      "executor": "generator_dimension",
+      "completion_note": "任意有限多项式生成集合下界、真正IsLeast及严格/有理谐和界已统一lake build通过；R033接受；日志results/lean_polynomial_generator_number_build.txt。"
+    },
+    {
+      "id": "R033",
+      "title": "独立审查任意多项式最少生成数证明",
+      "status": "done",
+      "priority": 1,
+      "owner": "generator_number_review",
+      "agent": "/root/generator_number_review",
+      "depends_on": [
+        "R028",
+        "R030"
+      ],
+      "reviews_task": "R031",
+      "owned_paths": [
+        "research/tasks/R033_generator_number_review.md"
+      ],
+      "deliverables": [
+        "research/tasks/R033_generator_number_review.md"
+      ],
+      "acceptance": [
+        "核对极小系数乘法公式、任意生成系张成和维数比较",
+        "核对实际最小基数达到性与不限齐次/单项式的量词",
+        "区分最少生成数和未完成的Tor/Betti识别"
+      ],
+      "completion_note": "任意有限多项式生成集合下界、真正IsLeast及严格/有理谐和界已统一lake build通过；R033接受；日志results/lean_polynomial_generator_number_build.txt。"
+    },
+    {
+      "id": "R034",
+      "title": "极小系数映射核与实际I/(x,y,z)I接口",
+      "status": "done",
+      "priority": 1,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R031",
+        "R032"
+      ],
+      "owned_paths": [
+        "lean/WidthBounds/GeneratorQuotient.lean",
+        "research/tasks/R034_generator_quotient.md"
+      ],
+      "deliverables": [
+        "lean/WidthBounds/GeneratorQuotient.lean",
+        "research/tasks/R034_generator_quotient.md",
+        "lean/WidthBounds/GeneratorQuotientBounds.lean"
+      ],
+      "acceptance": [
+        "用真实变量理想m及理想乘积mI证明限制系数映射的核等式",
+        "构造实际商I/mI与极小指数坐标空间的线性同构/基和维数",
+        "保留完整生成/穷尽假设，区分商线性代数与未完成Tor/Betti和半群归约"
+      ],
+      "execution_scope": "执行者定义真实变量理想并证明mI成员等价于I成员且极小系数为零；R035独立实现一般商空间线性接口；根集成实际I/mI与维数/最少数。",
+      "executor": "generator_product_kernel",
+      "completion_note": "真实mI核等式、实际I/mI同构/单项式类基/有限维性及最少数和两个上界已统一lake build通过；R036接受；日志results/lean_generator_quotient_build.txt。"
+    },
+    {
+      "id": "R035",
+      "title": "实际理想子商与核等式的通用线性接口",
+      "status": "done",
+      "priority": 1,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R031"
+      ],
+      "owned_paths": [
+        "lean/WidthBounds/IdealSubquotient.lean",
+        "research/tasks/R035_ideal_subquotient.md"
+      ],
+      "deliverables": [
+        "lean/WidthBounds/IdealSubquotient.lean",
+        "research/tasks/R035_ideal_subquotient.md"
+      ],
+      "acceptance": [
+        "按真实理想J在I中的comap定义商，不把未知核当定义",
+        "从显式核成员等价及I上满射构造商线性同构及商映射公式",
+        "通用模块编译、公理检查及真实维数接口正确"
+      ],
+      "executor": "ideal_subquotient",
+      "completion_note": "真实mI核等式、实际I/mI同构/单项式类基/有限维性及最少数和两个上界已统一lake build通过；R036接受；日志results/lean_generator_quotient_build.txt。"
+    },
+    {
+      "id": "R036",
+      "title": "独立审查真实I/mI与极小系数坐标接口",
+      "status": "done",
+      "priority": 1,
+      "owner": "generator_quotient_review",
+      "agent": "/root/generator_quotient_review",
+      "depends_on": [
+        "R031",
+        "R033"
+      ],
+      "reviews_task": "R034",
+      "owned_paths": [
+        "research/tasks/R036_generator_quotient_review.md"
+      ],
+      "deliverables": [
+        "research/tasks/R036_generator_quotient_review.md"
+      ],
+      "acceptance": [
+        "核对真实变量理想和理想乘积、两方向核等式及穷尽假设",
+        "核对实际I内子商、线性同构/基和维数与最少生成数",
+        "准确区分I/mI与尚未形式化Tor/Betti及半群归约"
+      ],
+      "completion_note": "真实mI核等式、实际I/mI同构/单项式类基/有限维性及最少数和两个上界已统一lake build通过；R036接受；日志results/lean_generator_quotient_build.txt。"
+    },
+    {
+      "id": "R037",
+      "title": "实际残差张量纤维与生成元商",
+      "status": "done",
+      "priority": 1,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R034",
+        "R035"
+      ],
+      "owned_paths": [
+        "lean/WidthBounds/GeneratorTensorFiber.lean",
+        "research/tasks/R037_generator_tensor_fiber.md"
+      ],
+      "deliverables": [
+        "lean/WidthBounds/GeneratorTensorFiber.lean",
+        "research/tasks/R037_generator_tensor_fiber.md",
+        "lean/WidthBounds/GeneratorTensorBounds.lean"
+      ],
+      "acceptance": [
+        "连接真实(A/m)张量I与实际I/mI，核对m作用子模和理想乘积",
+        "建立K线性同构及纯张量作用公式，传递已有基/维数/最少数",
+        "不把张量纤维改名为Tor1，保留底环和派生定义接口边界"
+      ],
+      "execution_scope": "执行者构造实际张量到I/mI的K线性同构和纯张量公式；根传递基/维数/最少数，R038并行识别残差环，R039独立审查。",
+      "executor": "generator_tensor",
+      "takeover_note": "执行者/审查者遇额度限制；根核对落盘源码与候选审查后接手，未发现存活lean/lake进程；最终构建与哈希由根执行。",
+      "completion_note": "实际(A/m)张量I的K线性同构、纯张量基/维数/最少数/两界及残差环已统一构建通过；R039最终核验接受。日志results/lean_generator_tensor_build.txt。按用户要求本轮止于此步骤。"
+    },
+    {
+      "id": "R038",
+      "title": "真实变量理想残差环与系数域的识别",
+      "status": "done",
+      "priority": 1,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R034"
+      ],
+      "owned_paths": [
+        "lean/WidthBounds/VariableResidue.lean",
+        "research/tasks/R038_variable_residue.md"
+      ],
+      "deliverables": [
+        "lean/WidthBounds/VariableResidue.lean",
+        "research/tasks/R038_variable_residue.md"
+      ],
+      "acceptance": [
+        "证明variableIdeal为常数项映射的真实核",
+        "构造实际A/m与K的K代数或K线性及环同构并给商代表元公式",
+        "不替换张量积底环或冒称Tor识别"
+      ],
+      "executor": "residue_field",
+      "completion_note": "实际(A/m)张量I的K线性同构、纯张量基/维数/最少数/两界及残差环已统一构建通过；R039最终核验接受。日志results/lean_generator_tensor_build.txt。按用户要求本轮止于此步骤。"
+    },
+    {
+      "id": "R039",
+      "title": "独立审查真实张量纤维及残差环接口",
+      "status": "done",
+      "priority": 1,
+      "owner": "tensor_final_review",
+      "agent": "/root/tensor_final_review",
+      "depends_on": [
+        "R034",
+        "R036"
+      ],
+      "reviews_task": "R037",
+      "owned_paths": [
+        "research/tasks/R039_tensor_fiber_review.md"
+      ],
+      "deliverables": [
+        "research/tasks/R039_tensor_fiber_review.md"
+      ],
+      "acceptance": [
+        "核对m作用子模与真实mI、restrictScalars及实际TensorProduct",
+        "核对纯张量、基识别、维数/最少数和残差域",
+        "精确区分张量与Tor及对单位理想的边界"
+      ],
+      "executor": "tensor_fiber_review",
+      "takeover_note": "2026-09-25恢复时旧执行者已不存在；原纸面/源码审查报告完整保留，新独立审查者只续核最终冻结版本与成功日志。",
+      "completion_note": "实际(A/m)张量I的K线性同构、纯张量基/维数/最少数/两界及残差环已统一构建通过；R039最终核验接受。日志results/lean_generator_tensor_build.txt。按用户要求本轮止于此步骤。"
+    },
+    {
+      "id": "R040",
+      "title": "标准Tor1与真实生成元张量纤维连接",
+      "status": "done",
+      "priority": 1,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R037",
+        "R038"
+      ],
+      "owned_paths": [
+        "lean/WidthBounds/TorOneBridge.lean",
+        "research/tasks/R040_tor_one_bridge.md"
+      ],
+      "deliverables": [
+        "lean/WidthBounds/TorOneBridge.lean",
+        "research/tasks/R040_tor_one_bridge.md",
+        "lean/WidthBounds/TorOneBounds.lean"
+      ],
+      "acceptance": [
+        "使用mathlib标准Tor定义而非自定义维数，保留I<=m",
+        "实际短正合序列、残差张量包含零映射及标准派生接口有编译证据",
+        "只有完成标准Tor1到张量纤维同构才标整体done，阶段结果单独标注"
+      ],
+      "completion_note": "2026-09-29完整标准Tor1到实际张量纤维的A模/K线性同构及基/有限维/维数界统一lake build成功，R043最终接受；日志results/lean_tor_one_build.txt。"
+    },
+    {
+      "id": "R041",
+      "title": "指定projective满射开头的标准分解接口",
+      "status": "done",
+      "priority": 1,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R037"
+      ],
+      "owned_paths": [
+        "lean/WidthBounds/ChosenResolution.lean",
+        "research/tasks/R041_chosen_resolution.md",
+        "lean/WidthBounds/DerivedKernel.lean"
+      ],
+      "deliverables": [
+        "lean/WidthBounds/ChosenResolution.lean",
+        "research/tasks/R041_chosen_resolution.md",
+        "lean/WidthBounds/DerivedKernel.lean"
+      ],
+      "acceptance": [
+        "从给定projective对象到目标的epi构造实际ProjectiveResolution",
+        "首项/增广/首微分有明确公式，且与标准leftDerived计算接口连接",
+        "不得假定待证正合性或引入自定义公理"
+      ],
+      "recovery_note": "中断后原执行者已不存在；已读取原报告，R041/R042仅计划落盘暂无Lean源码。按原路线续接，不删除旧报告。",
+      "execution_scope": "续验已有ChosenResolution，再证明右正合additive函子的标准L1到给定epi核像的计算同构（F映核包含为零时），供R040实例化。",
+      "executor": "derived_kernel",
+      "completion_note": "2026-09-29完整标准Tor1到实际张量纤维的A模/K线性同构及基/有限维/维数界统一lake build成功，R043最终接受；日志results/lean_tor_one_build.txt。"
+    },
+    {
+      "id": "R042",
+      "title": "真实理想商的ModuleCat短正合序列",
+      "status": "done",
+      "priority": 1,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R037"
+      ],
+      "owned_paths": [
+        "lean/WidthBounds/IdealExactSequence.lean",
+        "research/tasks/R042_ideal_exact_sequence.md"
+      ],
+      "deliverables": [
+        "lean/WidthBounds/IdealExactSequence.lean",
+        "research/tasks/R042_ideal_exact_sequence.md"
+      ],
+      "acceptance": [
+        "真实I包含A商到A/I的ShortComplex及ShortExact",
+        "给定实际底层线性映射和增广epi/projective首项接口",
+        "目标模块编译通过，非Tor识别"
+      ],
+      "recovery_note": "中断后原执行者已不存在；已读取原报告，R041/R042仅计划落盘暂无Lean源码。按原路线续接，不删除旧报告。",
+      "execution_scope": "续验已有真实短正合序列，并构造kernel(idealQuotientMap)与实际I的标准iso和包含兼容公式。",
+      "executor": "ideal_exact",
+      "completion_note": "2026-09-29完整标准Tor1到实际张量纤维的A模/K线性同构及基/有限维/维数界统一lake build成功，R043最终接受；日志results/lean_tor_one_build.txt。"
+    },
+    {
+      "id": "R043",
+      "title": "独立审查R040阶段的标准同调接口",
+      "status": "done",
+      "priority": 1,
+      "owner": "tor_final_review",
+      "agent": "/root/tor_final_review",
+      "depends_on": [
+        "R037",
+        "R039"
+      ],
+      "reviews_task": "R040",
+      "owned_paths": [
+        "research/tasks/R043_tor_bridge_review.md"
+      ],
+      "deliverables": [
+        "research/tasks/R043_tor_bridge_review.md"
+      ],
+      "acceptance": [
+        "核对真实短正合序列/张量零映射/选定分解及派生定义",
+        "区分阶段命题与尚未闭合Tor1到纤维的同构",
+        "冻结源码和统一构建证据核验"
+      ],
+      "recovery_note": "已保留原独立纸面/API审查；遵守用户最多两个子智能体限制，实现交付后再派最终审查。",
+      "completion_note": "2026-09-29完整标准Tor1到实际张量纤维的A模/K线性同构及基/有限维/维数界统一lake build成功，R043最终接受；日志results/lean_tor_one_build.txt。"
+    },
+    {
+      "id": "R044",
+      "title": "显式下界族的Hilbert轮廓与全部次数预算",
+      "status": "done",
+      "priority": 2,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R020"
+      ],
+      "owned_paths": [
+        "lean/WidthBounds/LowerProfile.lean",
+        "research/tasks/R044_lower_profile.md"
+      ],
+      "deliverables": [
+        "lean/WidthBounds/LowerProfile.lean",
+        "research/tasks/R044_lower_profile.md"
+      ],
+      "acceptance": [
+        "乘积条件定义标准集，证明H_d<=s²和H_0=1及全部累计预算",
+        "证明h_d=min(d+1,s²/(d+1))及分段轮廓",
+        "不把有限实验或轮廓作为真实理想实现的替代，目标模块编译"
+      ],
+      "executor": "lower_profile",
+      "completion_note": "显式真实lex下界族、全部次数实际预算、精确xy列和、有理谐和下界及标准Tor1/真正最少数统一lake build成功；R045最终接受；日志results/lean_lower_construction_build.txt。"
+    },
+    {
+      "id": "R045",
+      "title": "独立审查显式lex下界族的形式化",
+      "status": "done",
+      "priority": 2,
+      "owner": "lower_review",
+      "agent": "/root/lower_review",
+      "depends_on": [
+        "R020"
+      ],
+      "reviews_task": "R024",
+      "owned_paths": [
+        "research/tasks/R045_lower_construction_review.md"
+      ],
+      "deliverables": [
+        "research/tasks/R045_lower_construction_review.md"
+      ],
+      "acceptance": [
+        "核对真实上集/lex/有限余长、全部次数预算、列计数与原纸面族一致",
+        "精确区别显式有限公式、谐和下界、完整渐近与半群下界",
+        "核对冻结源码和统一构建证据，不认证原创性"
+      ],
+      "completion_note": "显式真实lex下界族、全部次数实际预算、精确xy列和、有理谐和下界及标准Tor1/真正最少数统一lake build成功；R045最终接受；日志results/lean_lower_construction_build.txt。"
+    },
+    {
+      "id": "R046",
+      "title": "实对数与抽象lex极值增长阶Theta收束",
+      "status": "done",
+      "priority": 1,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R021",
+        "R024"
+      ],
+      "owned_paths": [
+        "lean/WidthBounds/LogGrowth.lean",
+        "research/tasks/R046_log_growth.md"
+      ],
+      "deliverables": [
+        "lean/WidthBounds/LogGrowth.lean",
+        "lean/WidthBounds/LexGrowthTheta.lean",
+        "research/tasks/R046_log_growth.md"
+      ],
+      "acceptance": [
+        "连接项目有理harmonicQ与mathlib谐和数及Real.log上界",
+        "以真实有限余长lex理想的xy维数定义可达到的极值函数并证明Theta(w log w)",
+        "不把抽象lex最优阶转移为半群下界，明确当前交付结束标准"
+      ],
+      "executor": "log_upper",
+      "integration_note": "实对数上界模块已冻结，根继续完整极值/Theta集成。",
+      "completion_note": "真实lex极值达到性、所有w>=64的log上下界和标准IsTheta统一lake build通过，R048最终审查接受；日志results/lean_lex_theta_build.txt。"
+    },
+    {
+      "id": "R047",
+      "title": "非平方预算下的显式实对数下界",
+      "status": "done",
+      "priority": 1,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R024"
+      ],
+      "owned_paths": [
+        "lean/WidthBounds/LogLower.lean",
+        "research/tasks/R047_log_lower.md"
+      ],
+      "deliverables": [
+        "lean/WidthBounds/LogLower.lean",
+        "research/tasks/R047_log_lower.md"
+      ],
+      "acceptance": [
+        "用s=Nat.sqrt w与已证明构造给全部足够大w的真实下界",
+        "明确正数常量和阈值，不能只证明平方子序列",
+        "保留真实构造及非半群边界，模块编译"
+      ],
+      "executor": "log_lower",
+      "completion_note": "真实lex极值达到性、所有w>=64的log上下界和标准IsTheta统一lake build通过，R048最终审查接受；日志results/lean_lex_theta_build.txt。"
+    },
+    {
+      "id": "R048",
+      "title": "独立审查实对数极值Theta及项目收尾范围",
+      "status": "done",
+      "priority": 1,
+      "owner": "theta_review",
+      "agent": "/root/theta_review",
+      "depends_on": [
+        "R024",
+        "R045"
+      ],
+      "reviews_task": "R046",
+      "owned_paths": [
+        "research/tasks/R048_theta_review.md"
+      ],
+      "deliverables": [
+        "research/tasks/R048_theta_review.md"
+      ],
+      "acceptance": [
+        "核对上下界常数/阈值、sqrt取整、真实极值达到性及标准IsTheta",
+        "冻结源码和统一日志核验，区分研究交付与端到端半群形式化完成"
+      ],
+      "completion_note": "真实lex极值达到性、所有w>=64的log上下界和标准IsTheta统一lake build通过，R048最终审查接受；日志results/lean_lex_theta_build.txt。"
+    },
+    {
+      "id": "R049",
+      "title": "研究交付v0.3整合、PDF核验与冻结打包",
+      "status": "done",
+      "priority": 1,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R046",
+        "R047",
+        "R048"
+      ],
+      "owned_paths": [
+        "paper/width_bounds_v0_3.tex",
+        "research/DELIVERY.md",
+        "research/tasks/R049_delivery_closeout.md",
+        "scripts/package_delivery.py",
+        "results/delivery_validation_v0_3.json",
+        "results/pdf_qa_v0_3.md",
+        "scripts/test_package_delivery.py"
+      ],
+      "deliverables": [
+        "paper/width_bounds_v0_3.tex",
+        "research/DELIVERY.md",
+        "research/tasks/R049_delivery_closeout.md",
+        "scripts/package_delivery.py",
+        "results/delivery_validation_v0_3.json",
+        "results/pdf_qa_v0_3.md",
+        "scripts/test_package_delivery.py",
+        "output/pdf/width_bounds_v0_3.pdf",
+        "output/ai4math_research_delivery_v0_3.zip",
+        "output/ai4math_research_delivery_v0_3.receipt.json",
+        "results/pdf_v0_3_build.txt",
+        "results/delivery_tests_v0_3.txt"
+      ],
+      "acceptance": [
+        "保持数学源码及v0.1/v0.2快照不变",
+        "最新数学/传统证明/未完成项口径一致",
+        "PDF视觉核验、证据哈希和可复核归档通过",
+        "关闭研究阶段，不自动启动扩展"
+      ],
+      "completion_note": "交付载荷准备验收通过；8页v0.3 PDF目視QA及9工具测试完成，数学源码不变。最终冻结checkpoint与ZIP实际结果由外置receipt记录；无后续数学任务。"
+    },
+    {
+      "id": "R050",
+      "title": "全过程与未来扩展的长期项目报告",
+      "status": "done",
+      "priority": 1,
+      "owner": "project_report",
+      "agent": null,
+      "depends_on": [
+        "R046",
+        "R047",
+        "R048"
+      ],
+      "owned_paths": [
+        "research/PROJECT_REPORT.md",
+        "research/tasks/R050_project_report.md"
+      ],
+      "deliverables": [
+        "research/PROJECT_REPORT.md",
+        "research/tasks/R050_project_report.md"
+      ],
+      "acceptance": [
+        "独立可读地展示问题、分阶段路线、定理假设、证据和失败教训",
+        "给出准确源码入口、复现步骤与有边界的可选后续方向",
+        "明确研究交付关闭而非原半群定理端到端Lean完成"
+      ],
+      "completion_note": "约3万字符全过程/扩展报告完成，11节导航、43源码名称、边界与可选工作包通过主审及R051核对。"
+    },
+    {
+      "id": "R051",
+      "title": "独立审查研究交付口径与证据",
+      "status": "done",
+      "priority": 1,
+      "owner": "delivery_audit",
+      "agent": null,
+      "depends_on": [
+        "R046",
+        "R047",
+        "R048"
+      ],
+      "owned_paths": [
+        "research/tasks/R051_delivery_audit.md"
+      ],
+      "deliverables": [
+        "research/tasks/R051_delivery_audit.md"
+      ],
+      "acceptance": [
+        "核对精确结论/假设/状态分层和冻结证据",
+        "审查新报告/PDF源及包校验边界",
+        "不得将AI审查或字节校验升级为人类同行认可或新证明"
+      ],
+      "completion_note": "独立接受当前文稿及载荷准备；50 Lean项目文件与112既有证据路径全部匹配，最终ZIP实际核验由root完成。"
+    }
+  ],
+  "handoff": {
+    "prepared_utc": "2026-09-29T09:20:47.317273+00:00",
+    "next_task": null,
+    "parallel_task": null,
+    "active_worker_tasks": [],
+    "proposed_next_milestone": null,
+    "note": "研究交付阶段关闭。最终ZIP实际完成凭证为output/ai4math_research_delivery_v0_3.receipt.json及只读包验证；无新授权时不执行可选扩展。"
+  },
+  "current_scope": "R049/R050/R051文稿与载荷准备验收完成，执行最终稳定快照/ZIP冻结；最终成功结果在外置receipt。研究阶段按用户选择收尾，不启动后续数学或外部联系。",
+  "phase": "research_delivery_closed"
+}
