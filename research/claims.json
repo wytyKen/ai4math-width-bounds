@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-06T20:00:55.255052+00:00",
+  "updated_utc": "2026-10-06T20:22:10.002255+00:00",
   "claims": [
     {
       "id": "C001",
@@ -4941,12 +4941,14 @@
       },
       "evidence": [
         {
-          "path": "README.md",
-          "sha256": "a61a9090207c218ef9f1f854bc94e62437aec6cbdea503d0d0164318924246c7"
+          "path": "research/frozen/pre_consolidation_20261007/README.md",
+          "sha256": "a61a9090207c218ef9f1f854bc94e62437aec6cbdea503d0d0164318924246c7",
+          "original_delivery_path": "README.md"
         },
         {
-          "path": "README.zh-CN.md",
-          "sha256": "0e0badc28b489f7f33fcf42b96d3617d1900b61f2f70d76707af1934ceb2fbd6"
+          "path": "research/frozen/pre_consolidation_20261007/README.zh-CN.md",
+          "sha256": "0e0badc28b489f7f33fcf42b96d3617d1900b61f2f70d76707af1934ceb2fbd6",
+          "original_delivery_path": "README.zh-CN.md"
         },
         {
           "path": "AGENTS.md",
@@ -4969,12 +4971,14 @@
           "sha256": "cc3cdec848743701a38f48b88e6574688b281cf19947f97d8945ea009ece9f6c"
         },
         {
-          "path": "docs/README.md",
-          "sha256": "1c39bc953cf275722acd314b9670e8f9ec6747dc69d276fa457647480a1158a7"
+          "path": "research/frozen/pre_consolidation_20261007/docs/README.md",
+          "sha256": "1c39bc953cf275722acd314b9670e8f9ec6747dc69d276fa457647480a1158a7",
+          "original_delivery_path": "docs/README.md"
         },
         {
-          "path": "docs/PROJECT_OVERVIEW.md",
-          "sha256": "1d24db39900a6c81b2333928feed7fbd397c5523b93c8a27506de477ee8c1772"
+          "path": "research/frozen/pre_consolidation_20261007/docs/PROJECT_OVERVIEW.md",
+          "sha256": "1d24db39900a6c81b2333928feed7fbd397c5523b93c8a27506de477ee8c1772",
+          "original_delivery_path": "docs/PROJECT_OVERVIEW.md"
         },
         {
           "path": "docs/PROOF_NARRATIVE.md",
@@ -4993,8 +4997,9 @@
           "sha256": "ae741c1ffd4361eb8809b84ce4fea4330482d162dd35917b4b158e248800858a"
         },
         {
-          "path": "docs/PUBLICATION_STATUS.md",
-          "sha256": "47a33fe5b9b4104a980501907a914bc457664b20f0e302142b03a6c5a498f76e"
+          "path": "research/frozen/pre_consolidation_20261007/docs/PUBLICATION_STATUS.md",
+          "sha256": "47a33fe5b9b4104a980501907a914bc457664b20f0e302142b03a6c5a498f76e",
+          "original_delivery_path": "docs/PUBLICATION_STATUS.md"
         },
         {
           "path": "docs/FUTURE_WORK.md",
@@ -5020,12 +5025,77 @@
           "path": "results/r112_english_documentation_validation.json",
           "sha256": "1cab0fc20131917d328da82e75e44a1ee731dc5447108ecdb4e2202368f1f47d"
         }
+      ],
+      "preservation_note": "R116 (2026-10-07) preserves edited English-edition documents under research/frozen/pre_consolidation_20261007; historical evidence locations change but their accepted hashes remain unchanged."
+    },
+    {
+      "id": "C042",
+      "status": "artifact_checked",
+      "statement": "R116 documentation consolidation is complete: synchronized English/Chinese landing pages, purpose-based reading routes and document responsibilities, a focused overview/publication note, and corrected live status/handoff. R118 accepted retention of mathematical qualifications and unique project history.",
+      "scope": "Editorial organization only. No mathematical results, source builds, policy reassessment, licensing/authorship confirmation or research expansion. Canonical proof/map/contribution/reproducibility/future-work documents, source scripts and frozen artifacts remain byte-identical. Edited C041 documents are preserved at their old hashes under pre_consolidation_20261007. Actual final repository synchronization is recorded outside the source tree.",
+      "verification": {
+        "checked_utc": "2026-10-06T20:22:10.002255+00:00",
+        "checked_local_date": "2026-10-07",
+        "validation": "results/r116_documentation_validation.json",
+        "review": "research/tasks/R118_documentation_review.md",
+        "primary_documents_checked": 17,
+        "local_links_checked": 327,
+        "lean_line_targets_checked": 136,
+        "heading_anchors_checked": 3,
+        "policy_urls_preserved": 5,
+        "previous_evidence_references_verified": 762,
+        "lean_project_files_unchanged": 64,
+        "scripts_unchanged": 14,
+        "paper_files_unchanged": 7,
+        "existing_output_files_unchanged": 14,
+        "canonical_core_documents_unchanged": 8,
+        "lean_rebuilt": false,
+        "online_rendering_checked": false,
+        "repository_receipt": "output/r116_documentation_release.receipt.json"
+      },
+      "evidence": [
+        {
+          "path": "README.md",
+          "sha256": "ad9dd19dd75ff496265843620dbfee2d18f8f3edd663933871bd9e3018c4ed54"
+        },
+        {
+          "path": "README.zh-CN.md",
+          "sha256": "b6d16e3010a48beccdc4332490bb1c6708156e66379f02f2f6cff67c707954a8"
+        },
+        {
+          "path": "docs/README.md",
+          "sha256": "62af98e71cb9b7d819239cdac94c52f0447775bcefb7efa0b890162ae0ad6a55"
+        },
+        {
+          "path": "docs/PROJECT_OVERVIEW.md",
+          "sha256": "fa88e85608bf9fc3ffb57f18bfb94d43fb0e205afb28acd6a932cce73a5de74d"
+        },
+        {
+          "path": "docs/PUBLICATION_STATUS.md",
+          "sha256": "dc22c64a4437a7694d9b5ce4283fd58073e961d0b9f5720b830da28be7fe6f1d"
+        },
+        {
+          "path": "research/tasks/R116_documentation_consolidation.md",
+          "sha256": "392b058cb7742eb48145967f3a9c2043e84690e9925311a5ce77c4a79e983dfe"
+        },
+        {
+          "path": "research/tasks/R117_overview_publication_edit.md",
+          "sha256": "3f873d2779ae4728c4aa317f5b16817a9568667ac3a216b8e4e8faed3264db50"
+        },
+        {
+          "path": "research/tasks/R118_documentation_review.md",
+          "sha256": "c31fd99346c84fbfbaa23eb9cc39d8c0a67f58eb6588ead56b09da9e9e4b7e9e"
+        },
+        {
+          "path": "results/r116_documentation_validation.json",
+          "sha256": "94eb1ed7fb7c2c8415ad8905e276354117cfd52b4977f581ec7f754d952f6b89"
+        }
       ]
     }
   ],
   "last_handoff_check": {
-    "at_utc": "2026-10-06T20:00:55.255052+00:00",
+    "at_utc": "2026-10-06T20:22:10.002255+00:00",
     "source_changed": false,
-    "scope": "Mathematical sources unchanged. English primary documentation and publication guidance accepted; old evidence bytes preserved at frozen paths where live entrypoints changed. R093/R095 remain pending."
+    "scope": "Mathematical sources unchanged. Documentation roles and content consolidated, old hashes preserved, R118 accepted. R093 and mathematical extensions remain parked."
   }
 }

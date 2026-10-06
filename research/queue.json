@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-06T20:00:55.255052+00:00",
-  "focus": "English-first primary documentation accepted; publication boundaries documented",
+  "updated_utc": "2026-10-06T20:22:10.002255+00:00",
+  "focus": "Documentation responsibilities and reading routes consolidated; no research expansion",
   "root_owned_paths": [
     "AGENTS.md",
     "README.md",
@@ -2953,19 +2953,108 @@
         "Only write the assigned English report; no further agents, source edits, builds, or research"
       ],
       "completion_note": "English primary documentation accepted, with optional Chinese/history archives preserved; R115 found no material integration defect. Old source/evidence bytes remain valid. No new mathematics, builds, novelty certification, license or authorship decision."
+    },
+    {
+      "id": "R116",
+      "title": "Consolidate documentation roles, navigation, and current status",
+      "status": "done",
+      "priority": 1,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R112"
+      ],
+      "owned_paths": [
+        "README.zh-CN.md",
+        "docs/README.md",
+        "research/frozen/pre_consolidation_20261007",
+        "research/tasks/R116_documentation_consolidation.md",
+        "results/r116_documentation_validation.json"
+      ],
+      "root_integration_paths": [
+        "README.md",
+        "research/STATE.md",
+        "research/HANDOFF.md"
+      ],
+      "deliverables": [
+        "README.md",
+        "README.zh-CN.md",
+        "docs/README.md",
+        "research/STATE.md",
+        "research/HANDOFF.md",
+        "research/tasks/R116_documentation_consolidation.md"
+      ],
+      "acceptance": [
+        "Make each current document own a clear subject, shorten duplicated summaries and commands, retain full proof/evidence detail at canonical destinations",
+        "Correct stale public-release/task status; synchronize the Chinese overview with the English landing page",
+        "Preserve historical document bytes, scientific source/evidence and frozen artifacts; validate links and scope, then use the existing repository workflow"
+      ],
+      "completion_note": "Editorial consolidation accepted: synchronized landing pages, explicit document roles, focused overview/publication note, corrected live status. R118 found no material defect; canonical mathematical detail and old evidence preserved. No new research/build/policy or authorship/licensing decision."
+    },
+    {
+      "id": "R117",
+      "title": "Consolidate project overview and publication guidance",
+      "status": "done",
+      "priority": 1,
+      "owner": "document_editor",
+      "agent": null,
+      "depends_on": [
+        "R112"
+      ],
+      "supports_task": "R116",
+      "owned_paths": [
+        "docs/PROJECT_OVERVIEW.md",
+        "docs/PUBLICATION_STATUS.md",
+        "research/tasks/R117_overview_publication_edit.md"
+      ],
+      "deliverables": [
+        "docs/PROJECT_OVERVIEW.md",
+        "docs/PUBLICATION_STATUS.md",
+        "research/tasks/R117_overview_publication_edit.md"
+      ],
+      "acceptance": [
+        "Keep unique project history, failed shortcuts, human-AI evaluation, and extension interfaces; move full proof/rebuild details to links without deleting their canonical sources",
+        "Reduce repeated roadmap/status/disclaimer text while retaining precise mathematical and publication/AI/license boundaries",
+        "Keep English and citations; no new research/policy claims, source changes, or subagents"
+      ],
+      "completion_note": "Editorial consolidation accepted: synchronized landing pages, explicit document roles, focused overview/publication note, corrected live status. R118 found no material defect; canonical mathematical detail and old evidence preserved. No new research/build/policy or authorship/licensing decision."
+    },
+    {
+      "id": "R118",
+      "title": "Review documentation organization and retained scientific boundaries",
+      "status": "done",
+      "priority": 1,
+      "owner": "documentation_review",
+      "agent": null,
+      "depends_on": [
+        "R112"
+      ],
+      "supports_task": "R116",
+      "owned_paths": [
+        "research/tasks/R118_documentation_review.md"
+      ],
+      "deliverables": [
+        "research/tasks/R118_documentation_review.md"
+      ],
+      "acceptance": [
+        "Review clear document responsibilities, synchronized English/Chinese summaries, accurate current state and no lost mathematical qualifications",
+        "Compare edited overview/publication note to preserved originals; proof/map/contributions remain untouched",
+        "Only write assigned report, no Git/source edits, builds, research, or recursive delegation"
+      ],
+      "completion_note": "Editorial consolidation accepted: synchronized landing pages, explicit document roles, focused overview/publication note, corrected live status. R118 found no material defect; canonical mathematical detail and old evidence preserved. No new research/build/policy or authorship/licensing decision."
     }
   ],
   "handoff": {
-    "prepared_utc": "2026-10-06T20:00:55.255052+00:00",
+    "prepared_utc": "2026-10-06T20:22:10.002255+00:00",
     "next_task": null,
     "parallel_task": null,
     "active_worker_tasks": [],
     "suggested_first_task": "R093",
-    "waiting_for": "user_instruction_for_next_scope_after_english_documentation",
+    "waiting_for": "user_instruction_for_next_scope",
     "proposed_next_milestone": "R093 factual human contribution and responsibility record; distinguish evidence, personal confirmation, and unknowns.",
     "plan": "research/PUBLICATION_PREPARATION_PLAN.md",
     "scientific_baseline_checkpoint": "research/checkpoints/20261001T090243180713Z-07071c19",
-    "note": "R112 English primary reading path, optional Chinese overview, translated operational documents, and source-based publication guidance accepted. No mathematics, license choice, authorship confirmation, clean build, or journal submission. Root performs final commit/repository synchronization using the established repository workflow.",
+    "note": "R116 landing pages/index/state/handoff and R117 overview/publication consolidation accepted by R118. Full proof/map/contribution/reproduction/future-work docs and scientific evidence unchanged. Root records final checkpoint and ordinary repository synchronization, then stops.",
     "release_receipt": "output/ai4math_research_delivery_v0_4.receipt.json",
     "retrospective": "research/PROJECT_RETROSPECTIVE_v0_4.md",
     "planned_next_task": "R093",
@@ -2984,8 +3073,11 @@
     "privacy_audit": "research/tasks/R109_public_privacy_remediation.md",
     "english_documentation": "docs/README.md",
     "publication_responsibility": "docs/PUBLICATION_STATUS.md",
-    "english_release_receipt": "output/r112_english_release.receipt.json"
+    "english_release_receipt": "output/r112_english_release.receipt.json",
+    "documentation_guide": "docs/README.md",
+    "consolidation_report": "research/tasks/R116_documentation_consolidation.md",
+    "documentation_release_receipt": "output/r116_documentation_release.receipt.json"
   },
-  "current_scope": "R112 English primary reading path, optional Chinese overview, translated operational documents, and source-based publication guidance accepted. No mathematics, license choice, authorship confirmation, clean build, or journal submission. Root performs final commit/repository synchronization using the established repository workflow.",
-  "phase": "r112_english_first_complete"
+  "current_scope": "R116 landing pages/index/state/handoff and R117 overview/publication consolidation accepted by R118. Full proof/map/contribution/reproduction/future-work docs and scientific evidence unchanged. Root records final checkpoint and ordinary repository synchronization, then stops.",
+  "phase": "r116_documentation_consolidation_complete"
 }

@@ -1,39 +1,33 @@
-# Handoff: English-first project and responsible release
+# Handoff: documentation consolidation
 
-7 October 2026. R112 is an English documentation and publication-guidance task, not new mathematical research. The user permits optional Chinese versions but requires an English-first project. Root maintains the English README, operational documents, reproducibility and publication/future-work guides; R113 translates the full proof/map; R114 translates contributions and writes the project overview; R115 reviews integration. R113/R114/R115 have completed and stopped; root has accepted the English documentation.
+Updated: 2026-10-07. R116 has consolidated current documentation without changing mathematical content; R117/R118 are accepted and all workers have stopped. [STATE](STATE.md) owns live status; this file owns recovery steps and the invariants needed to resume safely.
 
-## Restore only what is needed
+## Recovery sequence
 
-Read AGENTS, STATE and queue, then run the root .venv checkpoint --check and, if the local checkpoint exists, --verify-latest. Consult `docs/README.md`, R112–R115 task reports, and the particular document being checked. Do not reread the entire historical archive or rerun Lean for a documentation-only change.
+1. Read AGENTS, STATE, and queue. Run root `.venv\Scripts\python.exe -B scripts/checkpoint.py --check`; run `--verify-latest` only if local checkpoints exist. Distinguish later workspace edits from damaged archives.
+2. For R116, read task reports R116–R118 and `results/r116_documentation_validation.json` when present. Only inspect the document involved in the remaining edit; do not reread the whole archive or rebuild Lean for this editorial task.
+3. Check actual Git status/log and the latest applicable ignored receipt before calling work committed or pushed. R112's English edition really reached remote main at `546b21c8823211fd2894d20201f3ba4aec266585`. Do not repeat its old “pending upload” descriptions as current status.
+4. R117 owns only PROJECT_OVERVIEW, PUBLICATION_STATUS, and its report. R118 owns its review report. Root owns landing pages, the docs guide, integration, validation and live state. Continue a vanished worker from saved files; do not restart blindly.
 
-The primary English route is README → docs/PROJECT_OVERVIEW, PROOF_NARRATIVE, STATEMENT_MAP, CONTRIBUTIONS, REPRODUCIBILITY, PUBLICATION_STATUS and FUTURE_WORK. CONTRIBUTING, AGENTS and research/PROTOCOL are English. README.zh-CN is optional. Existing Chinese records stay at their historical paths and are explained by research/README.
+## Editorial contract
 
-Historical evidence before English editing is preserved under `research/frozen/pre_english_20261007/`, covering the original README, AGENTS, PROTOCOL, and manuscript index. C039's README and C024's AGENTS/PROTOCOL references move to those byte-identical copies; the original hashes and original delivery paths remain. Other Chinese proof, mapping, contribution, project-report and retrospective originals must not change.
+README is the landing page; docs/README owns reading routes and document responsibilities. PROJECT_OVERVIEW owns the research story, milestones, failed shortcuts and reusable interfaces. Full proofs, declaration mapping, literature comparison, executable commands, publication responsibility and execution plans stay in their respective existing documents.
 
-## Integration checks and remaining transaction
+Keep README.zh-CN consistent with the English landing page. The five edited, previously accepted documents were preserved byte-for-byte under `research/frozen/pre_consolidation_20261007/`; C041 references were relocated with their original hashes. Do not modify these copies. Proof narrative, statement map, contributions, reproducibility, future work, AGENTS, CONTRIBUTING and PROTOCOL are intended to remain unchanged in R116.
 
-R113 retained all N0–N9 sections, 27 equation labels, 53 mapped statements, 136 Lean line links, the G/Q/C/D contracts and the classical/compiled distinctions. R114 retained M1–M3/F1, all U1–U5 and the White fixed-q/truncation comparison; it removed renderer-problematic operatorname/double-bracket macros from its two English docs. Root checked the delivered versions, 287 local links, old hashes and English primary navigation; R115 found no material integration defect.
+## Mathematical boundaries to retain
 
-The new English publication note cites current primary policies read on 2026-10-07: EMS mathematical-publication code, arXiv moderation/AI policy, AFM author instructions, Springer Nature preprints, and GitHub licensing guidance. Do not turn general guidance into a venue acceptance prediction or individualized legal opinion. Authors/licensing/funding/contract obligations have not been confirmed for this project. Do not invent them.
+- Any field; actual finite-colength lex quotient; x standard; w ≥ 4 and cumulative budget in every degree. Finite colength is a separate assumption.
+- Standard Tor fixes first A/m and derives second A/I. K action is via the actual algebra map; K-finiteness precedes dimensions, and the high tail is `IsZero`.
+- The lex maximum is attained; its explicit lower estimate requires w ≥ 64. It is not a matching semigroup lower bound.
+- Actual h-zero tails differ from floor-bound tails; signed v0 is allowed. b1 has an existing harmonic endpoint; displayed b2/b3 harmonic formulas are mathematical compositions, not new named compiled declarations.
+- N9 remains classical, with distinct CMS `w ≤ m−2`, complementary length, and width-3 cases. Full semigroup formalization, general Tor balance and graded-shifts interfaces are unfinished.
+- U1–U5 and novelty remain unresolved. Translation, editing and internal AI review do not supply external human review, authorship confirmation or a clean R095 reproduction.
 
-A large batched shell write was rejected by automatic approval review with the reason “blocked by policy”; no files from that command were written. Root used explicit file-by-file patch edits successfully instead. There is no unresolved approval request or blocked deliverable.
+Exact hypotheses, declarations and old evidence remain in the unchanged proof/map/source files. The [reproducibility guide](../docs/REPRODUCIBILITY.md) owns environment, build-log and frozen-archive details.
 
-R112 validation and task/state/claim integration are complete. Its final Git commit and repository synchronization occur after the stable checkpoint; output/r112_english_release.receipt.json records their actual outcome outside the committed tree. Use actual Git status/log and the remote readback before describing a later update as pushed. No remote URL should be invented; the established origin is the user's ai4math-width-bounds repository.
+## Finish and stop
 
-## Scope that must survive handoff
+The bounded review, intended-edit validation and old-hash checks have passed. Root performs the final stable-checkpoint and normal commit/repository transaction after these source records are written. Its actual outcome is recorded in ignored output/r116_documentation_release.receipt.json and Git state; if interrupted, finish only the remaining transaction, not the completed editing. Never infer a successful push from a prepared tree.
 
-Mathematics is still R058/C031, with arbitrary coefficient field, actual finite colength, x standard, w ≥ 4, and the budget at every degree. Standard Tor fixes first A/m and derives second A/I; the K action is restriction along the actual algebra map, finiteness is proved before dimensions, and the high tail is IsZero. The actual lex maximum is attained, and the explicit asymptotic lower estimate requires w ≥ 64.
-
-The h tail and the floor-estimate tail differ. Signed v0 is allowed. The b1 harmonic endpoint already exists; b2/b3 displayed harmonic expressions are direct compositions, not new named compiled endpoints. N9 is classical: CMS's budget theorem requires w ≤ m−2, the complementary branch uses length m and a separate degree-zero check, and w=3 has its own cited argument. No whole semigroup chain, Tor factor balance or graded-shifts API was newly formalized.
-
-R091 novelty questions U1–U5 remain unresolved. No external human review, verified human understanding, final authorship, legal clearance or clean-environment R095 run is implied by translation, publication, a Git identity, or another AI review.
-
-The fixed scientific log hash is `29b05fbcfa9054df43f5b171a511eb51e28e5745188c4a3a4ce9320fcee787e4`; the v0.4 ZIP hash is `ed74ee6c46ed160fd4b00f074de9c1e8c833f9a0b91a5bd96f29b36f1ede2285`. Keep all 64 Lean project files, all scripts, frozen TeX/PDF/ZIP artifacts and historical evidence unchanged. The live paper/README index is the only manuscript-directory text being maintained in English.
-
-## Publication, privacy, and next research task
-
-Git main was successfully pushed to `f8a5eddbc039129a3d3a30dc0b2f22d7e30134e7` in response to the user's explicit command request; earlier “awaiting user push” notes are historical. The repository URL is https://github.com/wytyKen/ai4math-width-bounds . Do not infer journal-submission permission from this repository workflow.
-
-Normal Git name/email may remain public. R109–R111 concern accidental private content and credentials, not identity masking. Exact audit scratch data remains under ignored tmp. No history rewrite is required by their findings. Public clones omit historical checkpoints and some ZIP evidence deliberately.
-
-R093 remains the next planned preparation task, but is not started by this language request. It must distinguish log-supported facts, personal confirmation and unknowns; missing human understanding is not filled in by assumption. R094–R096, the optional full-semigroup R060–R067 branch, and R009 external contact remain parked. Use English for future primary records, preserve old-language originals, and stop after the current authorized task.
+No R093, new mathematics, licensing decision, external contact, or journal submission starts automatically. Preserve privacy rules and normal Git identity. Use only root .venv, Lean/mathlib 4.22.0, and project-local caches; at most two non-recursive subagents including reviewers.

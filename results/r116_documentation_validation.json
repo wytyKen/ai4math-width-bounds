@@ -1,0 +1,69 @@
+{
+  "primary_documents_checked": 17,
+  "local_links_checked": 327,
+  "lean_line_links_checked": 136,
+  "heading_links_checked": 3,
+  "english_primary_documents": 16,
+  "optional_chinese_landing_page": 1,
+  "fences_balanced": true,
+  "renderer_problem_macros_absent": true,
+  "publication_policy_urls_unchanged": 5,
+  "previous_evidence_references_verified": 762,
+  "lean_files_unchanged": 64,
+  "scripts_unchanged": 14,
+  "paper_files_unchanged": 7,
+  "existing_output_files_unchanged": 14,
+  "unchanged_core_documents": [
+    "docs/PROOF_NARRATIVE.md",
+    "docs/STATEMENT_MAP.md",
+    "docs/CONTRIBUTIONS.md",
+    "docs/REPRODUCIBILITY.md",
+    "docs/FUTURE_WORK.md",
+    "AGENTS.md",
+    "CONTRIBUTING.md",
+    "research/PROTOCOL.md"
+  ],
+  "edited_document_counts": {
+    "README.md": {
+      "before_words": 1287,
+      "after_words": 600,
+      "before_sha256": "a61a9090207c218ef9f1f854bc94e62437aec6cbdea503d0d0164318924246c7",
+      "after_sha256": "ad9dd19dd75ff496265843620dbfee2d18f8f3edd663933871bd9e3018c4ed54"
+    },
+    "README.zh-CN.md": {
+      "before_words": 519,
+      "after_words": 198,
+      "before_sha256": "0e0badc28b489f7f33fcf42b96d3617d1900b61f2f70d76707af1934ceb2fbd6",
+      "after_sha256": "b6d16e3010a48beccdc4332490bb1c6708156e66379f02f2f6cff67c707954a8"
+    },
+    "docs/README.md": {
+      "before_words": 304,
+      "after_words": 548,
+      "before_sha256": "1c39bc953cf275722acd314b9670e8f9ec6747dc69d276fa457647480a1158a7",
+      "after_sha256": "62af98e71cb9b7d819239cdac94c52f0447775bcefb7efa0b890162ae0ad6a55"
+    },
+    "docs/PROJECT_OVERVIEW.md": {
+      "before_words": 5011,
+      "after_words": 2450,
+      "before_sha256": "1d24db39900a6c81b2333928feed7fbd397c5523b93c8a27506de477ee8c1772",
+      "after_sha256": "fa88e85608bf9fc3ffb57f18bfb94d43fb0e205afb28acd6a932cce73a5de74d"
+    },
+    "docs/PUBLICATION_STATUS.md": {
+      "before_words": 1340,
+      "after_words": 1019,
+      "before_sha256": "47a33fe5b9b4104a980501907a914bc457664b20f0e302142b03a6c5a498f76e",
+      "after_sha256": "dc22c64a4437a7694d9b5ce4283fd58073e961d0b9f5720b830da28be7fe6f1d"
+    }
+  },
+  "lean_rebuilt": false,
+  "new_math_or_policy_research": false,
+  "online_rendering_checked": false,
+  "checked_utc": "2026-10-06T20:22:10.002255+00:00",
+  "checked_local_date": "2026-10-07",
+  "status": "accepted_editorial_consolidation",
+  "editor_report": "research/tasks/R117_overview_publication_edit.md",
+  "review_report": "research/tasks/R118_documentation_review.md",
+  "review_result": "no_material_defect",
+  "queue_valid": true,
+  "repository_transaction_receipt": "output/r116_documentation_release.receipt.json"
+}

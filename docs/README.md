@@ -1,23 +1,41 @@
-# English documentation
+# Documentation guide
 
-English is the primary language for the active project. This directory provides a complete English route through the current mathematical results, their evidence, limitations, and maintenance. The Lean sources, Python tools, and manuscript text were already English before this documentation edition.
+Use this page to choose a reading route and locate the document responsible for a topic. English is the primary project language; the [Chinese overview](../README.zh-CN.md) is optional.
 
-## Reading order
+## Choose a route
 
-1. [Project overview](PROJECT_OVERVIEW.md): purpose, development history, current result, and what remains open.
-2. [Proof narrative](PROOF_NARRATIVE.md): the full N0–N9 argument, including the classical semigroup layer and its formalization limits.
-3. [Statement map](STATEMENT_MAP.md): exact assumptions and links to the Lean declarations supporting each step.
-4. [Contributions](CONTRIBUTIONS.md): literature-known ingredients, candidate mathematical increments, implementation contributions, and unresolved comparisons.
-5. [Reproducibility](REPRODUCIBILITY.md): pinned environment, source builds, archive checks, and their different meanings.
-6. [Publication status and responsibility](PUBLICATION_STATUS.md): why the repository is a research snapshot, how to communicate its status, and what formal submission still requires.
-7. [Future work](FUTURE_WORK.md): finite next steps and optional extensions; none is started automatically.
+| Goal | Route |
+|---|---|
+| Get oriented | [Repository README](../README.md) → [Project overview](PROJECT_OVERVIEW.md) |
+| Check the mathematics | [Proof narrative](PROOF_NARRATIVE.md) → [Statement map](STATEMENT_MAP.md); use [Contributions](CONTRIBUTIONS.md) to assess novelty |
+| Reproduce a result | [Reproducibility](REPRODUCIBILITY.md) → the specified source, command, and evidence record |
+| Evaluate a public or scholarly release | [Publication status](PUBLICATION_STATUS.md) → [Contributions](CONTRIBUTIONS.md) → [Future work](FUTURE_WORK.md) |
+| Maintain or resume the project | [Current state](../research/STATE.md) → [Handoff](../research/HANDOFF.md) → [AGENTS](../AGENTS.md) and [protocol](../research/PROTOCOL.md) |
 
-For development, read [CONTRIBUTING](../CONTRIBUTING.md), [AGENTS](../AGENTS.md), the [protocol](../research/PROTOCOL.md), and the live [state](../research/STATE.md) / [handoff](../research/HANDOFF.md).
+## Document responsibilities
 
-## Chinese alternatives and historical evidence
+| Document | It owns | Go elsewhere for |
+|---|---|---|
+| [Project overview](PROJECT_OVERVIEW.md) | Purpose, milestones, important failed approaches, evidence lessons, human–AI assessment, and extension interfaces | Complete proofs, setup commands, and current task status |
+| [Proof narrative](PROOF_NARRATIVE.md) | The complete mathematical argument N0–N9, hypotheses, notation, and the classical/formal boundary | Exact declaration locations |
+| [Statement map](STATEMENT_MAP.md) | G/Q/C/D contracts, Lean declarations and line links, compiled versus paper-level statements | The explanatory proof |
+| [Contributions](CONTRIBUTIONS.md) | M1–M3/F1 comparisons, known ingredients, sources and versions, unresolved U1–U5 | General publication policy |
+| [Reproducibility](REPRODUCIBILITY.md) | Pinned environment, executable commands, build evidence, archive checks, PDF-reproduction limits | Research-history narrative |
+| [Publication status](PUBLICATION_STATUS.md) | Release terminology, AI disclosure, human responsibility, rights, and dated policy guidance | The execution plan |
+| [Future work](FUTURE_WORK.md) | Planned tasks, decision gates, optional branches, and stopping conditions | Live authorization and completion status |
+| [Current state](../research/STATE.md) | Latest accepted milestone, outstanding scope, verified repository state, and next authorized action | Historical chronology |
+| [Handoff](../research/HANDOFF.md) | Minimal recovery sequence and invariants that must survive interruption | A second copy of every report |
 
-[README.zh-CN.md](../README.zh-CN.md) is the Chinese project overview. The original Chinese proof narrative, contribution map, and older task records remain under `research/`. The [archive guide](../research/README.md) identifies them. They are optional historical material, not a language prerequisite for the English reading path.
+[CONTRIBUTING](../CONTRIBUTING.md) is the guide for contributors. [AGENTS](../AGENTS.md) is the agent's startup contract; the [protocol](../research/PROTOCOL.md) contains detailed task, evidence, and checkpoint rules. The [manuscript index](../paper/README.md) owns the list of frozen TeX/PDF versions. The [research archive guide](../research/README.md) owns the route into historical documents and task reports.
 
-The English proof narrative, statement map, and contribution analysis identify their accepted source editions. Other English guides synthesize the existing record and clearly distinguish current status from old milestones. Translation does not add a proof, a successful build, a novelty certificate, or a human review.
+## Current, dated, and frozen material
 
-Historical files and old claim text are not retroactively translated in place: their recorded hashes and dated scope matter. Current state, protocol, task reports, and future primary documentation use English. When translations disagree, check the exact hypotheses and Lean declarations and report the discrepancy; English presentation cannot silently change a formal statement.
+The mathematical baseline is R058 / v0.4. A later documentation or repository milestone does not establish a new theorem. Consult STATE and the queue for live work status; a future-work list or an old report's “next task” is not authorization to execute it.
+
+Proof, statement-map, and contribution documents identify their accepted source editions. The publication note identifies the date of its policy assessment. Frozen manuscripts and historical reports retain their original claims, language, and evidence hashes. Original Chinese material remains available through the archive guide, but is not required for the English reading routes above.
+
+## Keep the documentation coherent
+
+Put a substantial explanation or command sequence in its owning document and link to it elsewhere. Short local summaries may repeat a boundary when needed to prevent a mathematical overclaim; do not remove necessary hypotheses just to reduce repetition.
+
+Update English and Chinese landing pages together. Preserve N0–N9 and M/U labels used for cross-reference. Before changing a document registered as historical evidence, preserve its accepted bytes under the protocol and keep the old hash. If accounts disagree, check the exact declaration and record a correction rather than silently changing the mathematics.
