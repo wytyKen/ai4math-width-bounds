@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-06T18:45:11.575444+00:00",
-  "focus": "R105用户授权助手完成本地Git准备和首提交；用户保留remote/push",
+  "updated_utc": "2026-10-06T18:52:00.125302+00:00",
+  "focus": "R105本地Git已初始化并首次提交，用户执行remote add/push",
   "root_owned_paths": [
     "AGENTS.md",
     "README.md",
@@ -2652,7 +2652,7 @@
     {
       "id": "R105",
       "title": "用户授权的本地Git初始化与首次提交载荷验收",
-      "status": "running",
+      "status": "done",
       "priority": 1,
       "owner": "root",
       "agent": null,
@@ -2673,12 +2673,13 @@
         "备份原无提交Lean Git元数据，根main仓库沿用现有身份，只配置本地换行策略",
         "明确范围暂存，无gitlink/缓存/临时/下载全文/旧ZIP；索引与工作区字节一致、旧证据保持",
         "首次提交实际结果由外置receipt和Git HEAD核验；不设置remote或push、不推进R093"
-      ]
+      ],
+      "completion_note": "本地初始提交18c79a3已实际成功，R106接受269文件载荷；64Lean/12冻结产物/18备份元数据及旧证据保持。根随后提交验收记录并用外置receipt核对最终HEAD，不在自身树回填最终hash。remote与push由用户执行。"
     },
     {
       "id": "R106",
       "title": "本地Git首次提交载荷的只读复核",
-      "status": "running",
+      "status": "done",
       "priority": 1,
       "owner": "local_git_review",
       "agent": null,
@@ -2696,22 +2697,21 @@
       "acceptance": [
         "独立只读核暂存范围、无gitlink、字节策略与旧Lean证据；只写独占报告",
         "不改Git索引/配置/远端或其他文件，不派生；首提交由根集成完成"
-      ]
+      ],
+      "completion_note": "本地初始提交18c79a3已实际成功，R106接受269文件载荷；64Lean/12冻结产物/18备份元数据及旧证据保持。根随后提交验收记录并用外置receipt核对最终HEAD，不在自身树回填最终hash。remote与push由用户执行。"
     }
   ],
   "handoff": {
-    "prepared_utc": "2026-10-06T18:45:11.575444+00:00",
+    "prepared_utc": "2026-10-06T18:52:00.125302+00:00",
     "next_task": null,
     "parallel_task": null,
-    "active_worker_tasks": [
-      "R106"
-    ],
+    "active_worker_tasks": [],
     "suggested_first_task": "R093",
-    "waiting_for": "local_git_preparation_and_first_commit",
+    "waiting_for": "user_creates_empty_github_repo_then_remote_add_and_push",
     "proposed_next_milestone": "R093真实贡献与作者责任事实记录，未知不冒称已确认",
     "plan": "research/PUBLICATION_PREPARATION_PLAN.md",
     "scientific_baseline_checkpoint": "research/checkpoints/20261001T090243180713Z-07071c19",
-    "note": "用户最新授权覆盖先前只提供命令的本地范围；助手备份lean/.git、根init、暂存检查、首提交，沿用已配置身份。用户自行建GitHub空仓库、添加远端和push。",
+    "note": "用户授权本地Git准备已执行：原Lean元数据完整备份，根main、现有身份、显式暂存及首提交验收通过；本轮记录随后提交并用外置receipt核对最终HEAD。未建远端、未push、不推进R093/R095。",
     "release_receipt": "output/ai4math_research_delivery_v0_4.receipt.json",
     "retrospective": "research/PROJECT_RETROSPECTIVE_v0_4.md",
     "planned_next_task": "R093",
@@ -2720,8 +2720,12 @@
     "proof_narrative": "research/publication/PROOF_NARRATIVE.md",
     "statement_map": "research/publication/STATEMENT_MAP.md",
     "github_upload_guide": "research/publication/GITHUB_UPLOAD_GUIDE.md",
-    "portable_statement_map": "research/publication/STATEMENT_MAP_GITHUB.md"
+    "portable_statement_map": "research/publication/STATEMENT_MAP_GITHUB.md",
+    "suggested_repository_name": "ai4math-width-bounds",
+    "initial_local_commit": "18c79a36fc232f6de781131d09000628ecf65163",
+    "local_commit_receipt": "output/r105_local_git_commit.receipt.json",
+    "local_git_task_report": "research/tasks/R105_local_git_initialization.md"
   },
-  "current_scope": "用户最新授权覆盖先前只提供命令的本地范围；助手备份lean/.git、根init、暂存检查、首提交，沿用已配置身份。用户自行建GitHub空仓库、添加远端和push。",
-  "phase": "r105_local_git_preparation_running"
+  "current_scope": "用户授权本地Git准备已执行：原Lean元数据完整备份，根main、现有身份、显式暂存及首提交验收通过；本轮记录随后提交并用外置receipt核对最终HEAD。未建远端、未push、不推进R093/R095。",
+  "phase": "r105_local_commit_done_awaiting_user_push"
 }

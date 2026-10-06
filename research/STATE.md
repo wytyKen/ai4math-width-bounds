@@ -1,6 +1,6 @@
-# 当前状态 R103 GitHub 公开入口准备完成
+# 当前状态 R105 本地 Git 已提交，等待用户上传
 
-2026-10-07。用户准备提前公开 GitHub，并明确全部上传相关终端与 GitHub 操作由本人完成。R103 / R104 已完成，本地文档与命令复核通过；未初始化根 Git、移动 lean/.git、提交或上传。入口为根 README 和 [上传指南](publication/GITHUB_UPLOAD_GUIDE.md)。R093 仍 parked。
+2026-10-07。用户随后明确授权助手完成本地 Git 准备与首次提交，仅 GitHub 建仓 / remote add / push 由本人执行。根 main 已初始化，现有身份沿用，首次本地导入提交为 `18c79a36fc232f6de781131d09000628ecf65163`。R105 本地初始化 / 首次提交已完成，R106 只读复核接受，验收记录已集成；没有 remote 或上传。R093 仍 parked。
 
 ## 当前阶段与公开内容
 
@@ -8,7 +8,7 @@
 
 新增 [GitHub 浏览版声明映射](publication/STATEMENT_MAP_GITHUB.md)转换 142 个链接，原 [叙事](publication/PROOF_NARRATIVE.md)和[验收映射](publication/STATEMENT_MAP.md)不改。原 v0.4 README 保存在 frozen/v0_4/README.md，C032 只改定位不改 hash；旧稿、PDF、ZIP、验收记录及 PROJECT_REPORT 保持原件。
 
-公开规则排除缓存、tmp、checkpoints、下载全文与历史 ZIP/收据；仅四份项目 PDF 放入 output 白名单。普通 Git 克隆不具全部历史归档，不能把缺少 --verify-latest 所需归档当成数学错误。根没有 .git；lean/.git 无提交、无远端，指南要求用户先精确路径核验并备份到 tmp，再初始化根仓库。助手没有执行这些变更。许可证 / 署名未替用户选择。
+公开规则排除缓存、tmp、checkpoints、下载全文与历史 ZIP/收据；仅四份项目 PDF 放入 output 白名单。普通 Git 克隆不具全部历史归档，不能把缺少 --verify-latest 所需归档当成数学错误。原无提交的 lean/.git 已完整备份到 tmp/lean_git_before_root_import，18 个元数据文件保持字节；根 .git / main 已就绪。64 个 Lean 项目文件按普通文件入 Git，无 gitlink，core.autocrlf=false 仅本地设置，现有姓名和邮箱未覆盖。许可证 / 署名未替用户选择。
 
 ## 科学范围不变
 
@@ -20,6 +20,6 @@ R092 N0–N9 的具体假设 / 符号 / 截断 / 下界 / 标准 Tor / 传统半
 
 ## 下一项与恢复
 
-本轮完成后等待用户自行上传或另行指令；“下一项”仍指 R093 真实贡献 / 作者责任事实记录，区分日志可证、本人确认、未知，不从授权推定理解或补造贡献。R094/R095/R096、旧 R060–R067 及外部联系 R009 保持 parked。
+本轮完成后用户在新建空 GitHub 仓库后，只需在项目根运行 `git remote add origin <真实HTTPS地址>` 与 `git push -u origin main`。建议仓库名 ai4math-width-bounds。不要重做上传指南中已执行的备份 / init / 首次 add / commit；旧 R103 指南保留原版本含义。最终提交与干净状态另由 output/r105_local_git_commit.receipt.json 和 Git HEAD 核对；“下一项”仍指 R093 真实贡献 / 作者责任事实记录，区分日志可证、本人确认、未知，不从授权推定理解或补造贡献。R094/R095/R096、旧 R060–R067 及外部联系 R009 保持 parked。
 
-本地恢复按 AGENTS 读 STATE/HANDOFF/queue，用根 .venv 核 checkpoint --check；有本地检查点时再 --verify-latest。Git 克隆缺少历史归档是预期，见上传指南。固定 Lean/mathlib 4.22.0，最多两子智能体且不派生；本轮结束时全部停止。LATEST 将为本次文档稳定快照，不改变 R058 科学证据。
+本地恢复按 AGENTS 读 STATE/HANDOFF/queue，用根 .venv 核 checkpoint --check；有本地检查点时再 --verify-latest。Git 克隆缺少历史归档是预期，见上传指南。固定 Lean/mathlib 4.22.0，最多两子智能体且不派生；本轮结束时全部停止。LATEST 为本次本地 Git 验收文档快照；工作区新增 .git 与 tmp 备份不进入检查点，Git 提交不改变 R058 科学证据。

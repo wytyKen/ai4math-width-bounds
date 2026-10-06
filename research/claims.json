@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-06T18:35:04.980008+00:00",
+  "updated_utc": "2026-10-06T18:52:00.125302+00:00",
   "claims": [
     {
       "id": "C001",
@@ -4790,11 +4790,49 @@
           "sha256": "d4ddb2c5d633961e129abe30f8a30fe760abea5948e25db2fc765d34c42dbba6"
         }
       ]
+    },
+    {
+      "id": "C038",
+      "status": "artifact_checked",
+      "statement": "R105用户授权的本地Git初始化与首次导入提交完成，R106接受：原无提交Lean Git元数据完整备份，根main沿用现有身份，269文件首提交18c79a3无gitlink且索引blob等于工作区；固定科学文件/冻结产物/原证据未改。",
+      "scope": "本地Git载荷与初始提交验收，不是数学证明、新构建、R095复现、许可选择、署名确认或GitHub上传。仅本地core.autocrlf=false，无身份覆盖、无remote、无push。最终验收记录提交发生在本源内登记之后，其HEAD和工作区干净结果在外置ignored receipt，避免自引用。",
+      "verification": {
+        "checked_utc": "2026-10-06T18:52:00.125302+00:00",
+        "checked_local_date": "2026-10-07",
+        "review": "research/tasks/R106_local_git_review.md",
+        "validation": "results/r105_local_git_validation.json",
+        "initial_commit": "18c79a36fc232f6de781131d09000628ecf65163",
+        "initial_commit_tree": "b0067b6e65ba9a7ccadee2d7eaa05061bc1a1135",
+        "initial_staged_files": 269,
+        "previous_evidence_references_verified": 732,
+        "lean_project_files_unchanged": 64,
+        "frozen_output_files_unchanged": 12,
+        "git_metadata_backup_files_unchanged": 18,
+        "final_commit_receipt": "output/r105_local_git_commit.receipt.json",
+        "source_record_created_before_final_record_commit": true,
+        "lean_rebuilt": false,
+        "remote_added": false,
+        "push_executed": false
+      },
+      "evidence": [
+        {
+          "path": "research/tasks/R105_local_git_initialization.md",
+          "sha256": "331167176fdf4e67ade0d2f4802b93778fd5bb11a86f6cb10b7faf8a59cd5aba"
+        },
+        {
+          "path": "research/tasks/R106_local_git_review.md",
+          "sha256": "96115214951e4d39cc2d3ba449a379b961b03250dafa67237e044663ea048828"
+        },
+        {
+          "path": "results/r105_local_git_validation.json",
+          "sha256": "2291d981c139d584fc681ae887d91b5143bee8c6f39df25b7af22e5bc0f4a4c6"
+        }
+      ]
     }
   ],
   "last_handoff_check": {
-    "at_utc": "2026-10-06T18:35:04.980008+00:00",
+    "at_utc": "2026-10-06T18:52:00.125302+00:00",
     "source_changed": false,
-    "scope": "Mathematical source unchanged. R103 public-facing documentation, rules and user-operated upload instructions accepted; 724 prior evidence refs and frozen outputs preserved. Only current documentation/Git rules/state changed; Git operations remain user-owned."
+    "scope": "Mathematical sources and frozen artifacts unchanged; local root Git initial import committed and accepted. Only current operation reports/live state updated. Final record commit result is outside its own source tree; user alone configures origin and pushes."
   }
 }
