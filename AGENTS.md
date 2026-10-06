@@ -1,36 +1,38 @@
-# ai4math：先恢复状态，再推进研究
+# ai4math: restore state before continuing research
 
-这是有持久研究记录的数学项目。用户已于2026-09-29选择研究交付收尾；本阶段交付完成后关闭，不自动增开数学任务。不要依赖聊天历史作为唯一记忆，也不要把压缩当作重新选题。
+This mathematical project has persistent research records. The user chose a research-delivery closeout on 2026-09-29 and later authorized specific additional stages. Do not depend on chat history as the only memory or treat compaction as permission to select a new problem. Current authorization is recorded in `research/STATE.md`, `research/HANDOFF.md`, and `research/queue.json`.
 
-## 启动或压缩后
+## At startup or after compaction
 
-1. 先读 `research/STATE.md`、`research/HANDOFF.md`、`research/queue.json`。
-2. 运行根目录 `.venv\Scripts\python.exe -B scripts/checkpoint.py --check`；有检查点时再运行 `--verify-latest`。区分归档损坏和工作区正常后续修改。
-3. 只按当前任务读相关源码/报告，不重读全部论文、旧聊天或缓存。
-4. 仅在用户授权的新研究范围内继续队列最高优先级、依赖已完成的任务。阶段closed且无ready/running任务时停止，未来方向不是自动待办。若 running 的旧执行者已不存在，先核对其任务报告和已写文件，再续接；不能直接删掉或从头重做。
+1. Read `research/STATE.md`, `research/HANDOFF.md`, and `research/queue.json` first.
+2. Run the root `.venv\Scripts\python.exe -B scripts/checkpoint.py --check`. If local checkpoints exist, also run `--verify-latest`. Distinguish archive corruption from ordinary later workspace changes. Public Git clones intentionally omit local checkpoints and some frozen binaries.
+3. Read only the source and reports relevant to the current task; do not reread every paper, old chat, or cache.
+4. Continue only the highest-priority ready task whose dependencies are complete and whose scope the user has authorized. Stop if the phase is closed and no tasks are ready/running. Future directions are not automatic TODOs. If an old running worker no longer exists, inspect its report and saved files before resuming; do not delete or restart its work blindly.
 
-## 当前授权与边界
+## Current scope and project language
 
-- 用户当前要求研究交付收尾和足量信息的全过程/扩展文档。入口为research/PROJECT_REPORT.md与research/DELIVERY.md；后续数学扩展须由用户重新选择范围。
-- 用户暂缓外部专家审阅。不要反复把外部审稿当作继续工作的前提；对外发信、上传、发表仍须明确授权。
-- Python 只用根目录 uv `.venv`。Lean 位于 `lean/`，固定 Lean/mathlib 4.22.0；缓存保持项目内。
-- 不创建新应用任务或后台定时任务来替代此工作流，除非用户明确要求。
+- English is the primary language for current project documentation, code, task reports, and new state/claim descriptions. Optional Chinese translations are permitted. Preserve original-language historical records and frozen evidence; label them clearly and provide an English primary reading path through `README.md` and `docs/README.md`.
+- The long-term English entry point is `docs/PROJECT_OVERVIEW.md`. `research/PROJECT_REPORT.md` and the old delivery guides remain historical records. Further mathematical extensions need a separately chosen scope.
+- The user has deferred external expert review. Do not repeatedly make it a prerequisite for authorized local work. External messages, uploads, and submissions require applicable explicit authorization; do not infer journal-submission permission from a repository release.
+- Use Python only through the root uv `.venv`. Lean is under `lean/`, pinned to Lean/mathlib 4.22.0; keep caches inside this project.
+- Do not create application chats or background scheduled tasks to replace this workflow unless the user asks.
+- Normal Git name/email may remain public, as the user explicitly clarified. Prevent accidental inclusion of credentials, private files, or other sensitive content; do not treat every ordinary local path as a secret without examining its context.
 
-## 分工与验收
+## Delegation and acceptance
 
-- 主智能体负责队列、集成、核验、状态与结论口径。按用户最新限制，同时最多两个子智能体，包括审查者；子智能体不再派生。
-- 子智能体优先用空历史启动；任务提示必须给文件路径、精确目标、独占文件、验收标准和停止条件。子智能体不自行再派生。
-- `queue.json` 先登记任务与文件所有权。执行者只能改分配的文件；根 import、依赖配置、状态文件由主智能体集成。
-- 每个任务将详细结果写入 `research/tasks/<任务ID>_*.md`，消息只回传简短结论、证据位置、限制和下一步。重要中间结果及时落盘。
-- 结果状态严格区分：猜想/实验支持/传统证明经审查/Lean已编译/文献已知/新颖性未定。严禁用编译一个有限命题代替声称整段数学已形式化。
-- Lean 禁止 `sorry`、`admit`、自定义公理或 `native_decide`。标准逻辑公理与研究假设要明确记录。
+- The root agent owns queue management, integration, validation, state, and the wording of conclusions. At most **two subagents** may be active at once, including reviewers. Subagents must not spawn further agents.
+- Prefer empty-history workers. Every delegation must specify file paths, an exact objective, exclusive owned files, acceptance criteria, and a stopping condition.
+- Register tasks and file ownership in `queue.json` before execution. Workers edit only assigned files. Root imports, dependency configuration, and live state are integrated by the root agent.
+- Each task records detailed results in `research/tasks/<taskID>_*.md`. Messages return only a short conclusion, evidence location, limits, and next action. Save important intermediate results promptly.
+- Distinguish conjecture, experimental support, internally reviewed classical proof, successfully compiled Lean statements, literature-known results, and unresolved novelty. Compiling a finite proposition does not establish that an entire mathematical argument is formalized. AI-agent review is not external human peer review.
+- Lean must not use `sorry`, `admit`, custom axioms, or `native_decide`. Record standard logical axioms and mathematical assumptions explicitly.
 
-## 检查点纪律
+## Checkpoint discipline
 
-- 每完成一个可验收里程碑、改变路线或停止本轮前，更新 STATE、HANDOFF、queue、claims；运行 `scripts/checkpoint.py --reason "简短原因"`。
-- 有长任务时最多约30分钟写一次工作中检查点；它必须标记 WIP，不得冒充稳定构建。
-- 若预计将压缩/交接，先让执行者保存进度，再建检查点。突发压缩时以磁盘状态恢复，不等待用户重新解释。
-- `research/claims.json` 保存结论与源码/日志校验值；修改证明后旧日志不能继续作为新版本的核验证据。
-- 已通过的v0.1/v0.2以及交付v0.3是冻结快照。新研究不覆盖旧PDF、TeX、ZIP或其验收记录；达到新版本里程碑另存。PROJECT_REPORT是长期入口，后续可在新版本工作区维护。
+- At each accepted milestone, route change, or end of a work round, update STATE, HANDOFF, queue, and claims, then run `scripts/checkpoint.py --reason "short reason"`.
+- For long tasks, save a working checkpoint about every 30 minutes. It must be marked WIP and must not be presented as a stable build.
+- Before expected compaction or handoff, have workers save progress and then checkpoint. After unexpected compaction, restore from disk rather than asking the user to repeat the project history.
+- `research/claims.json` records conclusions and source/log hashes. Old logs do not validate newly modified proofs. If a hashed historical document must change, first preserve its old bytes and redirect the historical evidence to that copy with the original hash.
+- Accepted v0.1/v0.2 and delivered v0.3/v0.4 artifacts are frozen. Do not overwrite their PDFs, TeX, ZIPs, or acceptance records. New milestones use new versions. English documentation may be maintained separately without changing historical mathematical evidence.
 
-完整协议在 `research/PROTOCOL.md`。单靠上下文压缩不能保证发现新数学结果；本协议保证的是尽量可恢复、可审计、避免重复消耗的工作流程。
+The full workflow is in `research/PROTOCOL.md`. This protocol supports recovery, auditability, and reduced repeated work; it does not guarantee new mathematical discoveries.

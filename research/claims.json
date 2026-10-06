@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-06T19:18:18.954558+00:00",
+  "updated_utc": "2026-10-06T20:00:55.255052+00:00",
   "claims": [
     {
       "id": "C001",
@@ -3622,8 +3622,9 @@
           "original_delivery_path": "README.md"
         },
         {
-          "path": "AGENTS.md",
-          "sha256": "c29baa7909f69082576afcef3ee4359c88121ac1d7c0ab60ba5ccf8c03ec5c20"
+          "path": "research/frozen/pre_english_20261007/AGENTS.md",
+          "sha256": "c29baa7909f69082576afcef3ee4359c88121ac1d7c0ab60ba5ccf8c03ec5c20",
+          "original_delivery_path": "AGENTS.md"
         },
         {
           "path": "research/frozen/v0_3/research/PROJECT_REPORT.md",
@@ -3649,8 +3650,9 @@
           "original_delivery_path": "research/HANDOFF.md"
         },
         {
-          "path": "research/PROTOCOL.md",
-          "sha256": "f64ef7d49d644b829bfe0012ce493e9654cb77110e72f543e65849d1b198c622"
+          "path": "research/frozen/pre_english_20261007/research/PROTOCOL.md",
+          "sha256": "f64ef7d49d644b829bfe0012ce493e9654cb77110e72f543e65849d1b198c622",
+          "original_delivery_path": "research/PROTOCOL.md"
         },
         {
           "path": "research/frozen/v0_3/research/queue.json",
@@ -3707,7 +3709,7 @@
           "sha256": "2d119d281a91abd414d670c272bcf7fc88d2a6ab06562384fe372b036cfd2ab1"
         }
       ],
-      "preservation_note": "2026-09-30用户要求以v0.3为冻结基线规划后续。原C024登记的STATE/HANDOFF/queue已从冻结ZIP逐字节保存在research/frozen/v0_3原层级，证据SHA不变；上述3个工作入口可记录新规划。v0.3 ZIP、原包内claims及原验收报告均未改变。"
+      "preservation_note": "2026-09-30用户要求以v0.3为冻结基线规划后续。原C024登记的STATE/HANDOFF/queue已从冻结ZIP逐字节保存在research/frozen/v0_3原层级，证据SHA不变；上述3个工作入口可记录新规划。v0.3 ZIP、原包内claims及原验收报告均未改变。 R112 (2026-10-07) preserves pre-English bytes under research/frozen/pre_english_20261007; only historical evidence locations change, not their hashes. R112 (2026-10-07) preserves pre-English bytes under research/frozen/pre_english_20261007; only historical evidence locations change, not their hashes."
     },
     {
       "id": "C025",
@@ -4851,8 +4853,9 @@
       },
       "evidence": [
         {
-          "path": "README.md",
-          "sha256": "9c13cc8e362492edadbaafab4da96a7409d1a0ac3115d06bd4706166850de17f"
+          "path": "research/frozen/pre_english_20261007/README.md",
+          "sha256": "9c13cc8e362492edadbaafab4da96a7409d1a0ac3115d06bd4706166850de17f",
+          "original_delivery_path": "README.md"
         },
         {
           "path": "research/tasks/R107_readme_formula_rendering.md",
@@ -4862,7 +4865,8 @@
           "path": "research/tasks/R108_readme_formula_review.md",
           "sha256": "55f4fa7785cc5a7f916d4a5c9dc0f0b3f9c6b0b9b677b1b0501a367c4c9848cb"
         }
-      ]
+      ],
+      "preservation_note": "R112 (2026-10-07) preserves pre-English bytes under research/frozen/pre_english_20261007; only historical evidence locations change, not their hashes."
     },
     {
       "id": "C040",
@@ -4909,11 +4913,119 @@
           "sha256": "586da03165aa5e17ae345dc22904fb05e68d0356883f64677b5ec68c22bc8f6e"
         }
       ]
+    },
+    {
+      "id": "C041",
+      "status": "artifact_checked",
+      "statement": "R112 establishes an English primary project reading/maintenance path with an optional Chinese overview: complete proof narrative, exact statement map, full contribution comparison, project history, reproducibility, publication responsibility and future-work guides. R115 accepted the bounded integration review.",
+      "scope": "Documentation translation/synthesis and current primary-policy guidance only: no new mathematical result, Lean build, clean-environment R095 run, novelty certification, external human peer review, R093 confirmation, author list, license grant, or journal submission. Original-language historical evidence and frozen artifacts remain unchanged; public release scope is distinguished from formal publication and legal clearance. Actual final Git/push outcome is recorded outside the tree to avoid self-reference.",
+      "verification": {
+        "checked_utc": "2026-10-06T20:00:55.255052+00:00",
+        "checked_local_date": "2026-10-07",
+        "validation": "results/r112_english_documentation_validation.json",
+        "integration_review": "research/tasks/R115_english_integration_review.md",
+        "previous_evidence_references_verified": 742,
+        "primary_english_documents_checked": 16,
+        "local_links_checked": 287,
+        "powershell_blocks_statically_parsed": 5,
+        "mapped_statements": 53,
+        "lean_line_links": 136,
+        "numbered_equations": 27,
+        "lean_project_files_unchanged": 64,
+        "scripts_unchanged": 14,
+        "existing_output_files_unchanged": 13,
+        "frozen_tex_unchanged": true,
+        "lean_rebuilt": false,
+        "novelty_status": "unresolved",
+        "final_repository_receipt": "output/r112_english_release.receipt.json"
+      },
+      "evidence": [
+        {
+          "path": "README.md",
+          "sha256": "a61a9090207c218ef9f1f854bc94e62437aec6cbdea503d0d0164318924246c7"
+        },
+        {
+          "path": "README.zh-CN.md",
+          "sha256": "0e0badc28b489f7f33fcf42b96d3617d1900b61f2f70d76707af1934ceb2fbd6"
+        },
+        {
+          "path": "AGENTS.md",
+          "sha256": "e3dddf7d7766c833f842689daeb1d2b6aacb6d5555a7c950df1bfd4232849c05"
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "sha256": "e6f07028526caf24152b42d91df2782067e5e8a7ee6d8631e4681b5ac6861c36"
+        },
+        {
+          "path": "paper/README.md",
+          "sha256": "c792ba4087e55589a1934ddf3efeecea66609b6f8985be8c3e7c7461b156798d"
+        },
+        {
+          "path": "research/README.md",
+          "sha256": "34e8d1340677069cdc41c567fe9c35e07cf21d01ee7e1b94dd5f598c8d6007cb"
+        },
+        {
+          "path": "research/PROTOCOL.md",
+          "sha256": "cc3cdec848743701a38f48b88e6574688b281cf19947f97d8945ea009ece9f6c"
+        },
+        {
+          "path": "docs/README.md",
+          "sha256": "1c39bc953cf275722acd314b9670e8f9ec6747dc69d276fa457647480a1158a7"
+        },
+        {
+          "path": "docs/PROJECT_OVERVIEW.md",
+          "sha256": "1d24db39900a6c81b2333928feed7fbd397c5523b93c8a27506de477ee8c1772"
+        },
+        {
+          "path": "docs/PROOF_NARRATIVE.md",
+          "sha256": "f501675a512cb3e11073847ba3634415519ac108da491168b5166260e14372ad"
+        },
+        {
+          "path": "docs/STATEMENT_MAP.md",
+          "sha256": "69c5c7cada5e746020a9eb62d4239a2dfeec7414bb19838005a502ca1e349035"
+        },
+        {
+          "path": "docs/CONTRIBUTIONS.md",
+          "sha256": "07aba8167cd956ebb18061c964c84fc29286fd05d1d3f58fd1023bece2633ae7"
+        },
+        {
+          "path": "docs/REPRODUCIBILITY.md",
+          "sha256": "ae741c1ffd4361eb8809b84ce4fea4330482d162dd35917b4b158e248800858a"
+        },
+        {
+          "path": "docs/PUBLICATION_STATUS.md",
+          "sha256": "47a33fe5b9b4104a980501907a914bc457664b20f0e302142b03a6c5a498f76e"
+        },
+        {
+          "path": "docs/FUTURE_WORK.md",
+          "sha256": "547748d924a183a3bc7e199c3b788afc3b559c0edac3aef0b4b56411fcb9ad30"
+        },
+        {
+          "path": "research/tasks/R112_english_first_release.md",
+          "sha256": "e203962a64a0361e71cf64109e53d118bf262ee971d53b53c497555a0840e9d0"
+        },
+        {
+          "path": "research/tasks/R113_english_mathematics.md",
+          "sha256": "1d23b75e3b6afa5f5a7b8add4299d866bf72495d56cf57aaacfbe2f1a362c189"
+        },
+        {
+          "path": "research/tasks/R114_english_project_context.md",
+          "sha256": "ce55444798e4f247cd5738170942985320b6d874502ed0824ba3935ae780693b"
+        },
+        {
+          "path": "research/tasks/R115_english_integration_review.md",
+          "sha256": "a8bbba2eeac300000e2ce105cecd574536e05dc0aa1ed31e4c5ff0044207e4dc"
+        },
+        {
+          "path": "results/r112_english_documentation_validation.json",
+          "sha256": "1cab0fc20131917d328da82e75e44a1ee731dc5447108ecdb4e2202368f1f47d"
+        }
+      ]
     }
   ],
   "last_handoff_check": {
-    "at_utc": "2026-10-06T19:18:18.954558+00:00",
+    "at_utc": "2026-10-06T20:00:55.255052+00:00",
     "source_changed": false,
-    "scope": "Mathematical source and frozen outputs unchanged. Content privacy audit accepted within scope and ignore rules hardened; normal Git identity preserved by user instruction; no history rewrite or automatic push."
+    "scope": "Mathematical sources unchanged. English primary documentation and publication guidance accepted; old evidence bytes preserved at frozen paths where live entrypoints changed. R093/R095 remain pending."
   }
 }

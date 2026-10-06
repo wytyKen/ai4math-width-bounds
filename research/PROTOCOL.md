@@ -1,63 +1,66 @@
-# 项目推进与交接协议
+# Research execution and handoff protocol
 
-版本1，2026-09-23；2026-09-29补充交付关闭约定。目的：把项目连续性建立在可恢复文件、明确任务和可复核证据上，使压缩或会话切换不要求用户重复解释。
+Original protocol: 2026-09-23; delivery-closeout amendment: 2026-09-29. English maintenance edition: 2026-10-07. The original Chinese bytes are preserved under `frozen/pre_english_20261007/` for historical claims.
 
-当前用户选择研究交付收尾。本阶段关闭后，以下研究循环只在用户明确重启某个有限范围时适用；PROJECT_REPORT中的可选方向不自动登记或执行。未来保持v0.1/v0.2/v0.3冻结快照，新增研究使用新版本证据。当前最多两个子智能体同时工作，包含独立审查；此限制优先于下文早期默认槽位安排。
+The project relies on recoverable files, explicit tasks, and inspectable evidence. A closed research stage does not authorize further mathematics. Current user instructions and STATE/HANDOFF determine which limited scope may resume. At most two subagents may be active, including reviewers, and they must not spawn further agents.
 
-## 持久状态分层
+## Persistent records
 
-| 文件 | 用途 | 谁维护 |
+| File | Purpose | Owner |
 |---|---|---|
-| `AGENTS.md` | 每次启动的短操作约定 | 主智能体 |
-| `STATE.md` | 当前科学状态、边界、下一动作，保持简短 | 主智能体 |
-| `HANDOFF.md` | 无聊天历史时的恢复顺序 | 主智能体 |
-| `queue.json` | 任务、依赖、独占文件、状态和验收 | 主智能体 |
-| `claims.json` | 结论类型、适用范围、证据路径与SHA-256 | 主智能体 |
-| `tasks/Rxxx_*.md` | 具体推导、编译错误、实验、失败路线 | 对应执行者 |
-| `checkpoints/` | 不可覆盖源码快照、清单和原子最新指针 | 检查点工具 |
+| `../AGENTS.md` | Short startup and working rules | Root |
+| `STATE.md` | Scientific state, boundaries, and next action | Root |
+| `HANDOFF.md` | Recovery without the old chat | Root |
+| `queue.json` | Tasks, dependencies, ownership, acceptance | Root |
+| `claims.json` | Claim types, evidence paths, SHA-256 | Root |
+| `tasks/Rxxx_*.md` | Derivations, implementation, experiments, failed routes | Assigned worker |
+| `checkpoints/` | Immutable source snapshots and an atomic latest pointer | Checkpoint tool |
+| `../docs/` | English primary research and maintenance documentation | Assigned task owner / root integration |
 
-聊天只传达进展和决策；工具大输出、论文正文和试错日志留在文件。主智能体只导入必要的摘要和关键证明步骤。
+Use English for new primary documents and live descriptions. Historical task and claim entries may retain Chinese to preserve the original research record. Translations must identify their source and must not silently replace original evidence.
 
-## 一个研究循环
+Chat communicates progress and decisions. Long tool output, source material, and trial history belong in files. Root imports only the summaries and proof details needed for integration.
 
-1. 从队列选依赖已完成的最高优先级任务，写明可验收目标；给任务编号和独占文件。
-2. 委派具体执行。常态最多2个执行任务，另1个槽用于审查/必要基础设施；不递归增加智能体。
-3. 执行者先落盘计划，随后在每个有意义的推导或编译节点保存进度。消息摘要控制在约15行，完整细节放任务报告。
-4. 报告至少包含：状态；精确命题及假设；文件；运行命令/结果；失败路线；尚未证明之处；下一条具体动作。
-5. 主智能体检查最终命题的语义，不只看“编译成功”。核对文件所有权，运行适量独立验收；通过后集成根import/配置。
-6. 更新claims、STATE、queue和交接下一步。新结论能复核才标done；实验支持不得升级为定理。
-7. 创建检查点，然后选下一小任务。数学无进展的一轮也要留下明确排除理由，防止反复尝试同一路线。
+## One authorized research cycle
 
-## 任务状态
+1. Select an authorized task whose dependencies are done, and record a concrete acceptance target, task ID, and owned files.
+2. Delegate a bounded implementation or review. Usually one worker and one reviewer are enough; the two-subagent limit includes both. Save a plan first and update it after meaningful progress.
+3. Reports state status, exact propositions and hypotheses, files, commands and outcomes, failed approaches, unproved parts, and one concrete next action.
+4. Root checks mathematical meaning, not just successful compilation. Validate ownership, run appropriate bounded checks, and integrate imports/configuration only after acceptance.
+5. Update claims, STATE, queue, and HANDOFF. Experiments cannot be promoted to general theorems; an AI review cannot be promoted to human peer review.
+6. Create a checkpoint. Continue only within the authorized scope; an accepted checkpoint is not permission to start the next task.
 
-- `ready`：等待领取；只有依赖全部done时才可开始。
-- `running`：执行中，磁盘可能只有部分产物。
-- `review`：执行者交付，尚未通过主智能体验收。
-- `done`：验收通过，证据已登记。
-- `parked`：用户暂缓或本轮有明确更高优先级；要注明恢复条件。
-- `rejected`：路线/候选命题已被反例或分析否定，保留失败证据。
+A round without mathematical progress must still record what it ruled out. Do not keep repeating an unproductive approach merely because a task number remains open.
 
-根维护状态文件和配置；工作者不自行宣布其他任务完成。依赖接口变化必须先告诉主智能体，避免两个执行者修改同一文件。
+## Task states
 
-## 检查点及压缩
+| State | Meaning |
+|---|---|
+| `ready` | Dependencies done; waiting to be assigned within authorized scope |
+| `running` | Work in progress; files may be incomplete |
+| `review` | Delivered by the worker, awaiting root acceptance |
+| `done` | Accepted and evidence registered |
+| `parked` | Deferred by the user or current priorities; state the resume condition |
+| `rejected` | A route or candidate was disproved or rejected; retain the evidence |
 
-- 每个验收里程碑、路线改变和本轮结束都创建；长任务中约30分钟创建WIP检查点。无需依赖精确的上下文余额。
-- 源码ZIP和manifest先完整写出，再原子更新LATEST指针；不会自动删除旧检查点或自动恢复覆盖文件。
-- running/review任务存在时明确标WIP。归档中存在某文件并不表示其已通过编译。
-- 所有归档项逐一记录实际字节的SHA-256；恢复时先验证归档自身，再报告工作区相对该快照的变化。
-- claims的证据哈希失配时保留旧结论的历史范围，当前版本要重新核验后才能更新“已验证”。
-- 运行时缓存可重建，不进快照；PDF/审阅包有自己的冻结版本。所有恢复命令都指向项目文件，不能依赖子智能体的会话ID持续存在。
-- `claims.json` 中只有明确标记 `archive_required:false` 的冻结二进制引用可以不入源码快照；工具仍核对其当前哈希，并列出未归档引用。缺失/不匹配仍标WIP。稳定源码快照不等同于整个工作区的完整二进制备份。
-- 跨多个文件的工作中快照不假装全局事务一致。稳定检查点应在工作者停止写入且主线验收后创建；WIP则明确列出活跃任务。
+Workers do not declare other tasks complete. Report interface changes before another worker depends on them. Root-owned paths must not be duplicated as active task-owned paths; use a root-integration field when appropriate.
 
-## 科学优先级
+## Checkpoints and integrity
 
-当前先继续内部研究，暂缓对外审稿。优先能简化论证或缩短形式化缺口的任务；有证据后再扩展到新参数/新问题。不要把整理PDF当作每轮主要进展，也不要因专家尚未审稿而停止所有授权研究。
+Create a checkpoint at accepted milestones, route changes, and the end of each round. Save WIP about every 30 minutes during long work. A file present in a snapshot is not automatically compiled or accepted.
 
-有限额度下，不启动无目标的大范围枚举、持续模型互相投票或无限文献检索。每个任务有明确输出和停止条件；两次实质尝试均没有新增约束时记录障碍，主智能体决定换路线。
+The tool writes a source ZIP and manifest before atomically advancing the latest pointer. Every archived file has a size and SHA-256. Runtime caches, Git objects, temporary files, and output binaries are excluded from source selection. The archive is an exact source snapshot, not a complete offline runtime or binary backup.
 
-## 可靠性口径
+Claims may mark a frozen external/binary reference `archive_required: false`; its current hash is still checked. Missing or mismatched required evidence makes the snapshot WIP. If a hashed document needs a new edition, preserve the old bytes and move the historical evidence pointer rather than rewriting its old hash as if the prior acceptance covered the new content.
 
-本协议无法保证一定发现新定理，也无法保证进程突然终止前最后几步已经持久化。它减少的是记忆丢失、无效重做和把未验收工作当成果的风险。自动压缩/用户触发交接后，按磁盘状态继续，不要求用户管理子任务。
+Archive verification reports archive integrity separately from later workspace changes. It does not rerun Lean, reproduce commands, or prove mathematics. Stable snapshots are created after workers stop writing and root acceptance is complete. Working snapshots may span files written at different times and do not pretend to be atomic research transactions.
 
-参考官方OpenAI关于持久工作流、文件产物与压缩的说明：<https://developers.openai.com/blog/skills-shell-tips>。本协议不依赖特定模型或应用能够由助手强制触发压缩，也不会为此调用额外API。
+A public Git clone intentionally lacks local checkpoints and some historical binaries. Run `--verify-latest` only when the corresponding checkpoint exists; use the English reproducibility guide to distinguish Git-source builds from complete-delivery verification.
+
+## Scientific priorities and stopping
+
+Do not make deferred external expert review a prerequisite for other authorized work. Prioritize useful proof simplifications or precisely scoped formalization gaps over repeated paper formatting, broad unbounded enumeration, or unlimited model voting.
+
+Each task has a finite output and a stop condition. After two substantive attempts yield no new constraint or interface, record the obstacle and let root reassess scope. Do not expand the queue simply to keep work moving. Public uploads and journal submissions are separate actions governed by the user's authorization.
+
+This workflow cannot guarantee a new theorem or preservation of every unsaved step after a sudden interruption. It reduces lost context, repeated effort, and unsupported claims of completion. After compaction, restore from disk and continue the authorized task.

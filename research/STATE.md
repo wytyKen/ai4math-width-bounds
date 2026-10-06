@@ -1,27 +1,33 @@
-# 当前状态 R109 仓库内容隐私审计与忽略规则补强
+# Current state: R112 English-first documentation complete
 
-2026-10-07。用户要求防止仓库文件泄露隐私，并明确上传本身无需隐藏姓名 / 邮箱。正常 Git 身份保留；本轮检查实际文件、可达历史和四份 PDF，补强 .gitignore，不因普通路径或身份信息重写历史。文件名 / 忽略规则核验及 R110 / R111 专项审计完成：3 个可达提交的文本与 4 份 PDF 共 29 页未发现需移除的凭据或私人材料。已补强忽略规则，无历史重写或文件脱敏。仍由用户执行 git push，R093 保持 parked。
+7 October 2026 (Asia/Shanghai). The user requires English as the primary project language, with optional Chinese versions, and asks whether releasing this mathematical work is appropriate and what responsibilities it creates. R112 integrates a complete English reading path and source-based publication guidance. R113/R114 deliveries and R115 bounded integration review have been accepted. All workers have stopped. No new mathematics, manuscript submission, license choice, or human-authorship confirmation is being claimed.
 
-## 当前阶段与公开内容
+## Current reading path and language
 
-数学基线仍 R058 / C031，研究冻结为 v0.4；R091 贡献对照与 R092 证明叙事 / 映射已完成。README 将这些层次与 AI 参与、新颖性未定、缺少外部人类审阅、尚未完成 R095 干净复现分别说明。旧“下一 R060”仅是历史交付停点，当前下一研究准备项仍 R093。
+The root README is English; README.zh-CN.md is the optional Chinese overview. The English docs cover project history, the full N0–N9 proof narrative, the precise G/Q/C/D statement map, the full R091 contribution comparison, reproducibility, publication status, and future work. AGENTS, PROTOCOL, CONTRIBUTING, this state, the handoff, and the manuscript index are maintained in English.
 
-新增 [GitHub 浏览版声明映射](publication/STATEMENT_MAP_GITHUB.md)转换 142 个链接，原 [叙事](publication/PROOF_NARRATIVE.md)和[验收映射](publication/STATEMENT_MAP.md)不改。原 v0.4 README 保存在 frozen/v0_4/README.md，C032 只改定位不改 hash；旧稿、PDF、ZIP、验收记录及 PROJECT_REPORT 保持原件。
+Original Chinese research documents, old task/claim descriptions, and frozen artifacts remain historical evidence. They are not required for the primary English reading path. Before editing hashed entrypoints, their original bytes were preserved under `research/frozen/pre_english_20261007/`; historical evidence pointers retain their original hashes. English translation does not certify a new proof or novelty.
 
-公开规则排除缓存、tmp、checkpoints、下载全文与历史 ZIP/收据；仅四份项目 PDF 放入 output 白名单。普通 Git 克隆不具全部历史归档，不能把缺少 --verify-latest 所需归档当成数学错误。原无提交的 lean/.git 已完整备份到 tmp/lean_git_before_root_import，18 个元数据文件保持字节；根 .git / main 已就绪。64 个 Lean 项目文件按普通文件入 Git，无 gitlink，core.autocrlf=false 仅本地设置，现有姓名和邮箱未覆盖。许可证 / 署名未替用户选择。
+## Scientific baseline remains R058 / C031
 
-## 科学范围不变
+For any field K, use an actual three-variable finite-colength lex quotient, x standard, w ≥ 4, and an actual cumulative Hilbert budget in every degree. The development provides an actual finite free resolution and standard Tor with first factor A/m, derived second factor A/I, and K action along the real map K→A. It proves true K-finiteness, dimensions 1,a+1+ell,a+2ell,ell, actual high-degree IsZero, all positive-degree width bounds, and a strict first bound.
 
-任意域、真实三变量有限余长 lex 商、x 标准、w≥4、所有次数累计预算。实际有限自由分解、标准 Tor 第一 A/m 派生第二 A/I、沿 K→A 的真实 K 作用；各次真实 K 有限，四维数 1,a+1+ell,a+2ell,ell，高次 IsZero，全部正次数宽度界及第一严格界。lex 实际类最大值达到且 w≥64 的 Θ(w log w) 已证，不迁移为半群匹配下界。
+The attained xy maximum over the actual lex budget class has Θ(w log w) growth, with the explicit lower comparison requiring w ≥ 64. This is not a matching lower bound for semigroups. The full semigroup reduction remains classical; no general Tor balance or complete graded Betti-table interface was added. N9 preserves the separate CMS width range, the complementary length argument, and width 3.
 
-R092 N0–N9 的具体假设 / 符号 / 截断 / 下界 / 标准 Tor / 传统半群引用层级保留。b2/b3 谐和式是直接数学复合，不伪称新增独立已编译端点；完整半群桥仍未端到端 Lean。R091 U1–U5 未排除，C003 新颖性 unresolved；文档公开不认证首创或人类责任。
+R091 M1–M3/F1 and unresolved U1–U5 remain unchanged; C003 novelty is unresolved. b2/b3 harmonic formulas in the narrative are direct mathematical compositions, not newly compiled standalone declarations. Internal AI review is not external human peer review. Human contribution/understanding/responsibility under R093 and independent clean reproduction under R095 are still pending.
 
-科学日志 results/lean_higher_tor_build.txt hash `29b05fbcfa9054df43f5b171a511eb51e28e5745188c4a3a4ce9320fcee787e4`；旧 64 个 Lean 文件不变，未编译或新实验。v0.4 ZIP hash `ed74ee6c46ed160fd4b00f074de9c1e8c833f9a0b91a5bd96f29b36f1ede2285`；原包源码 checkpoint 20261001T095721013368Z-b002439c，科学基线 20261001T090243180713Z-07071c19。
+The scientific build log is `results/lean_higher_tor_build.txt`, SHA-256 `29b05fbcfa9054df43f5b171a511eb51e28e5745188c4a3a4ce9320fcee787e4`. The 64 Lean project files are unchanged. Scientific baseline checkpoint: `20261001T090243180713Z-07071c19`. Frozen v0.4 ZIP SHA-256: `ed74ee6c46ed160fd4b00f074de9c1e8c833f9a0b91a5bd96f29b36f1ede2285`; its source checkpoint is `20261001T095721013368Z-b002439c`. No Lean build or mathematical experiment was run for this language change.
 
-## 下一项与恢复
+## Public repository and privacy
 
-origin 已由用户设置且首次推送成功，不再执行 remote add。R107 公式修复已本地提交；本轮隐私审计与忽略规则提交后，用户仍仅需 `git push`。旧 R103 / R105 文档记录当时授权和执行范围，保持原件；当前以本 STATE/HANDOFF 和 R107 报告为准。原 R103 README 保存在 frozen/github_r103/README.md；本轮原 .gitignore 保存在 frozen/github_r103/gitignore.original.txt，C037 只换历史定位、hash 不变；“下一项”仍指 R093 真实贡献 / 作者责任事实记录，区分日志可证、本人确认、未知，不从授权推定理解或补造贡献。R094/R095/R096、旧 R060–R067 及外部联系 R009 保持 parked。
+Repository: https://github.com/wytyKen/ai4math-width-bounds . The user initially pushed main and later explicitly authorized the assistant to run git push. That push succeeded at `f8a5eddbc039129a3d3a30dc0b2f22d7e30134e7`; remote main was read back and matched. The English documentation is subsequent work and must not be called uploaded until its push is actually checked.
 
-本地恢复按 AGENTS 读 STATE/HANDOFF/queue，用根 .venv 核 checkpoint --check；有本地检查点时再 --verify-latest。Git 克隆缺少历史归档是预期，见上传指南。固定 Lean/mathlib 4.22.0，最多两子智能体且不派生；本轮结束时全部停止。LATEST 为本次内容隐私审计与忽略规则补强快照；工作区新增 .git 与 tmp 备份不进入检查点，Git 提交不改变 R058 科学证据。
+Normal Git name/email remain unchanged as the user requested. R109–R111 found no actionable sensitive content in their stated file/history/PDF scope and strengthened ignore rules. That bounded audit does not certify all future content. Public Git excludes private scratch data, runtimes/caches, local checkpoints, downloaded full texts, and older ZIPs/receipts. Some historical evidence is therefore available only in the complete local archive.
 
-内容隐私口径：重点防止环境文件、私钥、令牌、凭据配置、浏览器登录状态与私人材料误入库。gitignore 不会追溯清除历史，因此本轮另查实际 Git blobs 和 PDF；不把普通姓名 / 邮箱 / 本机路径本身判为泄漏。专项细节在 tasks/R109_public_privacy_remediation.md、R110_privacy_text_audit.md、R111_privacy_pdf_audit.md，精确中间信息只在已忽略 tmp 中。
+The publication note concludes that an accurately scoped research snapshot is appropriate. It does not treat a GitHub release as peer review, a novelty certificate, a completed human responsibility record, or legal clearance. Formal submission and licensing are separate decisions.
+
+## Next action and recovery
+
+R112/R115 integration is complete: English links/assumptions and historical hashes passed the documented checks. The final Git commit and repository synchronization follow the stable source checkpoint; inspect Git state and output/r112_english_release.receipt.json for their actual result. No R093 or mathematical extension begins automatically. The next planned research-preparation task remains R093, followed by a manuscript-route decision and separately scoped R094/R095 work. R060–R067 and external-contact task R009 remain parked.
+
+Restore using AGENTS: read STATE/HANDOFF/queue, use the root .venv for checkpoint --check, and verify the latest local checkpoint if present. A public clone without historical checkpoint files is not damaged merely because those files are absent. Keep Lean/mathlib 4.22.0 and project-local caches. At most two subagents, including reviewers; no recursive delegation.

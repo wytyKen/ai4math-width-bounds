@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-06T19:18:18.954558+00:00",
-  "focus": "R109内容隐私审计完成并补强ignore，用户自行push",
+  "updated_utc": "2026-10-06T20:00:55.255052+00:00",
+  "focus": "English-first primary documentation accepted; publication boundaries documented",
   "root_owned_paths": [
     "AGENTS.md",
     "README.md",
@@ -32,7 +32,8 @@
     "results/lean_lex_resolution_build.txt",
     "results/r057_validation.json",
     ".gitignore",
-    ".gitattributes"
+    ".gitattributes",
+    "paper/README.md"
   ],
   "tasks": [
     {
@@ -2826,19 +2827,145 @@
         "不改冻结PDF，不改Git，不派生；遵守根.venv和pdf技能"
       ],
       "completion_note": "用户仅关注内容隐私，正常Git身份保持。实际文件/可达历史/PDF未发现需处置的凭据或私人材料；已补强ignore并验证不误排研究文件。根本地提交，用户push；不改证明/原PDF/历史。"
+    },
+    {
+      "id": "R112",
+      "title": "English-first project documentation and publication-responsibility guidance",
+      "status": "done",
+      "priority": 1,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R109"
+      ],
+      "owned_paths": [
+        "README.zh-CN.md",
+        "CONTRIBUTING.md",
+        "research/README.md",
+        "docs/README.md",
+        "docs/REPRODUCIBILITY.md",
+        "docs/PUBLICATION_STATUS.md",
+        "docs/FUTURE_WORK.md",
+        "research/tasks/R112_english_first_release.md",
+        "research/frozen/pre_english_20261007",
+        "results/r112_english_documentation_validation.json"
+      ],
+      "root_integration_paths": [
+        "README.md",
+        "AGENTS.md",
+        "research/PROTOCOL.md",
+        "paper/README.md"
+      ],
+      "deliverables": [
+        "README.md",
+        "README.zh-CN.md",
+        "CONTRIBUTING.md",
+        "research/README.md",
+        "docs/README.md",
+        "docs/REPRODUCIBILITY.md",
+        "docs/PUBLICATION_STATUS.md",
+        "docs/FUTURE_WORK.md",
+        "research/tasks/R112_english_first_release.md"
+      ],
+      "acceptance": [
+        "Provide a complete English primary reading path for mathematics, evidence, reproducibility, development, and publication status; retain Chinese alternatives and original frozen records",
+        "Preserve all mathematical sources, old manuscript/PDF bytes and historical claim evidence; translate/document without new research",
+        "Explain repository release vs scholarly publication, AI/human responsibility, novelty, licensing and correction risks using primary current sources; no license/author claim invented"
+      ],
+      "completion_note": "English primary documentation accepted, with optional Chinese/history archives preserved; R115 found no material integration defect. Old source/evidence bytes remain valid. No new mathematics, builds, novelty certification, license or authorship decision."
+    },
+    {
+      "id": "R113",
+      "title": "English proof narrative and precise statement map",
+      "status": "done",
+      "priority": 1,
+      "owner": "english_mathematics",
+      "agent": null,
+      "depends_on": [
+        "R109"
+      ],
+      "supports_task": "R112",
+      "owned_paths": [
+        "docs/PROOF_NARRATIVE.md",
+        "docs/STATEMENT_MAP.md",
+        "research/tasks/R113_english_mathematics.md"
+      ],
+      "deliverables": [
+        "docs/PROOF_NARRATIVE.md",
+        "docs/STATEMENT_MAP.md",
+        "research/tasks/R113_english_mathematics.md"
+      ],
+      "acceptance": [
+        "Translate the full R092 N0-N9 narrative and G/Q/C/D statement map, preserving assumptions, constants, proof-status boundaries and exact Lean names",
+        "Use portable repository-relative links; preserve original Chinese documents and all source hashes; no new mathematical research or compilation",
+        "Write English, maintain compact intermediate progress on disk, do not spawn agents"
+      ],
+      "completion_note": "English primary documentation accepted, with optional Chinese/history archives preserved; R115 found no material integration defect. Old source/evidence bytes remain valid. No new mathematics, builds, novelty certification, license or authorship decision."
+    },
+    {
+      "id": "R114",
+      "title": "English contributions and project overview",
+      "status": "done",
+      "priority": 1,
+      "owner": "english_project_context",
+      "agent": null,
+      "depends_on": [
+        "R109"
+      ],
+      "supports_task": "R112",
+      "owned_paths": [
+        "docs/CONTRIBUTIONS.md",
+        "docs/PROJECT_OVERVIEW.md",
+        "research/tasks/R114_english_project_context.md"
+      ],
+      "deliverables": [
+        "docs/CONTRIBUTIONS.md",
+        "docs/PROJECT_OVERVIEW.md",
+        "research/tasks/R114_english_project_context.md"
+      ],
+      "acceptance": [
+        "Faithful full English rendering of R091 contribution map, including M1-M3/F1 and U1-U5",
+        "Self-contained English project history/results/limitations and human-AI assessment, sufficiently detailed for future extension without requiring Chinese",
+        "Use current source records only, preserve old documents, no new novelty search or authorship/efficiency claims, no subagents"
+      ],
+      "completion_note": "English primary documentation accepted, with optional Chinese/history archives preserved; R115 found no material integration defect. Old source/evidence bytes remain valid. No new mathematics, builds, novelty certification, license or authorship decision."
+    },
+    {
+      "id": "R115",
+      "title": "English primary documentation integration review",
+      "status": "done",
+      "priority": 1,
+      "owner": "english_integration_review",
+      "agent": null,
+      "depends_on": [
+        "R109"
+      ],
+      "supports_task": "R112",
+      "owned_paths": [
+        "research/tasks/R115_english_integration_review.md"
+      ],
+      "deliverables": [
+        "research/tasks/R115_english_integration_review.md"
+      ],
+      "acceptance": [
+        "Review translated assumptions/quantifiers/statement status and English-only main reading route, using original accepted documents",
+        "Check public-status and responsibility wording without inventing human approval, novelty, or legal clearance",
+        "Only write the assigned English report; no further agents, source edits, builds, or research"
+      ],
+      "completion_note": "English primary documentation accepted, with optional Chinese/history archives preserved; R115 found no material integration defect. Old source/evidence bytes remain valid. No new mathematics, builds, novelty certification, license or authorship decision."
     }
   ],
   "handoff": {
-    "prepared_utc": "2026-10-06T19:18:18.954558+00:00",
+    "prepared_utc": "2026-10-06T20:00:55.255052+00:00",
     "next_task": null,
     "parallel_task": null,
     "active_worker_tasks": [],
     "suggested_first_task": "R093",
-    "waiting_for": "user_git_push_for_ignore_hardening",
-    "proposed_next_milestone": "R093真实贡献与作者责任事实记录，未知不冒称已确认",
+    "waiting_for": "user_instruction_for_next_scope_after_english_documentation",
+    "proposed_next_milestone": "R093 factual human contribution and responsibility record; distinguish evidence, personal confirmation, and unknowns.",
     "plan": "research/PUBLICATION_PREPARATION_PLAN.md",
     "scientific_baseline_checkpoint": "research/checkpoints/20261001T090243180713Z-07071c19",
-    "note": "按用户澄清保留正常Git姓名邮箱；275 tracked文件、3可达提交文本/4 PDF专项审计无确认敏感项。补强忽略规则，47正向/7保留探针通过，旧证据和冻结文件不改。无身份修改/历史重写/脱敏导出/自动push。",
+    "note": "R112 English primary reading path, optional Chinese overview, translated operational documents, and source-based publication guidance accepted. No mathematics, license choice, authorship confirmation, clean build, or journal submission. Root performs final commit/repository synchronization using the established repository workflow.",
     "release_receipt": "output/ai4math_research_delivery_v0_4.receipt.json",
     "retrospective": "research/PROJECT_RETROSPECTIVE_v0_4.md",
     "planned_next_task": "R093",
@@ -2854,8 +2981,11 @@
     "local_git_task_report": "research/tasks/R105_local_git_initialization.md",
     "repository_url": "https://github.com/wytyKen/ai4math-width-bounds",
     "formula_fix_report": "research/tasks/R107_readme_formula_rendering.md",
-    "privacy_audit": "research/tasks/R109_public_privacy_remediation.md"
+    "privacy_audit": "research/tasks/R109_public_privacy_remediation.md",
+    "english_documentation": "docs/README.md",
+    "publication_responsibility": "docs/PUBLICATION_STATUS.md",
+    "english_release_receipt": "output/r112_english_release.receipt.json"
   },
-  "current_scope": "按用户澄清保留正常Git姓名邮箱；275 tracked文件、3可达提交文本/4 PDF专项审计无确认敏感项。补强忽略规则，47正向/7保留探针通过，旧证据和冻结文件不改。无身份修改/历史重写/脱敏导出/自动push。",
-  "phase": "r109_content_privacy_audit_complete"
+  "current_scope": "R112 English primary reading path, optional Chinese overview, translated operational documents, and source-based publication guidance accepted. No mathematics, license choice, authorship confirmation, clean build, or journal submission. Root performs final commit/repository synchronization using the established repository workflow.",
+  "phase": "r112_english_first_complete"
 }
