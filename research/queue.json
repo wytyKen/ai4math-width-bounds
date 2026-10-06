@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-06T18:52:00.125302+00:00",
-  "focus": "R105本地Git已初始化并首次提交，用户执行remote add/push",
+  "updated_utc": "2026-10-06T19:06:15.343104+00:00",
+  "focus": "R107 README公式显示修复验收完成，用户执行git push",
   "root_owned_paths": [
     "AGENTS.md",
     "README.md",
@@ -2699,19 +2699,68 @@
         "不改Git索引/配置/远端或其他文件，不派生；首提交由根集成完成"
       ],
       "completion_note": "本地初始提交18c79a3已实际成功，R106接受269文件载荷；64Lean/12冻结产物/18备份元数据及旧证据保持。根随后提交验收记录并用外置receipt核对最终HEAD，不在自身树回填最终hash。remote与push由用户执行。"
+    },
+    {
+      "id": "R107",
+      "title": "README数学公式的跨渲染器显示修复",
+      "status": "done",
+      "priority": 1,
+      "owner": "root",
+      "agent": null,
+      "depends_on": [
+        "R105"
+      ],
+      "owned_paths": [
+        "research/frozen/github_r103/README.md",
+        "research/tasks/R107_readme_formula_rendering.md"
+      ],
+      "root_integration_paths": [
+        "README.md"
+      ],
+      "deliverables": [
+        "README.md",
+        "research/tasks/R107_readme_formula_rendering.md"
+      ],
+      "acceptance": [
+        "移除README中的LaTeX渲染依赖，组合数/严格界/极值公式含义不变",
+        "原R103 README留存旧hash，旧数学/冻结证据不变；本地提交由用户push"
+      ],
+      "completion_note": "README三处公式改为普通Markdown文本/代码表示，条件/常数/严格性不变，R108接受；根做本地提交，用户push。无新数学或线上视觉验收。"
+    },
+    {
+      "id": "R108",
+      "title": "README公式修复语义核对",
+      "status": "done",
+      "priority": 1,
+      "owner": "formula_review",
+      "agent": null,
+      "depends_on": [
+        "R105"
+      ],
+      "supports_task": "R107",
+      "owned_paths": [
+        "research/tasks/R108_readme_formula_review.md"
+      ],
+      "deliverables": [
+        "research/tasks/R108_readme_formula_review.md"
+      ],
+      "acceptance": [
+        "只读核对新旧公式及条件数学等价，只写独占短报告，不派生、不改Git或研究"
+      ],
+      "completion_note": "README三处公式改为普通Markdown文本/代码表示，条件/常数/严格性不变，R108接受；根做本地提交，用户push。无新数学或线上视觉验收。"
     }
   ],
   "handoff": {
-    "prepared_utc": "2026-10-06T18:52:00.125302+00:00",
+    "prepared_utc": "2026-10-06T19:06:15.343104+00:00",
     "next_task": null,
     "parallel_task": null,
     "active_worker_tasks": [],
     "suggested_first_task": "R093",
-    "waiting_for": "user_creates_empty_github_repo_then_remote_add_and_push",
+    "waiting_for": "user_git_push_for_readme_formula_fix",
     "proposed_next_milestone": "R093真实贡献与作者责任事实记录，未知不冒称已确认",
     "plan": "research/PUBLICATION_PREPARATION_PLAN.md",
     "scientific_baseline_checkpoint": "research/checkpoints/20261001T090243180713Z-07071c19",
-    "note": "用户授权本地Git准备已执行：原Lean元数据完整备份，根main、现有身份、显式暂存及首提交验收通过；本轮记录随后提交并用外置receipt核对最终HEAD。未建远端、未push、不推进R093/R095。",
+    "note": "修复README三处公式显示，R108接受数学等价；旧735证据/64Lean/13output不变。根保存检查点并本地提交，用户push更新GitHub，不推进R093。",
     "release_receipt": "output/ai4math_research_delivery_v0_4.receipt.json",
     "retrospective": "research/PROJECT_RETROSPECTIVE_v0_4.md",
     "planned_next_task": "R093",
@@ -2724,8 +2773,10 @@
     "suggested_repository_name": "ai4math-width-bounds",
     "initial_local_commit": "18c79a36fc232f6de781131d09000628ecf65163",
     "local_commit_receipt": "output/r105_local_git_commit.receipt.json",
-    "local_git_task_report": "research/tasks/R105_local_git_initialization.md"
+    "local_git_task_report": "research/tasks/R105_local_git_initialization.md",
+    "repository_url": "https://github.com/wytyKen/ai4math-width-bounds",
+    "formula_fix_report": "research/tasks/R107_readme_formula_rendering.md"
   },
-  "current_scope": "用户授权本地Git准备已执行：原Lean元数据完整备份，根main、现有身份、显式暂存及首提交验收通过；本轮记录随后提交并用外置receipt核对最终HEAD。未建远端、未push、不推进R093/R095。",
-  "phase": "r105_local_commit_done_awaiting_user_push"
+  "current_scope": "修复README三处公式显示，R108接受数学等价；旧735证据/64Lean/13output不变。根保存检查点并本地提交，用户push更新GitHub，不推进R093。",
+  "phase": "r107_readme_formula_fix_complete"
 }

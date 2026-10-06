@@ -1,6 +1,6 @@
-# 当前状态 R105 本地 Git 已提交，等待用户上传
+# 当前状态 R107 README 公式显示修复
 
-2026-10-07。用户随后明确授权助手完成本地 Git 准备与首次提交，仅 GitHub 建仓 / remote add / push 由本人执行。根 main 已初始化，现有身份沿用，首次本地导入提交为 `18c79a36fc232f6de781131d09000628ecf65163`。R105 本地初始化 / 首次提交已完成，R106 只读复核接受，验收记录已集成；没有 remote 或上传。R093 仍 parked。
+2026-10-07。用户已完成首次 GitHub 推送，仓库为 https://github.com/wytyKen/ai4math-width-bounds 。用户随后报告 README 的 operatorname 宏被拒绝、组合数 / 对数界显示异常；R107 已改为不依赖数学渲染的普通文本公式，根核验与 R108 语义复核均通过，本轮本地修复验收完成。只做本地修复与提交，更新远端仍由用户执行 git push。R093 仍 parked。
 
 ## 当前阶段与公开内容
 
@@ -20,6 +20,6 @@ R092 N0–N9 的具体假设 / 符号 / 截断 / 下界 / 标准 Tor / 传统半
 
 ## 下一项与恢复
 
-本轮完成后用户在新建空 GitHub 仓库后，只需在项目根运行 `git remote add origin <真实HTTPS地址>` 与 `git push -u origin main`。建议仓库名 ai4math-width-bounds。不要重做上传指南中已执行的备份 / init / 首次 add / commit；旧 R103 指南保留原版本含义。最终提交与干净状态另由 output/r105_local_git_commit.receipt.json 和 Git HEAD 核对；“下一项”仍指 R093 真实贡献 / 作者责任事实记录，区分日志可证、本人确认、未知，不从授权推定理解或补造贡献。R094/R095/R096、旧 R060–R067 及外部联系 R009 保持 parked。
+origin 已由用户设置且首次推送成功，不再执行 remote add。当前显示修复本地提交后，用户仅需 `git push`。旧 R103 / R105 文档记录当时授权和执行范围，保持原件；当前以本 STATE/HANDOFF 和 R107 报告为准。原 R103 README 保存在 frozen/github_r103/README.md，C037 只换历史定位、hash 不变；“下一项”仍指 R093 真实贡献 / 作者责任事实记录，区分日志可证、本人确认、未知，不从授权推定理解或补造贡献。R094/R095/R096、旧 R060–R067 及外部联系 R009 保持 parked。
 
-本地恢复按 AGENTS 读 STATE/HANDOFF/queue，用根 .venv 核 checkpoint --check；有本地检查点时再 --verify-latest。Git 克隆缺少历史归档是预期，见上传指南。固定 Lean/mathlib 4.22.0，最多两子智能体且不派生；本轮结束时全部停止。LATEST 为本次本地 Git 验收文档快照；工作区新增 .git 与 tmp 备份不进入检查点，Git 提交不改变 R058 科学证据。
+本地恢复按 AGENTS 读 STATE/HANDOFF/queue，用根 .venv 核 checkpoint --check；有本地检查点时再 --verify-latest。Git 克隆缺少历史归档是预期，见上传指南。固定 Lean/mathlib 4.22.0，最多两子智能体且不派生；本轮结束时全部停止。LATEST 为本次公式显示修复文档快照；工作区新增 .git 与 tmp 备份不进入检查点，Git 提交不改变 R058 科学证据。

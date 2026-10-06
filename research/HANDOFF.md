@@ -1,22 +1,22 @@
-# 交接 R105 本地 Git 已就绪 用户执行 remote 和 push
+# 交接 R107 README 公式显示修复 用户执行 git push
 
-2026-10-07，D:\project\ai4math。用户最新明确授权助手完成本地备份 / init / 暂存核验 / 首提交。首导入提交 `18c79a36fc232f6de781131d09000628ecf65163` 已实际创建，根 main 就绪；R105 / R106 验收完成，实际首提交已确认。**用户仍自行创建 GitHub 空仓库、添加 origin 和 push；助手没有设置 remote 或上传。**
+2026-10-07，D:\project\ai4math。用户已将 main 首次推送到 https://github.com/wytyKen/ai4math-width-bounds ，随后报告 README 公式渲染错误。R107 普通文本公式修复已完成，R108 数学语义复核接受；本轮记录与修复由根本地提交，最终 HEAD 以 Git 记录为准；不改 Lean，不推进 R093，不代替用户 push。
 
 ## 恢复入口
 
-按 AGENTS 读 STATE / queue，根 .venv 运行 checkpoint --check；存在本地 checkpoint 时再 --verify-latest。然后读 tasks/R105_local_git_initialization.md、tasks/R106_local_git_review.md、results/r105_local_git_validation.json 和 output/r105_local_git_commit.receipt.json；必要时再读 README 与旧上传指南。只按当前任务读取其他文件，不重做已完成数学。
+按 AGENTS 读 STATE / queue，根 .venv 运行 checkpoint --check；存在本地 checkpoint 时再 --verify-latest。然后读 README、tasks/R107_readme_formula_rendering.md、tasks/R108_readme_formula_review.md；必要时再读旧上传 / 初始化报告。只按当前任务读取其他文件，不重做已完成数学。
 
 R092 证明内容保存在 publication/PROOF_NARRATIVE.md 和 STATEMENT_MAP.md；GitHub 浏览版为 STATEMENT_MAP_GITHUB.md，仅转换链接并加说明。原文档保持 SHA。旧 README 位于 frozen/v0_4/README.md；C032 的历史 evidence 已换到此路径，hash 不变，旧 results/delivery_validation_v0_4.json 和 ZIP 内原路径保持其快照意义。
 
 ## 上传前实际环境与边界
 
-根 .git 已初始化为 main；原 lean/.git 已备份到 tmp/lean_git_before_root_import，完整 18 文件 hash 不变，不能移回 lean 再造成嵌套仓库。已执行本地 core.autocrlf=false，未改姓名 / 邮箱；显式暂存与逐 blob 检查通过，64 个 Lean 文件正常入 Git，无 gitlink。旧指南记录 R103 当时未执行的状态，不能照其第 3 / 4 节重做初始化。用户在根目录对自己的新空仓库执行 remote add origin 与 push -u origin main 即可；推荐仓库名 ai4math-width-bounds。
+根 .git 已初始化为 main；原 lean/.git 已备份到 tmp/lean_git_before_root_import，完整 18 文件 hash 不变，不能移回 lean 再造成嵌套仓库。已执行本地 core.autocrlf=false，未改姓名 / 邮箱；显式暂存与逐 blob 检查通过，64 个 Lean 文件正常入 Git，无 gitlink。旧指南记录 R103 当时未执行的状态，不能照其第 3 / 4 节重做初始化。用户已设置 origin 并成功首次 push，main 已跟踪 origin/main；当前修复提交后用户只需 git push，不再 remote add。
 
 .gitignore 排除本地运行时 / 缓存 / tmp / checkpoints / references 下载全文 / 历史 output ZIP 与收据，仅四份自有 PDF 例外。.gitattributes * -text 保护历史字节哈希。公开源码缺完整归档是有意范围选择；不能声称 Git clone 已通过本地历史 archive verify、干净环境构建或 CI。lean/.github 是子目录模板，没有根 CI 成功证据。项目许可证未选择；作者责任未确认。
 
-本地首次导入完成后，根会再提交本轮验收记录，使工作区保持干净。最后提交号不能写入它自身的树，故最终状态见 Git HEAD 与 output/r105_local_git_commit.receipt.json（被忽略）。若突发交接且收据缺失，先 git status / log 核对实际提交，再仅完成剩余验收事务，不重 init、不重移元数据、不自动 push。
+R105 原验收已提交为 01450016b1c7fc7e669a1155f8d717f9a00fa5e0，用户已推送；该状态由其终端输出及本地跟踪分支共同支持，本轮未查询网络。R107 修复只是改变 README 的三处公式表示，不改科学范围。C037 原 README 留存在 frozen/github_r103/README.md，旧 hash 和验收报告不改。最终本地修复提交与待推送状态以 git status / log 为准；不自动 push。
 
-不自动补 LICENSE、署名、建远端、发信或上传附件。用户自行上传之后可依据其提供的状态再核对；没有远端 URL 时不虚构仓库链接。
+不自动补 LICENSE、署名、建远端、发信或上传附件。本轮只读核对 origin 为用户提供的真实地址；不对远端执行变更，也不推断可见性或 CI 状态。
 
 ## 数学与后续不变
 

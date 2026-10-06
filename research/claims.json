@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-06T18:52:00.125302+00:00",
+  "updated_utc": "2026-10-06T19:06:15.343104+00:00",
   "claims": [
     {
       "id": "C001",
@@ -4758,8 +4758,9 @@
       },
       "evidence": [
         {
-          "path": "README.md",
-          "sha256": "1bca49d931837785c224fef090a072e073f82a0ae594bb154be85d718bf01740"
+          "path": "research/frozen/github_r103/README.md",
+          "sha256": "1bca49d931837785c224fef090a072e073f82a0ae594bb154be85d718bf01740",
+          "original_delivery_path": "README.md"
         },
         {
           "path": ".gitignore",
@@ -4789,7 +4790,8 @@
           "path": "results/r103_github_readiness.json",
           "sha256": "d4ddb2c5d633961e129abe30f8a30fe760abea5948e25db2fc765d34c42dbba6"
         }
-      ]
+      ],
+      "preservation_note": "2026-10-07 R107修复README渲染：R103原README逐字节保存在research/frozen/github_r103/README.md；C037只换证据定位，SHA不变，旧复核与validation原件保持历史范围。"
     },
     {
       "id": "C038",
@@ -4828,11 +4830,43 @@
           "sha256": "2291d981c139d584fc681ae887d91b5143bee8c6f39df25b7af22e5bc0f4a4c6"
         }
       ]
+    },
+    {
+      "id": "C039",
+      "status": "artifact_checked",
+      "statement": "R107 README三处数学公式的显示兼容性修复完成，R108核对与旧公式数学等价：累计预算、标准Tor统一界/第一严格界、实际lex极值对数界改用普通文本/代码表示并解释C(n,k)。",
+      "scope": "仅文档表示修复，不改变数学结论、假设、证明源码或Lean构建证据，不声称线上GitHub视觉验收或已推送此修复。R103原README按旧hash冻结保存，C037只换证据路径；旧735证据、64Lean项目文件和13个本轮前output文件不变。用户已完成初始push，本轮修复仍由用户push。",
+      "verification": {
+        "checked_utc": "2026-10-06T19:06:15.343104+00:00",
+        "checked_local_date": "2026-10-07",
+        "review": "research/tasks/R108_readme_formula_review.md",
+        "previous_evidence_references_verified": 735,
+        "lean_project_files_unchanged": 64,
+        "existing_output_files_unchanged": 13,
+        "readme_local_links_checked": 19,
+        "lean_rebuilt": false,
+        "online_visual_rendering_checked": false,
+        "fix_pushed_by_assistant": false
+      },
+      "evidence": [
+        {
+          "path": "README.md",
+          "sha256": "9c13cc8e362492edadbaafab4da96a7409d1a0ac3115d06bd4706166850de17f"
+        },
+        {
+          "path": "research/tasks/R107_readme_formula_rendering.md",
+          "sha256": "863ff23fa13df13eec8bb10e9c2289241fef4a5e34fd0863a63aae2723136c25"
+        },
+        {
+          "path": "research/tasks/R108_readme_formula_review.md",
+          "sha256": "55f4fa7785cc5a7f916d4a5c9dc0f0b3f9c6b0b9b677b1b0501a367c4c9848cb"
+        }
+      ]
     }
   ],
   "last_handoff_check": {
-    "at_utc": "2026-10-06T18:52:00.125302+00:00",
+    "at_utc": "2026-10-06T19:06:15.343104+00:00",
     "source_changed": false,
-    "scope": "Mathematical sources and frozen artifacts unchanged; local root Git initial import committed and accepted. Only current operation reports/live state updated. Final record commit result is outside its own source tree; user alone configures origin and pushes."
+    "scope": "Mathematical sources unchanged; README math rendering representation fixed and accepted. Historical README evidence preserved, current local repair requires user git push."
   }
 }

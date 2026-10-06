@@ -34,16 +34,14 @@
 
 设 K 为任意域，A = K[x,y,z]，m = (x,y,z)。I 是实际有限余长 lex 单项式理想，x 不属于 I，整数 w ≥ 4，并对每个 d ≥ 0 满足实际累计 Hilbert 维数预算
 
-```text
-Σ_{t=0}^d dim_K Q_t(I) ≤ 1 + d·w
-```
+$$\sum_{t=0}^{d}\dim_K Q_t(I)\le 1+dw,$$
 
 其中 Q_t(I) 是 t 次齐次多项式在 A/I 中的像。有限余长是独立假设。令 a 为首个使 xᵃ 属于 I 的指数，ℓ 为完整 xy 商子空间的实际 K 维数。
 
 - A/I 的实际标准有限自由分解在 0、1、2、3 次的 A 秩依次为 **1、a+1+ℓ、a+2ℓ、ℓ**，4 次起为零项；与 A/m 张量后所有微分为零。
 - 标准对象 **Torᵢᴬ(A/m, A/I)** 固定第一因子 A/m，派生第二因子 A/I；K 作用沿实际 K→A 限制。所有次数均证明 K 有限性，0–3 次维数为上述四数，i ≥ 4 为真正零对象（`IsZero`）。
-- 记 `b_i = dim_K Tor_i^A(A/m, A/I)`。所有 i ≥ 1 均满足 `b_i ≤ i·C(w+1, i+1)`，其中 C(n,k) 表示二项式系数（从 n 个元素中选 k 个，k > n 时为 0）。第一界更严格：`b_1 < C(w+1, 2) = w·(w+1)/2`。
-- 令 M_K(w) 为该实际 lex 预算类的最大 xy 维数。最大值在 w ≥ 4 时达到，w ≥ 64 时有 `w·log(w)/16 ≤ M_K(w) ≤ 10w·log(w)`，其中 log 为自然对数；并连接 mathlib 标准 `Asymptotics.IsTheta`。
+- 所有 i ≥ 1 有 $\dim_K\operatorname{Tor}_i^A(A/\mathfrak m,A/I)\le i\binom{w+1}{i+1}$；第一界严格小于 $\binom{w+1}{2}$。
+- 令 M_K(w) 为该实际 lex 预算类的最大 xy 维数。最大值在 w ≥ 4 时达到，w ≥ 64 时有 $w\log(w)/16\le M_K(w)\le10w\log(w)$，并连接 mathlib 标准 `Asymptotics.IsTheta`。
 
 完整半群归约、一般 Tor 因子交换 / 平衡比较、完整分次位移与 Betti 表接口仍未完成。b₂、b₃ 的显式谐和式在证明叙事中作为既有声明的直接数学推论列出，不冒称新增独立已编译端点。有限实验用于探索和查错，不替代一般证明。
 
