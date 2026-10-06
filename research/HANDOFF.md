@@ -1,10 +1,10 @@
-# 交接 R107 README 公式显示修复 用户执行 git push
+# 交接 R109 内容隐私审计 保留正常Git身份
 
-2026-10-07，D:\project\ai4math。用户已将 main 首次推送到 https://github.com/wytyKen/ai4math-width-bounds ，随后报告 README 公式渲染错误。R107 普通文本公式修复已完成，R108 数学语义复核接受；本轮记录与修复由根本地提交，最终 HEAD 以 Git 记录为准；不改 Lean，不推进 R093，不代替用户 push。
+2026-10-07，D:\project\ai4math。用户要求检查仓库可能没有被 gitignore 排除的隐私；明确无需隐藏上传时的 name / email。助手检查文件、可达历史、四份 PDF，并补强忽略规则。正常 Git 身份不变，不因普通路径 / 身份而重写历史，不自动 push；R093 和科学范围不变。R110 / R111 专项报告已集成，未发现需移除的实际秘密或私人材料；补强忽略规则后由根做普通本地提交。
 
 ## 恢复入口
 
-按 AGENTS 读 STATE / queue，根 .venv 运行 checkpoint --check；存在本地 checkpoint 时再 --verify-latest。然后读 README、tasks/R107_readme_formula_rendering.md、tasks/R108_readme_formula_review.md；必要时再读旧上传 / 初始化报告。只按当前任务读取其他文件，不重做已完成数学。
+按 AGENTS 读 STATE / queue，根 .venv 运行 checkpoint --check；存在本地 checkpoint 时再 --verify-latest。然后读 tasks/R109_public_privacy_remediation.md、tasks/R110_privacy_text_audit.md、tasks/R111_privacy_pdf_audit.md 与 .gitignore；必要时再读旧上传 / 初始化 / 公式修复报告。只按当前任务读取其他文件，不重做已完成数学。
 
 R092 证明内容保存在 publication/PROOF_NARRATIVE.md 和 STATEMENT_MAP.md；GitHub 浏览版为 STATEMENT_MAP_GITHUB.md，仅转换链接并加说明。原文档保持 SHA。旧 README 位于 frozen/v0_4/README.md；C032 的历史 evidence 已换到此路径，hash 不变，旧 results/delivery_validation_v0_4.json 和 ZIP 内原路径保持其快照意义。
 
@@ -14,7 +14,7 @@ R092 证明内容保存在 publication/PROOF_NARRATIVE.md 和 STATEMENT_MAP.md�
 
 .gitignore 排除本地运行时 / 缓存 / tmp / checkpoints / references 下载全文 / 历史 output ZIP 与收据，仅四份自有 PDF 例外。.gitattributes * -text 保护历史字节哈希。公开源码缺完整归档是有意范围选择；不能声称 Git clone 已通过本地历史 archive verify、干净环境构建或 CI。lean/.github 是子目录模板，没有根 CI 成功证据。项目许可证未选择；作者责任未确认。
 
-R105 原验收已提交为 01450016b1c7fc7e669a1155f8d717f9a00fa5e0，用户已推送；该状态由其终端输出及本地跟踪分支共同支持，本轮未查询网络。R107 修复只是改变 README 的三处公式表示，不改科学范围。C037 原 README 留存在 frozen/github_r103/README.md，旧 hash 和验收报告不改。最终本地修复提交与待推送状态以 git status / log 为准；不自动 push。
+R105 原验收已提交为 01450016b1c7fc7e669a1155f8d717f9a00fa5e0，用户已推送；该状态由其终端输出及本地跟踪分支共同支持，本轮未查询网络。R107 修复已提交为 5165182b944382797ec1bc7c3b7cf13da993ab93，仅改变 README 的三处公式表示，不改科学范围。本轮后续是内容隐私审计和忽略规则补强，R110/R111 最终报告均未发现需移除的实际秘密；不需要历史重写或改 PDF。C037 原 README 留存在 frozen/github_r103/README.md，原 .gitignore 留存在 frozen/github_r103/gitignore.original.txt，旧 hash 和验收报告不改。最终本地修复提交与待推送状态以 git status / log 为准；不自动 push。
 
 不自动补 LICENSE、署名、建远端、发信或上传附件。本轮只读核对 origin 为用户提供的真实地址；不对远端执行变更，也不推断可见性或 CI 状态。
 
@@ -25,3 +25,5 @@ R058 标准 lex Tor 链 / C031 仍科学基线，v0.4 冻结；R091 贡献与 R0
 旧 64 个 Lean 文件和 12 个 output 产物不变，科学日志 hash `29b05fbcfa9054df43f5b171a511eb51e28e5745188c4a3a4ce9320fcee787e4`，v0.4 ZIP hash `ed74ee6c46ed160fd4b00f074de9c1e8c833f9a0b91a5bd96f29b36f1ede2285`。科学 checkpoint 20261001T090243180713Z-07071c19、包源码 checkpoint 20261001T095721013368Z-b002439c 不变。本次新快照只是文档更新。
 
 下一准备项仍 R093：先整理可见日志事实，再询问真实人工贡献 / 理解 / 责任所需信息，允许未知，不把未回复当确认。R094及以后、旧 R060–R067、R009 仍 parked。本轮公开准备不代替 R093/R095，也不自动启动它们。固定根 .venv、Lean/mathlib4.22.0，最多两子智能体含审查，不派生。
+
+恢复时不要把用户的隐私要求扩展为隐藏正常 Git 姓名 / 邮箱或改写已公开身份。审计未确认真实敏感内容前，不删除已跟踪研究记录或重写历史。新忽略规则只覆盖常见凭据 / 私用目录，不能替代每次暂存内容检查；本轮没有生成脱敏导出副本或改变提交身份。

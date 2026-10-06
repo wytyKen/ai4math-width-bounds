@@ -1,6 +1,6 @@
-# 当前状态 R107 README 公式显示修复
+# 当前状态 R109 仓库内容隐私审计与忽略规则补强
 
-2026-10-07。用户已完成首次 GitHub 推送，仓库为 https://github.com/wytyKen/ai4math-width-bounds 。用户随后报告 README 的 operatorname 宏被拒绝、组合数 / 对数界显示异常；R107 已改为不依赖数学渲染的普通文本公式，根核验与 R108 语义复核均通过，本轮本地修复验收完成。只做本地修复与提交，更新远端仍由用户执行 git push。R093 仍 parked。
+2026-10-07。用户要求防止仓库文件泄露隐私，并明确上传本身无需隐藏姓名 / 邮箱。正常 Git 身份保留；本轮检查实际文件、可达历史和四份 PDF，补强 .gitignore，不因普通路径或身份信息重写历史。文件名 / 忽略规则核验及 R110 / R111 专项审计完成：3 个可达提交的文本与 4 份 PDF 共 29 页未发现需移除的凭据或私人材料。已补强忽略规则，无历史重写或文件脱敏。仍由用户执行 git push，R093 保持 parked。
 
 ## 当前阶段与公开内容
 
@@ -20,6 +20,8 @@ R092 N0–N9 的具体假设 / 符号 / 截断 / 下界 / 标准 Tor / 传统半
 
 ## 下一项与恢复
 
-origin 已由用户设置且首次推送成功，不再执行 remote add。当前显示修复本地提交后，用户仅需 `git push`。旧 R103 / R105 文档记录当时授权和执行范围，保持原件；当前以本 STATE/HANDOFF 和 R107 报告为准。原 R103 README 保存在 frozen/github_r103/README.md，C037 只换历史定位、hash 不变；“下一项”仍指 R093 真实贡献 / 作者责任事实记录，区分日志可证、本人确认、未知，不从授权推定理解或补造贡献。R094/R095/R096、旧 R060–R067 及外部联系 R009 保持 parked。
+origin 已由用户设置且首次推送成功，不再执行 remote add。R107 公式修复已本地提交；本轮隐私审计与忽略规则提交后，用户仍仅需 `git push`。旧 R103 / R105 文档记录当时授权和执行范围，保持原件；当前以本 STATE/HANDOFF 和 R107 报告为准。原 R103 README 保存在 frozen/github_r103/README.md；本轮原 .gitignore 保存在 frozen/github_r103/gitignore.original.txt，C037 只换历史定位、hash 不变；“下一项”仍指 R093 真实贡献 / 作者责任事实记录，区分日志可证、本人确认、未知，不从授权推定理解或补造贡献。R094/R095/R096、旧 R060–R067 及外部联系 R009 保持 parked。
 
-本地恢复按 AGENTS 读 STATE/HANDOFF/queue，用根 .venv 核 checkpoint --check；有本地检查点时再 --verify-latest。Git 克隆缺少历史归档是预期，见上传指南。固定 Lean/mathlib 4.22.0，最多两子智能体且不派生；本轮结束时全部停止。LATEST 为本次公式显示修复文档快照；工作区新增 .git 与 tmp 备份不进入检查点，Git 提交不改变 R058 科学证据。
+本地恢复按 AGENTS 读 STATE/HANDOFF/queue，用根 .venv 核 checkpoint --check；有本地检查点时再 --verify-latest。Git 克隆缺少历史归档是预期，见上传指南。固定 Lean/mathlib 4.22.0，最多两子智能体且不派生；本轮结束时全部停止。LATEST 为本次内容隐私审计与忽略规则补强快照；工作区新增 .git 与 tmp 备份不进入检查点，Git 提交不改变 R058 科学证据。
+
+内容隐私口径：重点防止环境文件、私钥、令牌、凭据配置、浏览器登录状态与私人材料误入库。gitignore 不会追溯清除历史，因此本轮另查实际 Git blobs 和 PDF；不把普通姓名 / 邮箱 / 本机路径本身判为泄漏。专项细节在 tasks/R109_public_privacy_remediation.md、R110_privacy_text_audit.md、R111_privacy_pdf_audit.md，精确中间信息只在已忽略 tmp 中。

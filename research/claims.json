@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-06T19:06:15.343104+00:00",
+  "updated_utc": "2026-10-06T19:18:18.954558+00:00",
   "claims": [
     {
       "id": "C001",
@@ -4763,8 +4763,9 @@
           "original_delivery_path": "README.md"
         },
         {
-          "path": ".gitignore",
-          "sha256": "1b8b21d64c992323a69b1c77e2e7563497ee5c8f3d2246b6c20d3d5a69f1aa33"
+          "path": "research/frozen/github_r103/gitignore.original.txt",
+          "sha256": "1b8b21d64c992323a69b1c77e2e7563497ee5c8f3d2246b6c20d3d5a69f1aa33",
+          "original_delivery_path": ".gitignore"
         },
         {
           "path": ".gitattributes",
@@ -4791,7 +4792,7 @@
           "sha256": "d4ddb2c5d633961e129abe30f8a30fe760abea5948e25db2fc765d34c42dbba6"
         }
       ],
-      "preservation_note": "2026-10-07 R107修复README渲染：R103原README逐字节保存在research/frozen/github_r103/README.md；C037只换证据定位，SHA不变，旧复核与validation原件保持历史范围。"
+      "preservation_note": "2026-10-07 R107修复README渲染：R103原README逐字节保存在research/frozen/github_r103/README.md；C037只换证据定位，SHA不变，旧复核与validation原件保持历史范围。 2026-10-07 R109补强凭据忽略规则前，将原.gitignore字节保存在research/frozen/github_r103/gitignore.original.txt，历史SHA不变。"
     },
     {
       "id": "C038",
@@ -4862,11 +4863,57 @@
           "sha256": "55f4fa7785cc5a7f916d4a5c9dc0f0b3f9c6b0b9b677b1b0501a367c4c9848cb"
         }
       ]
+    },
+    {
+      "id": "C040",
+      "status": "artifact_checked",
+      "statement": "R109公开仓库内容隐私审计与遗漏忽略规则补强完成；R110检查3可达提交/283 blobs，R111检查四份29页PDF，未发现本范围内需移除的凭据或私人材料。47应忽略/7应保留路径探针通过，275已有tracked路径无误排。",
+      "scope": "有限内容/模式/语境和PDF结构审计，不保证识别任意秘密或隐写；没有逐页视觉、网络远端复查或全面恶意PDF认证。用户允许正常Git姓名邮箱，本轮保留身份/普通路径，不重写历史、不改冻结PDF、不新增数学构建、不自动push。旧.gitignore按原hash保存，C037只换定位。",
+      "verification": {
+        "checked_utc": "2026-10-06T19:18:18.954558+00:00",
+        "checked_local_date": "2026-10-07",
+        "text_review": "research/tasks/R110_privacy_text_audit.md",
+        "pdf_review": "research/tasks/R111_privacy_pdf_audit.md",
+        "tracked_files_audited": 275,
+        "reachable_commits": 3,
+        "distinct_blobs": 283,
+        "utf8_text_blobs": 279,
+        "pdf_files": 4,
+        "pdf_pages": 29,
+        "confirmed_sensitive_content_findings": 0,
+        "positive_ignore_probes": 47,
+        "negative_keep_probes": 7,
+        "previous_evidence_references_verified": 738,
+        "lean_project_files_unchanged": 64,
+        "existing_output_files_unchanged": 13,
+        "identity_changed": false,
+        "history_rewritten": false,
+        "lean_rebuilt": false,
+        "push_executed": false
+      },
+      "evidence": [
+        {
+          "path": ".gitignore",
+          "sha256": "aad1823bb1edd248502d14847e939a291e14c004ad31d9402cf77e8b42d1ac89"
+        },
+        {
+          "path": "research/tasks/R109_public_privacy_remediation.md",
+          "sha256": "1fffc185b69eb11e49863b1ab562b40f471a265c35dba340419576403b33cfe3"
+        },
+        {
+          "path": "research/tasks/R110_privacy_text_audit.md",
+          "sha256": "de150cfffcf3f12545b6dba5046a4c5218f9df87a868a7a29c0cea900a1463bc"
+        },
+        {
+          "path": "research/tasks/R111_privacy_pdf_audit.md",
+          "sha256": "586da03165aa5e17ae345dc22904fb05e68d0356883f64677b5ec68c22bc8f6e"
+        }
+      ]
     }
   ],
   "last_handoff_check": {
-    "at_utc": "2026-10-06T19:06:15.343104+00:00",
+    "at_utc": "2026-10-06T19:18:18.954558+00:00",
     "source_changed": false,
-    "scope": "Mathematical sources unchanged; README math rendering representation fixed and accepted. Historical README evidence preserved, current local repair requires user git push."
+    "scope": "Mathematical source and frozen outputs unchanged. Content privacy audit accepted within scope and ignore rules hardened; normal Git identity preserved by user instruction; no history rewrite or automatic push."
   }
 }
